@@ -1,0 +1,122 @@
+{
+  "dataset_version": "v1__20261019",
+  "built_at": "2026-10-19T23:13:18.547868+00:00",
+  "generation_command": "python -m ml.ingestion.build_panel",
+  "sources": [
+    {
+      "organization": "World Bank",
+      "dataset": "World Development Indicators (WDI) v2 API",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/<code>",
+      "license": "CC BY 4.0 (attribution required)"
+    }
+  ],
+  "years": {
+    "start": 2000,
+    "end": 2025,
+    "note": "Several drivers end 2023-2024; forecasts must respect per-indicator availability."
+  },
+  "rows": {
+    "long": 14400,
+    "wide": 1404
+  },
+  "coverage_by_indicator": {
+    "u5m": {
+      "code": "SH.DYN.MORT",
+      "role": "outcome",
+      "unit": "per 1,000 live births",
+      "obs": 1350,
+      "countries": 54
+    },
+    "matmort": {
+      "code": "SH.STA.MMRT",
+      "role": "candidate_outcome",
+      "unit": "per 100,000 live births",
+      "obs": 1296,
+      "countries": 54
+    },
+    "malaria": {
+      "code": "SH.MLR.INCD.P3",
+      "role": "candidate_outcome",
+      "unit": "per 1,000 population at risk",
+      "obs": 1225,
+      "countries": 49
+    },
+    "gdp_pc": {
+      "code": "NY.GDP.PCAP.CD",
+      "role": "driver",
+      "unit": "current US$",
+      "obs": 1372,
+      "countries": 54
+    },
+    "chexp_pctgdp": {
+      "code": "SH.XPD.CHEX.GD.ZS",
+      "role": "driver",
+      "unit": "% of GDP",
+      "obs": 1256,
+      "countries": 54
+    },
+    "phys_1k": {
+      "code": "SH.MED.PHYS.ZS",
+      "role": "driver",
+      "unit": "per 1,000 people",
+      "obs": 606,
+      "countries": 54
+    },
+    "nurses_1k": {
+      "code": "SH.MED.NUMW.P3",
+      "role": "driver",
+      "unit": "per 1,000 people",
+      "obs": 582,
+      "countries": 54
+    },
+    "dpt_cov": {
+      "code": "SH.IMM.IDPT",
+      "role": "driver",
+      "unit": "% of children 12-23 months",
+      "obs": 1339,
+      "countries": 54
+    },
+    "meas_cov": {
+      "code": "SH.IMM.MEAS",
+      "role": "driver",
+      "unit": "% of children 12-23 months",
+      "obs": 1339,
+      "countries": 54
+    },
+    "san_basic": {
+      "code": "SH.STA.BASS.ZS",
+      "role": "driver",
+      "unit": "% of population",
+      "obs": 1318,
+      "countries": 54
+    },
+    "water_basic": {
+      "code": "SH.H2O.BASW.ZS",
+      "role": "driver",
+      "unit": "% of population",
+      "obs": 1313,
+      "countries": 54
+    },
+    "urb_pct": {
+      "code": "SP.URB.TOTL.IN.ZS",
+      "role": "driver",
+      "unit": "% of total population",
+      "obs": 1404,
+      "countries": 54
+    }
+  },
+  "quality_flags": {
+    "q_driver_coverage_pct": "share of the 9 driver series present for that country-year",
+    "q_target_missing": "under-five mortality absent for that country-year (kept as NaN, never zero-filled)",
+    "q_sparse_hwf_missing": "both sparse health-workforce series missing (physicians, nurses)"
+  },
+  "notes": [
+    "WB v2 API does not distinguish reported vs modelled estimates; all values carry value_status='published_wdi' and series-level modelled status lives in docs/DATA_DICTIONARY.md.",
+    "phys_1k and nurses_1k are sparse (Wk-1 audit: ~42%); downstream models must treat them as weak-confidence features.",
+    "WHO GHO was 502-down during the Wk-1 audit; this dataset is WB-only by design."
+  ],
+  "files": {
+    "panel_long.csv": "bee7f302fcc1b1f62b924d15ebb2a92c58e1217ec60cdf9c60fbd15d35a510fc",
+    "panel_wide.csv": "c38461c2b084046da0888f9a9abde63e01498b69212198fe42f17af1fb4fb8e2"
+  }
+}

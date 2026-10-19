@@ -15,13 +15,22 @@ Under-five mortality verified as a **STRONG** target — 1,350 observations, 54 
 series usable**. WHO GHO returned 502 on every query during the audit, confirming the
 architecture invariant: **v1 ships on World Bank alone.**
 
+## Week-2 build in one line
+
+The audit's verdicts are now a **versioned dataset**: `ml/ingestion/build_panel.py`
+assembles `panel_long.csv` (tidy observations with source, unit, value status) and
+`panel_wide.csv` (one row per country-year with `q_` quality flags — driver
+coverage, target-missing, sparse-workforce flags). Seven unit tests guard the
+validation suite; the build writes a sha256 hashed manifest and refuses to pass
+if any blocking check fails.
+
 ## Status overview
 
 | Phase | State |
 |---|---|
 | Blueprint + monorepo scaffold | ✅ done |
 | Wk 1 — Data audit (WHO/WB U5M + drivers) | ✅ done — [`data/manifests/audit_report.md`](data/manifests/audit_report.md) |
-| Wk 2 — Ingestion + validation pipeline | planned |
+| Wk 2 — Ingestion + validation pipeline | ✅ done — `panel_long.csv` + `panel_wide.csv` (1,404 country-years), manifest + gate report |
 | Wk 3–5 — Forecasting research core | planned |
 | Wk 6 — FastAPI (typed /api/v1) | planned |
 | Wk 7 — React atlas + forecast + explainability | planned |
