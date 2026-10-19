@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data — raw API pulls are reproducible, never commit
+data/raw/
+
+# Credentials / secrets
+.env
+*.key
+frontend/.env
+
+# Node / frontend
+node_modules/
+frontend/dist/
+*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Large model artifacts (small final artifacts may be committed selectively)
+*.pkl
+!artifacts/*.pkl

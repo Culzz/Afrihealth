@@ -1,0 +1,31 @@
+# Core
+pandas
+numpy
+requests
+
+# ML pipeline
+scikit-learn
+xgboost
+lightgbm
+optuna
+shap
+joblib
+
+# Viz (pipeline figures + dataset packaging)
+matplotlib
+seaborn
+plotly
+
+# Backend API
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Docs
+reportlab
+
+# Dev
+pytest
+jupyterlab
+httpx
