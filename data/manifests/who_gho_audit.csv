@@ -1,0 +1,6 @@
+search_term,code,name
+under-five mortality,,SEARCH FAILED (502 Server Error: Bad Gateway for url: https://ghoapi.azureedge.net/api/Indicator?%24search=under-five+mortality&%24top=10)
+maternal mortality,,SEARCH FAILED (502 Server Error: Bad Gateway for url: https://ghoapi.azureedge.net/api/Indicator?%24search=maternal+mortality&%24top=10)
+malaria incidence,,SEARCH FAILED (502 Server Error: Bad Gateway for url: https://ghoapi.azureedge.net/api/Indicator?%24search=malaria+incidence&%24top=10)
+physicians density,,SEARCH FAILED (502 Server Error: Bad Gateway for url: https://ghoapi.azureedge.net/api/Indicator?%24search=physicians+density&%24top=10)
+UHC service coverage,,SEARCH FAILED (502 Server Error: Bad Gateway for url: https://ghoapi.azureedge.net/api/Indicator?%24search=UHC+service+coverage&%24top=10)

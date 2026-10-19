@@ -48,7 +48,7 @@ Status: living document · starts Wk 1, grows with the pipeline
 | `SH.IMM.IDPT` | DPT immunization % | driver |
 | `SH.IMM.MEAS` | Measles immunization % | driver |
 | `SH.STA.BASS.ZS` | Basic sanitation % | driver |
-| `SH.H2O.SMDW` | Safely managed drinking water % | driver |
+| `SH.H2O.BASW.ZS` | Basic drinking-water access % | driver ✓ *audit-verified* |
 | `SP.URB.TOTL.IN.ZS` | Urbanization % | driver |
 | WHO GHO `UHC_INDEX_REPORTED` | UHC service coverage | driver |
 | `SH.STA.MMRT` (WB) | Maternal mortality | exploratory (2nd-outcome candidate) |

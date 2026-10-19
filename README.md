@@ -8,12 +8,19 @@
 
 **Start here:** [`PLAN.md`](PLAN.md) — platform blueprint, releases, and build calendar.
 
-## Status
+## Week-1 audit in one line
+
+Under-five mortality verified as a **STRONG** target — 1,350 observations, 54 countries,
+96.2% of possible country-year cells, data through 2024, with **9/9 World Bank driver
+series usable**. WHO GHO returned 502 on every query during the audit, confirming the
+architecture invariant: **v1 ships on World Bank alone.**
+
+## Status overview
 
 | Phase | State |
 |---|---|
 | Blueprint + monorepo scaffold | ✅ done |
-| Wk 1 — Data audit (WHO/WB U5M + drivers) | 🔜 next |
+| Wk 1 — Data audit (WHO/WB U5M + drivers) | ✅ done — [`data/manifests/audit_report.md`](data/manifests/audit_report.md) |
 | Wk 2 — Ingestion + validation pipeline | planned |
 | Wk 3–5 — Forecasting research core | planned |
 | Wk 6 — FastAPI (typed /api/v1) | planned |
