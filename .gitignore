@@ -5,20 +5,26 @@ __pycache__/
 venv/
 *.egg-info/
 .pytest_cache/
+.ruff_cache/
 .ipynb_checkpoints/
 
-# Data — raw API pulls are reproducible, never commit
+# Node / frontend
+node_modules/
+apps/web/dist/
+*.local
+
+# Data — raw API pulls are reproducible, never commit; keep manifests + samples committed
 data/raw/
+*.db
 
 # Credentials / secrets
 .env
 *.key
-frontend/.env
+apps/web/.env
 
-# Node / frontend
-node_modules/
-frontend/dist/
-*.local
+# Reports generated
+research/paper/*.pdf
+reports/generated/
 
 # OS / editor
 .DS_Store
@@ -28,4 +34,4 @@ Thumbs.db
 
 # Large model artifacts (small final artifacts may be committed selectively)
 *.pkl
-!artifacts/*.pkl
+!ml/registry/*.pkl

@@ -1,203 +1,154 @@
-# AfriHealth Risk Atlas — Build Plan
+# AfriHealth — Platform Blueprint (v2)
 
-> ML-powered atlas that scores every African country on a composite health-risk index,
-> tiers countries (Low / Elevated / High / Critical), explains **why** each country sits
-> in its tier (SHAP), and simulates policy what-ifs — shipped as a **React + FastAPI
-> web app**, a research PDF, and a model card.
+> **AI-powered African population health intelligence and early-warning platform.**
+> Not a dashboard: a reproducible, geospatial health-intelligence system that integrates
+> public health data, evaluates forecasting models against temporal baselines, explains
+> predictions, quantifies uncertainty, and exposes the evidence behind regional risk
+> assessments through a production web application.
 
-**Status:** planned · **Owner:** you + AI pairing · **Window:** 4–6 weeks
-
----
-
-## 1. Decisions locked
-
-| Decision | Choice | Why |
-|---|---|---|
-| Prediction target | **Composite Health Risk Index + tiers** | Fits "Risk Atlas"; richer story than a single outcome |
-| Data granularity | **Country-year panel, 2000–2023** (~54 countries ≈ 1,200+ rows) | 54 rows alone can't train XGBoost; panel gives 20× data and enables what-ifs |
-| Validation | **Temporal split** (train ≤2018, val 2019–2020, test 2021–2023) + leave-one-region-out sanity | Random KFold on panel data leaks country effects; temporal is honest |
-| Index sources | Burden indicators only (mortality, disease prevalence) | Keeps drivers (capacity levers) out of the target — no target leakage |
-| **App stack** | **React (Vite + Tailwind) frontend · FastAPI backend** | Real web app, strongest recruiter signal; API contract separates ML from UI |
-| Deployment | **Single Docker container** (FastAPI serves built React bundle) → Render free tier | One URL, no CORS pain; two-service split is a documented stretch goal |
-| Environment | venv + pip (backend) · npm (frontend) | Simple, zero extra tooling |
+**Status:** blueprint written, Phase 01 (research & data audit) next
+**Research core:** data reliability + cross-region forecasting + explainable early warnings
+**Product layer:** Scenario Lab + Research Copilot, built on top of the validated core
 
 ---
 
-## 2. Data spec
+## 1. Locked decisions
 
-### Source A — World Bank Open Data API (primary, free, no key)
-Raw pulls cached to `data/raw/` as CSV. Code list (indicator codes verified at first fetch, snapshotted):
-
-**Burden outcomes → build the Risk Index (never used as features):**
-- `SH.DYN.MORT` — under-5 mortality per 1,000
-- `SH.STA.MMRT` — maternal mortality per 100k
-- `SH.STA.WAST.ZS` — wasting prevalence
-- `SH.STA.STNT.ZS` — stunting prevalence
-- `SH.TBS.INCD` — TB incidence per 100k
-- `SH.DYN.AIDS.ZS` — HIV prevalence
-- `SH.MLR.INCD.P3` — malaria incidence per 1,000 at risk
-
-**Capacity drivers → model features (the policy levers):**
-- `NY.GDP.PCAP.CD` — GDP per capita
-- `SH.XPD.CHEX.GD.ZS` — health expenditure (% GDP)
-- `SH.MED.PHYS.ZS` — physicians per 1,000
-- `SH.MED.NUMW.P3` — nurses & midwives per 1,000
-- `SH.IMM.IDPT` — DPT immunization %
-- `SH.IMM.MEAS` — measles immunization %
-- `SH.STA.BASS.ZS` — basic sanitation %
-- `SH.H2O.SMDW` — safely managed drinking water %
-- `SP.URB.TOTL.IN.ZS` — urbanization %
-
-### Source B — WHO GHO API (secondary, enhances drivers)
-- `UHC_INDEX_REPORTED` — UHC service coverage index
-- Optional extras if data quality is good enough; **v1 must ship on World Bank alone** (de-risking).
-
-### Missing-data policy (documented in the research PDF)
-1. Per-country time interpolation for small gaps (flagged)
-2. Drop country-years with < 50% driver coverage
-3. Missingness map shipped in EDA — this is a *feature* of the story, not an embarrassment
-
----
-
-## 3. Risk index & tiering
-
-- **Index v1:** min-max normalize each burden indicator (0–100, higher = worse) → weighted mean.
-  Weights: equal-weight baseline + sensitivity analysis (PC1-weighted variant reported in appendix).
-- **Tiers:** KMeans (k=4) on the index distribution, sanity-checked against quartiles; silhouette score reported. Cluster profiles named Low / Elevated / High / Critical.
-- **Neighborhood sanity check:** e.g., Niger vs. Nigeria, Botswana (high HIV burden but strong system) — the atlas must *not* be a GDP map in disguise. SHAP output will prove this.
-
----
-
-## 4. Modeling plan
-
-| Step | Detail |
+| Decision | Choice |
 |---|---|
-| Baselines | Majority-tier + logistic regression (with standardization) |
-| Main models | LightGBM + XGBoost, multiclass on tiers **and** regression on the index (regression powers the what-if slider) |
-| Tuning | Optuna, ~75 trials, expanding-window time CV (never cross-year random split) |
-| Metrics | Macro-F1, per-tier precision/recall, confusion matrix; MAE for regression |
-| Explainability | SHAP: global importances + per-country-year waterfall (country deep-dive page) |
-| Fairness slice | Error rates by UN sub-region (North vs. West vs. East/Central/Southern Africa) — honest table in the PDF |
+| Primary focus | **Balanced platform** — atlas + forecasting + explainability together |
+| Lead outcome | **Under-five mortality** (data audit decides if a second outcome — e.g., malaria — joins it) |
+| Geographic scope | **All-Africa, country-level first**; subnational only after validation |
+| Success bar | **Both** — defensible research evaluation AND production-grade product |
+| Release 1 timeline | **~8 weeks** |
+| Frontend | React + TypeScript + Vite + Tailwind (no Streamlit) |
+| Backend | FastAPI + Pydantic, PostgreSQL (+PostGIS), Alembic migrations |
+| ML | scikit-learn, XGBoost, LightGBM, Optuna, SHAP · temporal validation only |
+| Deploy | Docker, managed Postgres, static frontend on CDN host |
 
-**Deliverable gate:** a short decision memo choosing the final model with evidence.
-**Serving artifact:** trained model + SHAP TreeExplainer serialized to `artifacts/` — loaded once at app startup.
+## 2. Six capabilities (the product spine)
 
----
+1. **Health Risk Atlas** — outcomes and risk factors across African countries; subnational where data supports it (later)
+2. **Predictive Health Intelligence** — forecast under-5 mortality; probability of exceeding defined risk thresholds
+3. **Risk Driver Discovery** — SHAP-explained drivers, regional comparison, emerging patterns
+4. **Intervention Scenario Lab** — validated hypothetical-condition exploration, clearly labelled (Release 2)
+5. **Early-Warning Intelligence** — unusual-change detection, threshold alerts, uncertainty framing (Release 2)
+6. **Evidence & Research Copilot** — grounded Q&A over the platform's own verified data, with citations (Release 3)
 
-## 5. Web app architecture (React + FastAPI)
+## 3. The three-layer intelligence framework (the research identity)
 
-```
-┌─────────────────────────────  single Docker container (prod)  ─────────────┐
-│  FastAPI :8000                                                             │
-│  ├── /api/*          Pydantic-typed JSON                                   │
-│  ├── /assets/*       React build served as static files (SPA)              │
-│  └── ML layer        loads artifacts/ at startup (model + explainer+panel) │
-└────────────────────────────────────────────────────────────────────────────┘
-```
+**Layer 1 — Observed health burden:** what reported/modelled data says, with source quality and coverage flags.
+**Layer 2 — Predicted future risk:** validated forecasts with intervals + threshold-exceedance probabilities + SHAP explanations.
+**Layer 3 — Health-system vulnerability:** where high burden overlaps weak service capacity — a transparent, sensitivity-tested composite, **never** an opaque universal score.
 
-### API contract (locked before frontend work starts)
+No single "African health risk score." Outcome-specific models, an explicit data-confidence layer, and an emerging-risk monitor instead. Low data quality is displayed, not silently smoothed away.
 
-| Endpoint | Method | Returns |
-|---|---|---|
-| `/api/health` | GET | `{status, model_version, data_through}` |
-| `/api/atlas/{year}` | GET | `[{iso3, country, region, risk_index, tier, top_drivers:[{feature, value, shap}]}]` |
-| `/api/countries/{iso3}` | GET | profile: `series[{year, index, tier}]`, current drivers w/ SHAP, stats |
-| `/api/whatif` | POST `{iso3, year, deltas: {"SH.IMM.IDPT": +10}}` | `{index_before, index_after, tier_before, tier_after, driver_delta:[{feature, shap}]}` |
-| `/api/model-card` | GET | model card JSON (rendered beautifully on the Methodology page) |
+### Research questions (drive the evaluation plan)
 
-- **Pydantic response models for every endpoint** — this is the recruiter-visible rigor
-- Dev mode: Vite dev server proxies `/api` → `localhost:8000`; prod: same origin, zero CORS issues
+1. Do ML models beat simple forecasting baselines (naive, trend) on U5M?
+2. Do socioeconomic + health-system + environmental indicators improve forecasts over health-history-only models?
+3. How does performance vary with country-level data availability?
+4. Do uncertainty + data-quality indicators reduce overconfidence in rankings?
+5. How stable are rankings under alternative normalizations and weights?
+6. Can every displayed number be traced to source, version, and method?
 
-### Frontend pages (React Router)
+## 4. Release plan
 
-1. **🗺️ Atlas** — Plotly choropleth by tier, year slider (2000–2023), tooltips: index + top 3 drivers; trend strip
-2. **🏳️ Country Deep-Dive** — profile card, 20-year risk trajectory, SHAP waterfall of current drivers
-3. **🔮 What-If Simulator** — policy sliders (DPT +10pp, sanitation +10pp…) → predicted tier shift + SHAP delta. Framed as a *policy sandbox*, not diagnosis
-4. **📚 Methodology** — model card, data sources, limitations, disclaimers (country-level decision support, not individual medical advice)
+### Release 1 — Research-ready MVP (~8 weeks) ← current target
+WHO/WB ingestion for U5M + drivers · data catalogue · interactive Africa map (MapLibre) · historical trends & comparisons · 1–2 properly validated forecast models · basic explainability + uncertainty · PDF/CSV exports + provenance · tests · live deployment · model card.
 
-UI discipline: Tailwind + one accent palette per risk tier; skeleton loaders while API resolves; fully responsive (recruiters open links on phones).
+### Release 2 — Predictive intelligence
+Forecast studio + model registry · threshold monitoring + anomaly detection · vulnerability index with sensitivity analysis · saved analyses, alerts, scheduled reports · possible second outcome (malaria) if the audit supports it · Celery + Redis background jobs.
 
-### Deployment
-- **Dockerfile (multi-stage):** `node:20` builds `frontend/dist` → copied into `python:3.11-slim` image → FastAPI `StaticFiles` mounts it → one service on Render free tier
-- Dev runs as two terminals (`uvicorn` + `vite`); prod is one URL
-- Frontend `API_BASE` via env var so the same bundle can point anywhere
+### Release 3 — Advanced research platform
+Research copilot (RAG over platform evidence, refuses invented statistics) · validated scenario engine · subnational expansion where data supports · expanded environmental modelling.
 
----
+## 5. Stack adoption by release (over-engineering control)
 
-## 6. Research PDF + model card (ReportLab, generated by script)
+| Layer | R1 | R2 | R3 |
+|---|---|---|---|
+| Frontend | React 18, TS, Vite, Tailwind, MapLibre GL JS, Plotly.js | saved analyses UI, alerts UI | copilot UI, scenario lab UI |
+| Backend | FastAPI, Pydantic, **public read-only API, no auth** | auth + saved analyses + rate limits | copilot service |
+| Database | PostgreSQL **with PostGIS enabled from day 1**, Alembic | vulnerability/scenario tables + Redis | + RAG store |
+| Jobs | synchronous endpoints (bounded) | Celery + Redis workers | — |
+| ML | XGBoost/LightGBM vs baselines, SHAP, temporal CV | model registry hardening, anomaly detection | scenario engine |
+| Ops | Docker Compose, GH Actions CI, structured logs | monitoring budget: error tracking, model drift | — |
 
-- **Paper:** Abstract → Intro (why Africa-wide, why decision support) → Data & Methods → Results (figures from matplotlib) → SHAP findings → Fairness analysis → Limitations → Future work
-- **Model card:** intended use / out-of-scope, data provenance, metrics, fairness notes, limitations, update cadence — served as JSON by the API *and* as `reports/MODEL_CARD.md`
-- Built via `reports/build_pdf.py` → reproducible artifact, not a one-off Word doc
-
----
-
-## 7. Week-by-week
-
-| Week | Milestone | Gate |
-|---|---|---|
-| 1 | Scaffold; WB fetcher + panel builder; missingness report; EDA starts | `python -m src.data.build_dataset` reproduces `panel.csv` |
-| 2 | Risk index + tiers; baselines; first XGBoost with temporal eval | Index passes neighborhood sanity check |
-| 3 | Optuna tuning; LightGBM vs XGBoost; SHAP; decision memo; artifacts serialized | Final model picked; API contract frozen |
-| 4 | FastAPI (all 5 endpoints, Pydantic models, tests) + React scaffold + **Atlas map page live** | Swagger UI passes manual checks; map renders real data |
-| 5 | Deep-dive + what-if + methodology pages; UI polish; ReportLab PDF + model card | All 4 pages working; PDF generated |
-| 6 | Dockerize → deploy to Render; buffer; README + demo GIF + story post | LIVE URL in README |
-
----
-
-## 8. Repo layout
+## 6. Monorepo layout
 
 ```
 afrihealth-risk-atlas/
-├── backend/
-│   └── app/
-│       ├── main.py            # FastAPI entrypoint + static mount
-│       ├── core/config.py     # settings, artifact paths
-│       ├── ml/predictor.py    # loads model + explainer once
-│       └── routers/           # atlas.py, countries.py, whatif.py, model_card.py
-├── frontend/
-│   ├── src/
-│   │   ├── pages/             # Atlas.jsx, Country.jsx, WhatIf.jsx, Methodology.jsx
-│   │   ├── components/        # ChoroplethMap, TrendChart, Waterfall, RiskBadge, TierLegend
-│   │   └── api/client.js      # fetch wrapper + types
-│   ├── index.html, vite.config.js, tailwind.config.js
-├── src/                       # ML pipeline (pure Python, no HTTP)
-│   ├── data/                  # fetch_worldbank.py, build_dataset.py
-│   ├── features/              # build_index.py (index + tiers)
-│   ├── models/                # train.py, tune_optuna.py, explain_shap.py
-│   └── visualization/         # charts.py (figures for PDF)
-├── artifacts/                 # trained model, SHAP explainer, panel.csv (committed — small)
-├── data/                      # raw/ (gitignored) + processed/
-├── notebooks/                 # 01_eda.ipynb, 02_modeling.ipynb
-├── reports/                   # figures/, build_pdf.py, MODEL_CARD.md
-├── tests/                     # index construction, dataset builder, API responses
-├── Dockerfile
-├── requirements.txt           # backend + pipeline deps
-├── PLAN.md
-└── README.md
+├── apps/web/            # React + TS (atlas, forecasts, comparisons, scenarios, alerts, copilot)
+├── services/api/        # FastAPI (api/ core/ db/ models/ schemas/ services/)
+├── ml/                  # ingestion, validation, features, training, evaluation,
+│                        # forecasting, explainability, registry
+├── pipelines/           # jobs/ schedules/ (Celery arrives in R2)
+├── research/            # notebooks, experiments, paper
+├── data/                # raw/ (gitignored), processed/, manifests/, samples/
+├── docs/                # SRS, ARCHITECTURE, DATA_DICTIONARY, MODEL_CARD, SECURITY, DEPLOYMENT
+├── infra/               # Dockerfile.api, docker-compose.yml (CI/CD in .github/workflows)
+└── tests/               # cross-cutting integration tests
 ```
 
----
+## 7. Release 1 — 8-week build calendar
 
-## 9. Definition of done
+| Wk | Stage(s) | Milestone | Exit gate |
+|---|---|---|---|
+| 1 | 01–03 | SRS finalized; **data audit** (WHO GHO + World Bank U5M/driver availability & missingness profile); monorepo + Docker Compose + local Postgres/PostGIS running | Audit report decides feature set; `docker compose up` works |
+| 2 | 04 | Source adapters + immutable snapshots + manifest; geocoding via ISO codes; missingness/quality flags | Reproducible validated dataset with documented limitations |
+| 3 | 04–05 | Migrations; baselines (naive, trend) with rolling-origin evaluation | Baseline table in `research/experiments/` |
+| 4 | 05 | XGBoost/LightGBM lag models; Optuna with time-aware CV; ablation (Q2 answered) | ≥1 model beats baseline OR explicit fallback decision |
+| 5 | 05 | SHAP global/local; prediction intervals; regional error breakdown (Q3); model registry v1 + model card draft | Registered artifacts with metrics + limitations |
+| 6 | 06 | FastAPI: catalogue, atlas, series, forecast, explainability, model-card, export endpoints; integration tests | Documented typed API, tests green |
+| 7 | 07 | React: app shell, **atlas map**, forecast view, explainability view; loading/empty/error/low-data states; mobile check | End-to-end on real API |
+| 8 | 08–09 | E2E + leakage tests; security sweep; deploy (frontend CDN + api + managed Postgres); monitoring basics; README + demo | LIVE URL; runbook; Stage 10 (paper) kicks off |
 
-- [ ] One command reproduces the dataset from cached raw pulls
-- [ ] Temporal validation only — zero leakage, verified with a test
-- [ ] API runs offline from committed artifacts; Pydantic-typed responses
-- [ ] React app: all 4 pages, responsive, skeleton loaders
-- [ ] Dockerized, deployed, live demo URL + README demo GIF
-- [ ] pytest green on index + dataset builder + API
-- [ ] Honest Limitations section in both PDF and model card
-- [ ] Model card complete (intended use, out-of-scope, metrics, fairness)
+## 8. R1 data scope (pending audit — codes verified against APIs in Wk 1)
 
-## 10. Risks & mitigations
+**Outcome (target):** under-5 mortality (WHO GHO / World Bank `SH.DYN.MORT`).
+**Driver candidates:** GDP/capita (`NY.GDP.PCAP.CD`), health expenditure % GDP (`SH.XPD.CHEX.GD.ZS`), physicians/1,000 (`SH.MED.PHYS.ZS`), nurses (`SH.MED.NUMW.P3`), DPT immunization (`SH.IMM.IDPT`), measles (`SH.IMM.MEAS`), basic sanitation (`SH.STA.BASS.ZS`), water (`SH.H2O.SMDW`), urbanization (`SP.URB.TOTL.IN.ZS`), UHC service coverage (WHO GHO `UHC_INDEX_REPORTED`), plus rainfall/temperature where justified (CHIRPS, later).
+**Panel:** country × year (~54 countries × 20+ years). **Provenance is a first-class entity** (source, id, URL, retrieval timestamp, reported/estimated/imputed flag).
+**Critical rules:** never fill missing health values with zero; every imputation documented and tested; geographic joins only on ISO codes, never display names.
 
-| Risk | Mitigation |
-|---|---|
-| WHO API flaky / sparse | World Bank-first design; v1 ships on WB alone |
-| Indicator code changes | Cache raw JSON/CSV; pin snapshot; fetcher validates codes |
-| Overfitting on small panel | Temporal CV, small model capacity, no metric overclaiming |
-| "It's just a GDP map" critique | SHAP evidence that capacity levers ≠ wealth alone; neighborhood sanity checks |
-| What-if scope creep | Locked spec: tier-shift prediction from fixed feature deltas, no causal claims |
-| React learning curve mid-project | API contract frozen in week 3; pages are data-viz heavy, not CRUD — Tailwind + Plotly.js patterns repeat across pages |
-| Two-service deploy complexity | Single-container default; service split documented as stretch |
+## 9. R1 API contract (locked Wk 6, versioned under /api/v1)
+
+| Endpoint | Method | Returns |
+|---|---|---|
+| `/api/v1/health` | GET | app + data-freshness status |
+| `/api/v1/countries` · `/api/v1/indicators` | GET | catalogue with metadata + coverage |
+| `/api/v1/atlas` | GET | country-year U5M observables + data-confidence layer |
+| `/api/v1/countries/{iso3}/series` | GET | historical series + quality flags |
+| `/api/v1/countries/{iso3}/forecast` | GET | forecast, intervals, model version, SHAP summary |
+| `/api/v1/models/{model_id}` | GET | registry record: window, metrics, limitations |
+| `/api/v1/reports` | POST | PDF/CSV export generation (bounded synchronous in R1) |
+
+(R1 = read-only public API; auth arrives in R2 with saved analyses.)
+
+## 10. Initial database scope (R1)
+
+`countries`, `indicators`, `data_sources`, `dataset_versions`, `observations` (+ provenance FKs), `model_versions`, `forecasts` — versioned against dataset AND model.
+R2 adds: `alerts`, `saved_analyses`, `report_jobs`, `users`, `risk_assessments`, `scenarios`.
+
+## 11. Safeguards (non-negotiable, build-time, not paperwork)
+
+1. No clinical/individual claims — population-level decision support only
+2. No fabricated precision — suppress or qualify under-inadequate coverage
+3. SHAP ≠ causation — labelled explicitly everywhere
+4. No hidden imputation — estimates labelled; missing ≠ zero
+5. Rankings expose construction, weights, sensitivity
+6. Alert ≠ outbreak confirmation — automated flags distinguished from official warnings
+7. Model card + prohibited uses recorded per model version
+8. Human review required for any real resource-allocation use
+9. Source licensing respected; national data rules honoured
+10. Minimal user data; secrets never in Git or browser bundles
+
+## 12. Definition of done — Release 1
+
+- [ ] `docker compose up` runs web + api + db reproducibly; CI green in GitHub Actions
+- [ ] Wk-1 audit report governs every modeling claim; no code contradicts the audit
+- [ ] ≥1 model beats temporal baseline (or documented fallback) + leakage test passes
+- [ ] Every number in UI traceable: source → dataset version → model version
+- [ ] React app: atlas + forecast + explainability views, responsive, real API only
+- [ ] Exports (PDF/CSV) include methods, limitations, provenance
+- [ ] Model card + data documentation published
+- [ ] LIVE URL + demo in README; rollback and restore documented

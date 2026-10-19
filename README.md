@@ -1,59 +1,59 @@
-# AfriHealth Risk Atlas 🌍
+# AfriHealth 🌍
 
-> **Work in progress.** Composite health-risk profiles for every African country —
-> WHO / World Bank data → gradient-boosted models → SHAP-explained risk tiers →
-> what-if policy simulator. **React + FastAPI web app** · research PDF · model card.
+> **AI-powered African population health intelligence**
+> Reproducible, geospatial platform that integrates WHO / World Bank evidence,
+> validates forecasting models against temporal baselines, explains predictions
+> with SHAP, quantifies uncertainty, and exposes the evidence behind regional
+> risk assessments through a production web app.
 
-**The full build plan lives in [`PLAN.md`](PLAN.md).**
+**Start here:** [`PLAN.md`](PLAN.md) — platform blueprint, releases, and build calendar.
 
 ## Status
 
 | Phase | State |
 |---|---|
-| 1 — Data foundation (World Bank/WHO fetchers, panel dataset) | 🔜 next |
-| 2 — Risk index + tiering | planned |
-| 3 — Modeling + Optuna + SHAP | planned |
-| 4 — FastAPI (typed API) + React app (atlas map · deep-dive · what-if) | planned |
-| 5 — Research PDF + model card | planned |
-| 6 — Docker deploy + story | planned |
+| Blueprint + monorepo scaffold | ✅ done |
+| Wk 1 — Data audit (WHO/WB U5M + drivers) | 🔜 next |
+| Wk 2 — Ingestion + validation pipeline | planned |
+| Wk 3–5 — Forecasting research core | planned |
+| Wk 6 — FastAPI (typed /api/v1) | planned |
+| Wk 7 — React atlas + forecast + explainability | planned |
+| Wk 8 — Deploy + hardening | planned |
 
-## Architecture
+## The three-layer framework
 
-```
-World Bank / WHO APIs  →  ML pipeline (index, tiers, XGBoost + SHAP)
-                       →  artifacts/ (model + explainer + panel.csv)
-                       →  FastAPI (Pydantic-typed /api endpoints + static React build)
-                       →  React + Tailwind + Plotly.js  →  🌐 live on Render
-```
+1. **Observed burden** — reported/modelled data with source quality flags
+2. **Predicted risk** — validated forecasts with intervals and explanations
+3. **Health-system vulnerability** — transparent, sensitivity-tested composite (R2)
 
-## Stack
+No opaque universal risk score. Every displayed number is traceable to
+source → dataset version → model version.
 
-**ML:** Python · Pandas · NumPy · Scikit-learn · XGBoost · LightGBM · Optuna · SHAP
-**API:** FastAPI · Pydantic · Uvicorn
-**Frontend:** React (Vite) · Tailwind CSS · Plotly.js
+## Stack (Release 1)
 
-## Quickstart
+React + TypeScript + Vite + Tailwind · MapLibre GL JS · Plotly.js ·
+FastAPI · Pydantic · PostgreSQL + PostGIS · Alembic ·
+scikit-learn · XGBoost · LightGBM · Optuna · SHAP · Docker · GitHub Actions
 
-**Backend** (once Phase 1 lands — Python 3.11+):
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-python -m src.data.build_dataset   # fetch + build the country-year panel
-uvicorn backend.app.main:app --reload   # http://localhost:8000/docs
-```
-
-**Frontend** (Node 20+):
+## Quickstart (once Week 1 scaffolding lands)
 
 ```bash
-cd frontend
-npm install
-npm run dev    # http://localhost:5173 → proxies /api to :8000
+docker compose -f infra/docker-compose.yml up   # web + api + postgres/postgis
 ```
+
+Modern detail: `services/api` docs at `/api/docs`; web at the frontend dev URL.
+
+## Documentation
+
+- [`docs/SRS.md`](docs/SRS.md) — product + research scope
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — system + deployment
+- [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) — entities, provenance rules, indicators
+- [`docs/MODEL_CARD.md`](docs/MODEL_CARD.md) — responsible-AI record
+- [`docs/SECURITY.md`](docs/SECURITY.md) — safeguards + security design
+- [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) — operations runbook
 
 ## Ethics framing
 
-This project is **country-level decision support** for policy exploration —
-not individual medical diagnosis. All model limitations are documented in the
-model card (`reports/MODEL_CARD.md`) and served by the app's `/api/model-card`.
+Population-level decision support for public-health research and policy exploration —
+**not** individual diagnosis, outbreak surveillance, or clinical guidance. All ten
+safeguards in [`PLAN.md`](PLAN.md) §11 are enforced in product behaviour.
