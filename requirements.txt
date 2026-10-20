@@ -10,11 +10,7 @@ lightgbm
 optuna
 shap
 joblib
-
-# Viz (pipeline figures + dataset packaging)
 matplotlib
-seaborn
-plotly
 
 # Backend API
 fastapi
@@ -22,10 +18,9 @@ uvicorn[standard]
 pydantic
 pydantic-settings
 
-# Docs
+# Docs / exports
 reportlab
 
-# Dev
+# Dev / tests
 pytest
-jupyterlab
 httpx

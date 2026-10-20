@@ -105,13 +105,13 @@ def main() -> int:
         history = dict(zip(grp["year"], grp[TARGET]))
         last_obs = int(grp[grp[TARGET].notna()]["year"].max())
         last_obs_val = float(grp.loc[grp["year"] == last_obs, TARGET].iloc[0])
-        for h in HORIZONS:
-            year = last_obs + h
-            if year <= int(wide["year"].max()):
-                continue
+        # Fixed forecast grid 2025-2027; horizon = years since last observation
+        # (a country whose series ends 2023 gets h=2 for 2025, flagged honestly).
+        for year in (2025, 2026, 2027):
+            h = year - last_obs
             hist = dict(history)
             for back in range(1, h):  # prior predictions become synthetic history
-                prev = int(grp["year"].max() + back)
+                prev = year - back
                 yhat_prev = next((r["yhat"] for r in rows
                                   if r["iso3"] == iso3 and r["year"] == prev), None)
                 if yhat_prev is not None:

@@ -2,17 +2,54 @@
  {
   "iso3": "AGO",
   "country": "Angola",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.16,
-  "lo90": 76.98,
-  "hi90": 85.34,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 47.68,
+  "lo90": 44.72,
+  "hi90": 50.63,
   "last_observed_year": 2024,
   "last_observed_u5m": 49.0,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.661,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.12,
+  "p_gt_50": 0.451,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.728
+   },
+   {
+    "feature": "year",
+    "shap": -1.015
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.848
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.139
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.126
+   }
+  ]
+ },
+ {
+  "iso3": "AGO",
+  "country": "Angola",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 46.59,
+  "lo90": 42.41,
+  "hi90": 50.77,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 49.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.192,
+  "p_gt_50": 0.45,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -41,15 +78,15 @@
   "country": "Angola",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 45.99,
+  "lo90": 40.87,
+  "hi90": 51.11,
   "last_observed_year": 2024,
   "last_observed_u5m": 49.0,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.233,
+  "p_gt_50": 0.452,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -76,17 +113,54 @@
  {
   "iso3": "BDI",
   "country": "Burundi",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 82.89,
-  "lo90": 78.71,
-  "hi90": 87.07,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 45.99,
+  "lo90": 43.04,
+  "hi90": 48.95,
   "last_observed_year": 2024,
   "last_observed_u5m": 47.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.684,
-  "p_gt_50": 0.889,
+  "p_gt_70": 0.103,
+  "p_gt_50": 0.417,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -28.917
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.828
+   },
+   {
+    "feature": "year",
+    "shap": -0.689
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.608
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.189
+   }
+  ]
+ },
+ {
+  "iso3": "BDI",
+  "country": "Burundi",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 44.92,
+  "lo90": 40.74,
+  "hi90": 49.1,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 47.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.176,
+  "p_gt_50": 0.425,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -115,15 +189,15 @@
   "country": "Burundi",
   "year": 2027,
   "horizon": 3,
-  "yhat": 81.63,
-  "lo90": 76.51,
-  "hi90": 86.75,
+  "yhat": 44.05,
+  "lo90": 38.93,
+  "hi90": 49.17,
   "last_observed_year": 2024,
   "last_observed_u5m": 47.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.638,
-  "p_gt_50": 0.831,
+  "p_gt_70": 0.215,
+  "p_gt_50": 0.428,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -150,17 +224,54 @@
  {
   "iso3": "BEN",
   "country": "Benin",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.31,
-  "lo90": 77.13,
-  "hi90": 85.49,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 72.29,
+  "lo90": 69.33,
+  "hi90": 75.24,
   "last_observed_year": 2024,
   "last_observed_u5m": 74.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.663,
-  "p_gt_50": 0.878,
+  "p_gt_70": 0.548,
+  "p_gt_50": 0.879,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -2.533
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.846
+   },
+   {
+    "feature": "year",
+    "shap": -0.738
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.525
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.291
+   }
+  ]
+ },
+ {
+  "iso3": "BEN",
+  "country": "Benin",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 70.41,
+  "lo90": 66.23,
+  "hi90": 74.59,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 74.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.506,
+  "p_gt_50": 0.776,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -189,15 +300,15 @@
   "country": "Benin",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 68.36,
+  "lo90": 63.24,
+  "hi90": 73.48,
   "last_observed_year": 2024,
   "last_observed_u5m": 74.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.48,
+  "p_gt_50": 0.711,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -224,17 +335,54 @@
  {
   "iso3": "BFA",
   "country": "Burkina Faso",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.48,
-  "lo90": 77.3,
-  "hi90": 85.66,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 73.1,
+  "lo90": 70.15,
+  "hi90": 76.06,
   "last_observed_year": 2024,
   "last_observed_u5m": 74.9,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.665,
-  "p_gt_50": 0.879,
+  "p_gt_70": 0.565,
+  "p_gt_50": 0.888,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -1.553
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.802
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.575
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.516
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.327
+   }
+  ]
+ },
+ {
+  "iso3": "BFA",
+  "country": "Burkina Faso",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 71.36,
+  "lo90": 67.18,
+  "hi90": 75.54,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 74.9,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.52,
+  "p_gt_50": 0.786,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -263,15 +411,15 @@
   "country": "Burkina Faso",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 69.77,
+  "lo90": 64.65,
+  "hi90": 74.89,
   "last_observed_year": 2024,
   "last_observed_u5m": 74.9,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.497,
+  "p_gt_50": 0.726,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -298,17 +446,54 @@
  {
   "iso3": "BWA",
   "country": "Botswana",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.21,
-  "lo90": 77.03,
-  "hi90": 85.39,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 33.56,
+  "lo90": 30.61,
+  "hi90": 36.52,
   "last_observed_year": 2024,
   "last_observed_u5m": 33.3,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.662,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.028,
+  "p_gt_50": 0.194,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.937
+   },
+   {
+    "feature": "year",
+    "shap": -1.001
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.813
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.208
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.174
+   }
+  ]
+ },
+ {
+  "iso3": "BWA",
+  "country": "Botswana",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 33.53,
+  "lo90": 29.35,
+  "hi90": 37.71,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 33.3,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.088,
+  "p_gt_50": 0.27,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -337,15 +522,15 @@
   "country": "Botswana",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 34.26,
+  "lo90": 29.14,
+  "hi90": 39.38,
   "last_observed_year": 2024,
   "last_observed_u5m": 33.3,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.139,
+  "p_gt_50": 0.316,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -372,17 +557,54 @@
  {
   "iso3": "CAF",
   "country": "Central African Republic",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.21,
-  "lo90": 76.03,
-  "hi90": 84.39,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 89.05,
+  "lo90": 86.1,
+  "hi90": 92.01,
   "last_observed_year": 2024,
   "last_observed_u5m": 89.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.648,
-  "p_gt_50": 0.869,
+  "p_gt_70": 0.842,
+  "p_gt_50": 0.98,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 12.008
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.521
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.473
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": 0.377
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.369
+   }
+  ]
+ },
+ {
+  "iso3": "CAF",
+  "country": "Central African Republic",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 88.75,
+  "lo90": 84.57,
+  "hi90": 92.93,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 89.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.757,
+  "p_gt_50": 0.925,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -411,15 +633,15 @@
   "country": "Central African Republic",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.42,
-  "lo90": 73.3,
-  "hi90": 83.54,
+  "yhat": 88.91,
+  "lo90": 83.79,
+  "hi90": 94.03,
   "last_observed_year": 2024,
   "last_observed_u5m": 89.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.601,
-  "p_gt_50": 0.806,
+  "p_gt_70": 0.717,
+  "p_gt_50": 0.881,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -446,17 +668,54 @@
  {
   "iso3": "CIV",
   "country": "Cote d'Ivoire",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.17,
-  "lo90": 76.99,
-  "hi90": 85.35,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 63.42,
+  "lo90": 60.46,
+  "hi90": 66.38,
   "last_observed_year": 2024,
   "last_observed_u5m": 64.5,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.661,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.365,
+  "p_gt_50": 0.76,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -12.941
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.883
+   },
+   {
+    "feature": "year",
+    "shap": -0.662
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.221
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.165
+   }
+  ]
+ },
+ {
+  "iso3": "CIV",
+  "country": "Cote d'Ivoire",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 61.0,
+  "lo90": 56.82,
+  "hi90": 65.18,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.369,
+  "p_gt_50": 0.659,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -485,15 +744,15 @@
   "country": "Cote d'Ivoire",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 59.18,
+  "lo90": 54.06,
+  "hi90": 64.3,
   "last_observed_year": 2024,
   "last_observed_u5m": 64.5,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.371,
+  "p_gt_50": 0.61,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -520,17 +779,54 @@
  {
   "iso3": "CMR",
   "country": "Cameroon",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.22,
-  "lo90": 77.04,
-  "hi90": 85.4,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 64.51,
+  "lo90": 61.55,
+  "hi90": 67.47,
   "last_observed_year": 2024,
   "last_observed_u5m": 64.8,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.662,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.386,
+  "p_gt_50": 0.777,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -12.846
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.844
+   },
+   {
+    "feature": "year",
+    "shap": -0.722
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.253
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.17
+   }
+  ]
+ },
+ {
+  "iso3": "CMR",
+  "country": "Cameroon",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 63.4,
+  "lo90": 59.22,
+  "hi90": 67.59,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.8,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.403,
+  "p_gt_50": 0.691,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -559,15 +855,15 @@
   "country": "Cameroon",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 61.3,
+  "lo90": 56.18,
+  "hi90": 66.42,
   "last_observed_year": 2024,
   "last_observed_u5m": 64.8,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.396,
+  "p_gt_50": 0.634,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -594,17 +890,54 @@
  {
   "iso3": "COD",
   "country": "Congo, Dem. Rep.",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.65,
-  "lo90": 75.47,
-  "hi90": 83.83,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 89.3,
+  "lo90": 86.35,
+  "hi90": 92.26,
   "last_observed_year": 2024,
   "last_observed_u5m": 89.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.64,
-  "p_gt_50": 0.865,
+  "p_gt_70": 0.845,
+  "p_gt_50": 0.981,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 12.558
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.856
+   },
+   {
+    "feature": "year",
+    "shap": -0.425
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.424
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.168
+   }
+  ]
+ },
+ {
+  "iso3": "COD",
+  "country": "Congo, Dem. Rep.",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 88.52,
+  "lo90": 84.34,
+  "hi90": 92.7,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 89.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.754,
+  "p_gt_50": 0.924,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -633,15 +966,15 @@
   "country": "Congo, Dem. Rep.",
   "year": 2027,
   "horizon": 3,
-  "yhat": 77.65,
-  "lo90": 72.53,
-  "hi90": 82.77,
+  "yhat": 88.91,
+  "lo90": 83.79,
+  "hi90": 94.03,
   "last_observed_year": 2024,
   "last_observed_u5m": 89.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.592,
-  "p_gt_50": 0.799,
+  "p_gt_70": 0.717,
+  "p_gt_50": 0.881,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -668,17 +1001,54 @@
  {
   "iso3": "COG",
   "country": "Congo, Rep.",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.21,
-  "lo90": 77.03,
-  "hi90": 85.39,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 38.26,
+  "lo90": 35.3,
+  "hi90": 41.22,
   "last_observed_year": 2024,
   "last_observed_u5m": 39.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.662,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.048,
+  "p_gt_50": 0.269,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.596
+   },
+   {
+    "feature": "year",
+    "shap": -1.018
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.829
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.13
+   },
+   {
+    "feature": "region_afr",
+    "shap": 0.057
+   }
+  ]
+ },
+ {
+  "iso3": "COG",
+  "country": "Congo, Rep.",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 36.95,
+  "lo90": 32.77,
+  "hi90": 41.13,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.11,
+  "p_gt_50": 0.314,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -707,15 +1077,15 @@
   "country": "Congo, Rep.",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 36.23,
+  "lo90": 31.11,
+  "hi90": 41.35,
   "last_observed_year": 2024,
   "last_observed_u5m": 39.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.153,
+  "p_gt_50": 0.338,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -742,17 +1112,54 @@
  {
   "iso3": "COM",
   "country": "Comoros",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.87,
-  "lo90": 77.69,
-  "hi90": 86.05,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 37.26,
+  "lo90": 34.3,
+  "hi90": 40.22,
   "last_observed_year": 2024,
   "last_observed_u5m": 39.0,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.67,
-  "p_gt_50": 0.882,
+  "p_gt_70": 0.043,
+  "p_gt_50": 0.251,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.305
+   },
+   {
+    "feature": "year",
+    "shap": -0.906
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.807
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.138
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.075
+   }
+  ]
+ },
+ {
+  "iso3": "COM",
+  "country": "Comoros",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 35.97,
+  "lo90": 31.79,
+  "hi90": 40.15,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.103,
+  "p_gt_50": 0.301,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -781,15 +1188,15 @@
   "country": "Comoros",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 35.07,
+  "lo90": 29.95,
+  "hi90": 40.19,
   "last_observed_year": 2024,
   "last_observed_u5m": 39.0,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.144,
+  "p_gt_50": 0.325,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -816,17 +1223,54 @@
  {
   "iso3": "CPV",
   "country": "Cabo Verde",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.64,
-  "lo90": 75.46,
-  "hi90": 83.82,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 15.24,
+  "lo90": 12.28,
+  "hi90": 18.2,
   "last_observed_year": 2024,
   "last_observed_u5m": 11.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.64,
-  "p_gt_50": 0.865,
+  "p_gt_70": 0.002,
+  "p_gt_50": 0.034,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.271
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.591
+   },
+   {
+    "feature": "year",
+    "shap": -1.082
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.833
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.22
+   }
+  ]
+ },
+ {
+  "iso3": "CPV",
+  "country": "Cabo Verde",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 15.39,
+  "lo90": 11.21,
+  "hi90": 19.57,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 11.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.021,
+  "p_gt_50": 0.099,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -855,15 +1299,15 @@
   "country": "Cabo Verde",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.16,
-  "lo90": 73.04,
-  "hi90": 83.28,
+  "yhat": 15.65,
+  "lo90": 10.53,
+  "hi90": 20.77,
   "last_observed_year": 2024,
   "last_observed_u5m": 11.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.598,
-  "p_gt_50": 0.804,
+  "p_gt_70": 0.05,
+  "p_gt_50": 0.149,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -890,17 +1334,54 @@
  {
   "iso3": "DJI",
   "country": "Djibouti",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.83,
-  "lo90": 76.65,
-  "hi90": 85.01,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 47.61,
+  "lo90": 44.65,
+  "hi90": 50.56,
   "last_observed_year": 2024,
   "last_observed_u5m": 48.9,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.656,
-  "p_gt_50": 0.874,
+  "p_gt_70": 0.12,
+  "p_gt_50": 0.45,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.544
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.854
+   },
+   {
+    "feature": "year",
+    "shap": -0.848
+   },
+   {
+    "feature": "region_afr",
+    "shap": -0.205
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.173
+   }
+  ]
+ },
+ {
+  "iso3": "DJI",
+  "country": "Djibouti",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 46.57,
+  "lo90": 42.39,
+  "hi90": 50.75,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.9,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.192,
+  "p_gt_50": 0.449,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -929,15 +1410,15 @@
   "country": "Djibouti",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.67,
-  "lo90": 73.55,
-  "hi90": 83.79,
+  "yhat": 45.98,
+  "lo90": 40.86,
+  "hi90": 51.1,
   "last_observed_year": 2024,
   "last_observed_u5m": 48.9,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.604,
-  "p_gt_50": 0.808,
+  "p_gt_70": 0.233,
+  "p_gt_50": 0.451,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -964,17 +1445,54 @@
  {
   "iso3": "DZA",
   "country": "Algeria",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.2,
-  "lo90": 76.02,
-  "hi90": 84.38,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 21.65,
+  "lo90": 18.69,
+  "hi90": 24.6,
   "last_observed_year": 2024,
   "last_observed_u5m": 21.6,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.648,
-  "p_gt_50": 0.869,
+  "p_gt_70": 0.006,
+  "p_gt_50": 0.068,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -54.832
+   },
+   {
+    "feature": "year",
+    "shap": -0.96
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.83
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.636
+   },
+   {
+    "feature": "region_afr",
+    "shap": -0.236
+   }
+  ]
+ },
+ {
+  "iso3": "DZA",
+  "country": "Algeria",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 21.37,
+  "lo90": 17.19,
+  "hi90": 25.55,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 21.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.035,
+  "p_gt_50": 0.144,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1003,15 +1521,15 @@
   "country": "Algeria",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.88,
-  "lo90": 73.76,
-  "hi90": 84.0,
+  "yhat": 20.09,
+  "lo90": 14.97,
+  "hi90": 25.21,
   "last_observed_year": 2024,
   "last_observed_u5m": 21.6,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.606,
-  "p_gt_50": 0.81,
+  "p_gt_70": 0.065,
+  "p_gt_50": 0.182,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1038,17 +1556,54 @@
  {
   "iso3": "EGY",
   "country": "Egypt, Arab Rep.",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.81,
-  "lo90": 76.63,
-  "hi90": 84.99,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 21.44,
+  "lo90": 18.49,
+  "hi90": 24.4,
   "last_observed_year": 2024,
   "last_observed_u5m": 22.4,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.656,
-  "p_gt_50": 0.874,
+  "p_gt_70": 0.005,
+  "p_gt_50": 0.067,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -53.843
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.827
+   },
+   {
+    "feature": "year",
+    "shap": -0.806
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.639
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.208
+   }
+  ]
+ },
+ {
+  "iso3": "EGY",
+  "country": "Egypt, Arab Rep.",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 19.76,
+  "lo90": 15.58,
+  "hi90": 23.94,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 22.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.031,
+  "p_gt_50": 0.13,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1077,15 +1632,15 @@
   "country": "Egypt, Arab Rep.",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.7,
-  "lo90": 73.58,
-  "hi90": 83.82,
+  "yhat": 19.22,
+  "lo90": 14.1,
+  "hi90": 24.34,
   "last_observed_year": 2024,
   "last_observed_u5m": 22.4,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.604,
-  "p_gt_50": 0.808,
+  "p_gt_70": 0.062,
+  "p_gt_50": 0.175,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1112,17 +1667,54 @@
  {
   "iso3": "ERI",
   "country": "Eritrea",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 83.29,
-  "lo90": 79.11,
-  "hi90": 87.47,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 34.3,
+  "lo90": 31.35,
+  "hi90": 37.26,
   "last_observed_year": 2024,
   "last_observed_u5m": 34.3,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.689,
-  "p_gt_50": 0.892,
+  "p_gt_70": 0.03,
+  "p_gt_50": 0.205,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.971
+   },
+   {
+    "feature": "year",
+    "shap": -1.044
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.841
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.25
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.216
+   }
+  ]
+ },
+ {
+  "iso3": "ERI",
+  "country": "Eritrea",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 34.43,
+  "lo90": 30.25,
+  "hi90": 38.61,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 34.3,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.093,
+  "p_gt_50": 0.281,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1151,15 +1743,15 @@
   "country": "Eritrea",
   "year": 2027,
   "horizon": 3,
-  "yhat": 82.01,
-  "lo90": 76.89,
-  "hi90": 87.13,
+  "yhat": 34.81,
+  "lo90": 29.69,
+  "hi90": 39.93,
   "last_observed_year": 2024,
   "last_observed_u5m": 34.3,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.642,
-  "p_gt_50": 0.834,
+  "p_gt_70": 0.143,
+  "p_gt_50": 0.322,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1186,17 +1778,54 @@
  {
   "iso3": "ETH",
   "country": "Ethiopia",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.95,
-  "lo90": 76.76,
-  "hi90": 85.13,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 43.96,
+  "lo90": 41.0,
+  "hi90": 46.92,
   "last_observed_year": 2024,
   "last_observed_u5m": 44.5,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.658,
-  "p_gt_50": 0.875,
+  "p_gt_70": 0.085,
+  "p_gt_50": 0.375,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.116
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.9
+   },
+   {
+    "feature": "year",
+    "shap": -0.84
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": 0.231
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.201
+   }
+  ]
+ },
+ {
+  "iso3": "ETH",
+  "country": "Ethiopia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 42.68,
+  "lo90": 38.5,
+  "hi90": 46.86,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 44.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.155,
+  "p_gt_50": 0.393,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1225,15 +1854,15 @@
   "country": "Ethiopia",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.74,
-  "lo90": 73.62,
-  "hi90": 83.86,
+  "yhat": 41.74,
+  "lo90": 36.62,
+  "hi90": 46.86,
   "last_observed_year": 2024,
   "last_observed_u5m": 44.5,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.605,
-  "p_gt_50": 0.809,
+  "p_gt_70": 0.196,
+  "p_gt_50": 0.401,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1260,17 +1889,54 @@
  {
   "iso3": "GAB",
   "country": "Gabon",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.21,
-  "lo90": 77.03,
-  "hi90": 85.39,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 30.7,
+  "lo90": 27.74,
+  "hi90": 33.65,
   "last_observed_year": 2024,
   "last_observed_u5m": 32.6,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.662,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.019,
+  "p_gt_50": 0.155,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -43.85
+   },
+   {
+    "feature": "year",
+    "shap": -1.164
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.836
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.172
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.131
+   }
+  ]
+ },
+ {
+  "iso3": "GAB",
+  "country": "Gabon",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 29.07,
+  "lo90": 24.89,
+  "hi90": 33.25,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 32.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.064,
+  "p_gt_50": 0.218,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1299,15 +1965,15 @@
   "country": "Gabon",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 28.69,
+  "lo90": 23.57,
+  "hi90": 33.81,
   "last_observed_year": 2024,
   "last_observed_u5m": 32.6,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.105,
+  "p_gt_50": 0.259,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1334,17 +2000,54 @@
  {
   "iso3": "GHA",
   "country": "Ghana",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.22,
-  "lo90": 77.04,
-  "hi90": 85.4,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 34.52,
+  "lo90": 31.57,
+  "hi90": 37.48,
   "last_observed_year": 2024,
   "last_observed_u5m": 35.9,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.662,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.031,
+  "p_gt_50": 0.208,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -41.098
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.819
+   },
+   {
+    "feature": "year",
+    "shap": -0.77
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.244
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.197
+   }
+  ]
+ },
+ {
+  "iso3": "GHA",
+  "country": "Ghana",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 34.12,
+  "lo90": 29.94,
+  "hi90": 38.3,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 35.9,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.091,
+  "p_gt_50": 0.278,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1373,15 +2076,15 @@
   "country": "Ghana",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 34.81,
+  "lo90": 29.69,
+  "hi90": 39.93,
   "last_observed_year": 2024,
   "last_observed_u5m": 35.9,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.143,
+  "p_gt_50": 0.322,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1408,17 +2111,54 @@
  {
   "iso3": "GIN",
   "country": "Guinea",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.7,
-  "lo90": 75.52,
-  "hi90": 83.88,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 89.48,
+  "lo90": 86.52,
+  "hi90": 92.43,
   "last_observed_year": 2024,
   "last_observed_u5m": 92.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.641,
-  "p_gt_50": 0.865,
+  "p_gt_70": 0.847,
+  "p_gt_50": 0.981,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 15.688
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.949
+   },
+   {
+    "feature": "year",
+    "shap": -0.913
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.338
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.263
+   }
+  ]
+ },
+ {
+  "iso3": "GIN",
+  "country": "Guinea",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 88.35,
+  "lo90": 84.17,
+  "hi90": 92.54,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 92.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.752,
+  "p_gt_50": 0.923,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1447,15 +2187,15 @@
   "country": "Guinea",
   "year": 2027,
   "horizon": 3,
-  "yhat": 77.65,
-  "lo90": 72.53,
-  "hi90": 82.77,
+  "yhat": 88.91,
+  "lo90": 83.79,
+  "hi90": 94.03,
   "last_observed_year": 2024,
   "last_observed_u5m": 92.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.592,
-  "p_gt_50": 0.799,
+  "p_gt_70": 0.717,
+  "p_gt_50": 0.881,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1482,17 +2222,54 @@
  {
   "iso3": "GMB",
   "country": "Gambia, The",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.8,
-  "lo90": 76.62,
-  "hi90": 84.98,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 41.28,
+  "lo90": 38.33,
+  "hi90": 44.24,
   "last_observed_year": 2024,
   "last_observed_u5m": 42.4,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.656,
-  "p_gt_50": 0.874,
+  "p_gt_70": 0.066,
+  "p_gt_50": 0.323,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -34.767
+   },
+   {
+    "feature": "year",
+    "shap": -0.985
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.84
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.107
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.102
+   }
+  ]
+ },
+ {
+  "iso3": "GMB",
+  "country": "Gambia, The",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 40.07,
+  "lo90": 35.89,
+  "hi90": 44.25,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 42.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.133,
+  "p_gt_50": 0.356,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1521,15 +2298,15 @@
   "country": "Gambia, The",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.74,
-  "lo90": 73.62,
-  "hi90": 83.86,
+  "yhat": 39.0,
+  "lo90": 33.88,
+  "hi90": 44.12,
   "last_observed_year": 2024,
   "last_observed_u5m": 42.4,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.605,
-  "p_gt_50": 0.808,
+  "p_gt_70": 0.173,
+  "p_gt_50": 0.369,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1556,17 +2333,54 @@
  {
   "iso3": "GNB",
   "country": "Guinea-Bissau",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.58,
-  "lo90": 77.4,
-  "hi90": 85.76,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 65.09,
+  "lo90": 62.14,
+  "hi90": 68.05,
   "last_observed_year": 2024,
   "last_observed_u5m": 67.3,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.667,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.398,
+  "p_gt_50": 0.786,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -9.618
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.87
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.562
+   },
+   {
+    "feature": "year",
+    "shap": -0.438
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.243
+   }
+  ]
+ },
+ {
+  "iso3": "GNB",
+  "country": "Guinea-Bissau",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 64.28,
+  "lo90": 60.1,
+  "hi90": 68.46,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 67.3,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.416,
+  "p_gt_50": 0.702,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1595,15 +2409,15 @@
   "country": "Guinea-Bissau",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.76,
-  "lo90": 74.64,
-  "hi90": 84.88,
+  "yhat": 63.49,
+  "lo90": 58.37,
+  "hi90": 68.61,
   "last_observed_year": 2024,
   "last_observed_u5m": 67.3,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.616,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.422,
+  "p_gt_50": 0.659,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1630,17 +2444,54 @@
  {
   "iso3": "GNQ",
   "country": "Equatorial Guinea",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.17,
-  "lo90": 76.99,
-  "hi90": 85.35,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 65.35,
+  "lo90": 62.39,
+  "hi90": 68.31,
   "last_observed_year": 2024,
   "last_observed_u5m": 68.0,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.661,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.403,
+  "p_gt_50": 0.79,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -9.512
+   },
+   {
+    "feature": "year",
+    "shap": -1.141
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.877
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.163
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.128
+   }
+  ]
+ },
+ {
+  "iso3": "GNQ",
+  "country": "Equatorial Guinea",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 64.31,
+  "lo90": 60.13,
+  "hi90": 68.49,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 68.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.416,
+  "p_gt_50": 0.703,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1669,15 +2520,15 @@
   "country": "Equatorial Guinea",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.76,
-  "lo90": 74.64,
-  "hi90": 84.88,
+  "yhat": 63.44,
+  "lo90": 58.32,
+  "hi90": 68.56,
   "last_observed_year": 2024,
   "last_observed_u5m": 68.0,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.616,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.421,
+  "p_gt_50": 0.658,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1704,17 +2555,54 @@
  {
   "iso3": "KEN",
   "country": "Kenya",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.85,
-  "lo90": 77.67,
-  "hi90": 86.03,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 37.32,
+  "lo90": 34.36,
+  "hi90": 40.28,
   "last_observed_year": 2024,
   "last_observed_u5m": 38.8,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.67,
-  "p_gt_50": 0.882,
+  "p_gt_70": 0.043,
+  "p_gt_50": 0.253,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.88
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.836
+   },
+   {
+    "feature": "year",
+    "shap": -0.785
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.16
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.148
+   }
+  ]
+ },
+ {
+  "iso3": "KEN",
+  "country": "Kenya",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 36.02,
+  "lo90": 31.84,
+  "hi90": 40.2,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 38.8,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.103,
+  "p_gt_50": 0.302,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1743,15 +2631,15 @@
   "country": "Kenya",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 35.07,
+  "lo90": 29.95,
+  "hi90": 40.19,
   "last_observed_year": 2024,
   "last_observed_u5m": 38.8,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.144,
+  "p_gt_50": 0.325,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1778,17 +2666,54 @@
  {
   "iso3": "LBR",
   "country": "Liberia",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 78.98,
-  "lo90": 74.79,
-  "hi90": 83.16,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 82.54,
+  "lo90": 79.58,
+  "hi90": 85.5,
   "last_observed_year": 2024,
   "last_observed_u5m": 86.4,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.631,
-  "p_gt_50": 0.859,
+  "p_gt_70": 0.745,
+  "p_gt_50": 0.956,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 7.758
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.756
+   },
+   {
+    "feature": "year",
+    "shap": -0.626
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.469
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.384
+   }
+  ]
+ },
+ {
+  "iso3": "LBR",
+  "country": "Liberia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.14,
+  "lo90": 76.96,
+  "hi90": 85.32,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 86.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.661,
+  "p_gt_50": 0.876,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1817,15 +2742,15 @@
   "country": "Liberia",
   "year": 2027,
   "horizon": 3,
-  "yhat": 77.41,
-  "lo90": 72.29,
-  "hi90": 82.53,
+  "yhat": 79.76,
+  "lo90": 74.64,
+  "hi90": 84.88,
   "last_observed_year": 2024,
   "last_observed_u5m": 86.4,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.589,
-  "p_gt_50": 0.797,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1852,17 +2777,54 @@
  {
   "iso3": "LBY",
   "country": "Libya",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.3,
-  "lo90": 75.12,
-  "hi90": 83.48,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 16.76,
+  "lo90": 13.8,
+  "hi90": 19.71,
   "last_observed_year": 2024,
   "last_observed_u5m": 9.8,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.635,
-  "p_gt_50": 0.862,
+  "p_gt_70": 0.003,
+  "p_gt_50": 0.04,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -45.752
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.606
+   },
+   {
+    "feature": "year",
+    "shap": -0.867
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.811
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.493
+   }
+  ]
+ },
+ {
+  "iso3": "LBY",
+  "country": "Libya",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 15.68,
+  "lo90": 11.5,
+  "hi90": 19.86,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 9.8,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.022,
+  "p_gt_50": 0.101,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1891,15 +2853,15 @@
   "country": "Libya",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.05,
-  "lo90": 72.93,
-  "hi90": 83.17,
+  "yhat": 15.98,
+  "lo90": 10.86,
+  "hi90": 21.1,
   "last_observed_year": 2024,
   "last_observed_u5m": 9.8,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.597,
-  "p_gt_50": 0.803,
+  "p_gt_70": 0.051,
+  "p_gt_50": 0.151,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1926,17 +2888,54 @@
  {
   "iso3": "LSO",
   "country": "Lesotho",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.6,
-  "lo90": 77.42,
-  "hi90": 85.78,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 58.18,
+  "lo90": 55.23,
+  "hi90": 61.14,
   "last_observed_year": 2024,
   "last_observed_u5m": 60.0,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.667,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.267,
+  "p_gt_50": 0.666,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -17.71
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.789
+   },
+   {
+    "feature": "year",
+    "shap": -0.553
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.515
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.196
+   }
+  ]
+ },
+ {
+  "iso3": "LSO",
+  "country": "Lesotho",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 57.51,
+  "lo90": 53.33,
+  "hi90": 61.69,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 60.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.321,
+  "p_gt_50": 0.61,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -1965,15 +2964,15 @@
   "country": "Lesotho",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.78,
-  "lo90": 74.66,
-  "hi90": 84.9,
+  "yhat": 56.16,
+  "lo90": 51.04,
+  "hi90": 61.28,
   "last_observed_year": 2024,
   "last_observed_u5m": 60.0,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.337,
+  "p_gt_50": 0.574,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2000,17 +2999,54 @@
  {
   "iso3": "MAR",
   "country": "Morocco",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.29,
-  "lo90": 75.11,
-  "hi90": 83.47,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 15.69,
+  "lo90": 12.73,
+  "hi90": 18.64,
   "last_observed_year": 2024,
   "last_observed_u5m": 15.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.635,
-  "p_gt_50": 0.862,
+  "p_gt_70": 0.002,
+  "p_gt_50": 0.036,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.493
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.575
+   },
+   {
+    "feature": "year",
+    "shap": -0.866
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.255
+   }
+  ]
+ },
+ {
+  "iso3": "MAR",
+  "country": "Morocco",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 15.69,
+  "lo90": 11.51,
+  "hi90": 19.87,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 15.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.022,
+  "p_gt_50": 0.101,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2039,15 +3075,15 @@
   "country": "Morocco",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.05,
-  "lo90": 72.93,
-  "hi90": 83.17,
+  "yhat": 15.97,
+  "lo90": 10.85,
+  "hi90": 21.09,
   "last_observed_year": 2024,
   "last_observed_u5m": 15.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.597,
-  "p_gt_50": 0.803,
+  "p_gt_70": 0.05,
+  "p_gt_50": 0.151,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2074,17 +3110,54 @@
  {
   "iso3": "MDG",
   "country": "Madagascar",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.98,
-  "lo90": 77.8,
-  "hi90": 86.16,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 61.25,
+  "lo90": 58.3,
+  "hi90": 64.21,
   "last_observed_year": 2024,
   "last_observed_u5m": 62.4,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.672,
-  "p_gt_50": 0.883,
+  "p_gt_70": 0.323,
+  "p_gt_50": 0.723,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -15.772
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "year",
+    "shap": -0.763
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.15
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": 0.1
+   }
+  ]
+ },
+ {
+  "iso3": "MDG",
+  "country": "Madagascar",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 59.13,
+  "lo90": 54.94,
+  "hi90": 63.31,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 62.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.343,
+  "p_gt_50": 0.633,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2113,15 +3186,15 @@
   "country": "Madagascar",
   "year": 2027,
   "horizon": 3,
-  "yhat": 80.33,
-  "lo90": 75.21,
-  "hi90": 85.45,
+  "yhat": 57.65,
+  "lo90": 52.53,
+  "hi90": 62.77,
   "last_observed_year": 2024,
   "last_observed_u5m": 62.4,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.623,
-  "p_gt_50": 0.821,
+  "p_gt_70": 0.354,
+  "p_gt_50": 0.592,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2148,17 +3221,54 @@
  {
   "iso3": "MLI",
   "country": "Mali",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.56,
-  "lo90": 77.38,
-  "hi90": 85.74,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 71.23,
+  "lo90": 68.27,
+  "hi90": 74.19,
   "last_observed_year": 2024,
   "last_observed_u5m": 73.0,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.666,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.526,
+  "p_gt_50": 0.868,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -3.831
+   },
+   {
+    "feature": "year",
+    "shap": -0.951
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.92
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.374
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.128
+   }
+  ]
+ },
+ {
+  "iso3": "MLI",
+  "country": "Mali",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 68.39,
+  "lo90": 64.21,
+  "hi90": 72.57,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 73.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.476,
+  "p_gt_50": 0.753,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2187,15 +3297,15 @@
   "country": "Mali",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 67.3,
+  "lo90": 62.18,
+  "hi90": 72.42,
   "last_observed_year": 2024,
   "last_observed_u5m": 73.0,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.467,
+  "p_gt_50": 0.7,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2222,17 +3332,54 @@
  {
   "iso3": "MOZ",
   "country": "Mozambique",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.65,
-  "lo90": 77.47,
-  "hi90": 85.83,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 57.41,
+  "lo90": 54.46,
+  "hi90": 60.37,
   "last_observed_year": 2024,
   "last_observed_u5m": 59.4,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.668,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.254,
+  "p_gt_50": 0.652,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -17.05
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.848
+   },
+   {
+    "feature": "year",
+    "shap": -0.665
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.648
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.244
+   }
+  ]
+ },
+ {
+  "iso3": "MOZ",
+  "country": "Mozambique",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 56.11,
+  "lo90": 51.92,
+  "hi90": 60.29,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 59.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.303,
+  "p_gt_50": 0.59,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2261,15 +3408,15 @@
   "country": "Mozambique",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.78,
-  "lo90": 74.66,
-  "hi90": 84.9,
+  "yhat": 54.49,
+  "lo90": 49.37,
+  "hi90": 59.61,
   "last_observed_year": 2024,
   "last_observed_u5m": 59.4,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.319,
+  "p_gt_50": 0.554,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2296,17 +3443,54 @@
  {
   "iso3": "MRT",
   "country": "Mauritania",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.18,
-  "lo90": 77.0,
-  "hi90": 85.36,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 35.69,
+  "lo90": 32.73,
+  "hi90": 38.64,
   "last_observed_year": 2024,
   "last_observed_u5m": 36.9,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.661,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.036,
+  "p_gt_50": 0.226,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.071
+   },
+   {
+    "feature": "year",
+    "shap": -0.855
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.834
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.261
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.172
+   }
+  ]
+ },
+ {
+  "iso3": "MRT",
+  "country": "Mauritania",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 34.56,
+  "lo90": 30.38,
+  "hi90": 38.74,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 36.9,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.094,
+  "p_gt_50": 0.283,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2335,15 +3519,15 @@
   "country": "Mauritania",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 34.81,
+  "lo90": 29.69,
+  "hi90": 39.93,
   "last_observed_year": 2024,
   "last_observed_u5m": 36.9,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.143,
+  "p_gt_50": 0.322,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2370,17 +3554,54 @@
  {
   "iso3": "MUS",
   "country": "Mauritius",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.26,
-  "lo90": 76.08,
-  "hi90": 84.45,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 15.39,
+  "lo90": 12.44,
+  "hi90": 18.35,
   "last_observed_year": 2024,
   "last_observed_u5m": 15.4,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.649,
-  "p_gt_50": 0.87,
+  "p_gt_70": 0.002,
+  "p_gt_50": 0.034,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.951
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.603
+   },
+   {
+    "feature": "year",
+    "shap": -0.868
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.831
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.203
+   }
+  ]
+ },
+ {
+  "iso3": "MUS",
+  "country": "Mauritius",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 15.41,
+  "lo90": 11.23,
+  "hi90": 19.59,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 15.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.021,
+  "p_gt_50": 0.099,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2409,15 +3630,15 @@
   "country": "Mauritius",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.92,
-  "lo90": 73.8,
-  "hi90": 84.04,
+  "yhat": 15.65,
+  "lo90": 10.53,
+  "hi90": 20.77,
   "last_observed_year": 2024,
   "last_observed_u5m": 15.4,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.607,
-  "p_gt_50": 0.81,
+  "p_gt_70": 0.05,
+  "p_gt_50": 0.149,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2444,17 +3665,54 @@
  {
   "iso3": "MWI",
   "country": "Malawi",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.94,
-  "lo90": 76.76,
-  "hi90": 85.12,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 47.76,
+  "lo90": 44.8,
+  "hi90": 50.71,
   "last_observed_year": 2024,
   "last_observed_u5m": 48.8,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.658,
-  "p_gt_50": 0.875,
+  "p_gt_70": 0.121,
+  "p_gt_50": 0.453,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -28.155
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.817
+   },
+   {
+    "feature": "year",
+    "shap": -0.653
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.261
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.192
+   }
+  ]
+ },
+ {
+  "iso3": "MWI",
+  "country": "Malawi",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 46.51,
+  "lo90": 42.33,
+  "hi90": 50.69,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.8,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.191,
+  "p_gt_50": 0.448,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2483,15 +3741,15 @@
   "country": "Malawi",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.71,
-  "lo90": 73.59,
-  "hi90": 83.83,
+  "yhat": 45.99,
+  "lo90": 40.87,
+  "hi90": 51.11,
   "last_observed_year": 2024,
   "last_observed_u5m": 48.8,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.604,
-  "p_gt_50": 0.808,
+  "p_gt_70": 0.233,
+  "p_gt_50": 0.452,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2518,17 +3776,54 @@
  {
   "iso3": "NAM",
   "country": "Namibia",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.84,
-  "lo90": 77.66,
-  "hi90": 86.02,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 38.14,
+  "lo90": 35.18,
+  "hi90": 41.09,
   "last_observed_year": 2024,
   "last_observed_u5m": 39.5,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.67,
-  "p_gt_50": 0.882,
+  "p_gt_70": 0.047,
+  "p_gt_50": 0.266,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -37.11
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.795
+   },
+   {
+    "feature": "year",
+    "shap": -0.697
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.599
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.22
+   }
+  ]
+ },
+ {
+  "iso3": "NAM",
+  "country": "Namibia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 36.93,
+  "lo90": 32.75,
+  "hi90": 41.11,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.109,
+  "p_gt_50": 0.314,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2557,15 +3852,15 @@
   "country": "Namibia",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 36.23,
+  "lo90": 31.11,
+  "hi90": 41.35,
   "last_observed_year": 2024,
   "last_observed_u5m": 39.5,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.153,
+  "p_gt_50": 0.338,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2592,17 +3887,54 @@
  {
   "iso3": "NER",
   "country": "Niger",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.01,
-  "lo90": 74.83,
-  "hi90": 83.19,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 104.82,
+  "lo90": 101.86,
+  "hi90": 107.78,
   "last_observed_year": 2024,
   "last_observed_u5m": 110.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.631,
-  "p_gt_50": 0.86,
+  "p_gt_70": 0.966,
+  "p_gt_50": 0.998,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 34.542
+   },
+   {
+    "feature": "year",
+    "shap": -0.908
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.859
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.557
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.309
+   }
+  ]
+ },
+ {
+  "iso3": "NER",
+  "country": "Niger",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 101.99,
+  "lo90": 97.81,
+  "hi90": 106.17,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 110.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.883,
+  "p_gt_50": 0.973,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2631,15 +3963,15 @@
   "country": "Niger",
   "year": 2027,
   "horizon": 3,
-  "yhat": 76.66,
-  "lo90": 71.54,
-  "hi90": 81.78,
+  "yhat": 100.55,
+  "lo90": 95.43,
+  "hi90": 105.67,
   "last_observed_year": 2024,
   "last_observed_u5m": 110.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.58,
-  "p_gt_50": 0.791,
+  "p_gt_70": 0.823,
+  "p_gt_50": 0.938,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2666,17 +3998,54 @@
  {
   "iso3": "NGA",
   "country": "Nigeria",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 78.67,
-  "lo90": 74.49,
-  "hi90": 82.85,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 114.55,
+  "lo90": 111.59,
+  "hi90": 117.5,
   "last_observed_year": 2024,
   "last_observed_u5m": 115.6,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.626,
-  "p_gt_50": 0.857,
+  "p_gt_70": 0.99,
+  "p_gt_50": 1.0,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 38.675
+   },
+   {
+    "feature": "year",
+    "shap": -2.427
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.844
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.562
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.219
+   }
+  ]
+ },
+ {
+  "iso3": "NGA",
+  "country": "Nigeria",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 113.71,
+  "lo90": 109.53,
+  "hi90": 117.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 115.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.948,
+  "p_gt_50": 0.991,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2705,15 +4074,15 @@
   "country": "Nigeria",
   "year": 2027,
   "horizon": 3,
-  "yhat": 76.65,
-  "lo90": 71.53,
-  "hi90": 81.77,
+  "yhat": 113.15,
+  "lo90": 108.03,
+  "hi90": 118.27,
   "last_observed_year": 2024,
   "last_observed_u5m": 115.6,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.58,
-  "p_gt_50": 0.791,
+  "p_gt_70": 0.905,
+  "p_gt_50": 0.972,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2740,17 +4109,54 @@
  {
   "iso3": "RWA",
   "country": "Rwanda",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.53,
-  "lo90": 77.35,
-  "hi90": 85.71,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 36.1,
+  "lo90": 33.15,
+  "hi90": 39.06,
   "last_observed_year": 2024,
   "last_observed_u5m": 37.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.666,
-  "p_gt_50": 0.879,
+  "p_gt_70": 0.037,
+  "p_gt_50": 0.233,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -39.724
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.824
+   },
+   {
+    "feature": "year",
+    "shap": -0.714
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.209
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.184
+   }
+  ]
+ },
+ {
+  "iso3": "RWA",
+  "country": "Rwanda",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 34.79,
+  "lo90": 30.61,
+  "hi90": 38.97,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 37.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.095,
+  "p_gt_50": 0.286,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2779,15 +4185,15 @@
   "country": "Rwanda",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 34.71,
+  "lo90": 29.59,
+  "hi90": 39.83,
   "last_observed_year": 2024,
   "last_observed_u5m": 37.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.142,
+  "p_gt_50": 0.321,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2814,17 +4220,54 @@
  {
   "iso3": "SDN",
   "country": "Sudan",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.6,
-  "lo90": 77.42,
-  "hi90": 85.78,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 61.12,
+  "lo90": 58.16,
+  "hi90": 64.08,
   "last_observed_year": 2024,
   "last_observed_u5m": 61.6,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.667,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.32,
+  "p_gt_50": 0.721,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -16.224
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.741
+   },
+   {
+    "feature": "year",
+    "shap": -0.717
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.163
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.118
+   }
+  ]
+ },
+ {
+  "iso3": "SDN",
+  "country": "Sudan",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 59.21,
+  "lo90": 55.03,
+  "hi90": 63.39,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 61.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.344,
+  "p_gt_50": 0.634,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2853,15 +4296,15 @@
   "country": "Sudan",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.78,
-  "lo90": 74.66,
-  "hi90": 84.9,
+  "yhat": 57.65,
+  "lo90": 52.53,
+  "hi90": 62.77,
   "last_observed_year": 2024,
   "last_observed_u5m": 61.6,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.354,
+  "p_gt_50": 0.592,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2888,17 +4331,54 @@
  {
   "iso3": "SEN",
   "country": "Senegal",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.29,
-  "lo90": 77.11,
-  "hi90": 85.47,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 35.69,
+  "lo90": 32.74,
+  "hi90": 38.65,
   "last_observed_year": 2024,
   "last_observed_u5m": 36.5,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.663,
-  "p_gt_50": 0.878,
+  "p_gt_70": 0.036,
+  "p_gt_50": 0.226,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.097
+   },
+   {
+    "feature": "year",
+    "shap": -0.861
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.824
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.252
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.166
+   }
+  ]
+ },
+ {
+  "iso3": "SEN",
+  "country": "Senegal",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 34.55,
+  "lo90": 30.37,
+  "hi90": 38.73,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 36.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.094,
+  "p_gt_50": 0.283,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2927,15 +4407,15 @@
   "country": "Senegal",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 34.81,
+  "lo90": 29.69,
+  "hi90": 39.93,
   "last_observed_year": 2024,
   "last_observed_u5m": 36.5,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.143,
+  "p_gt_50": 0.322,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -2962,17 +4442,54 @@
  {
   "iso3": "SLE",
   "country": "Sierra Leone",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.34,
-  "lo90": 75.16,
-  "hi90": 83.53,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 86.41,
+  "lo90": 83.45,
+  "hi90": 89.37,
   "last_observed_year": 2024,
   "last_observed_u5m": 90.5,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.636,
-  "p_gt_50": 0.862,
+  "p_gt_70": 0.806,
+  "p_gt_50": 0.972,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 15.467
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.937
+   },
+   {
+    "feature": "year",
+    "shap": -0.587
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.512
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.454
+   }
+  ]
+ },
+ {
+  "iso3": "SLE",
+  "country": "Sierra Leone",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 83.33,
+  "lo90": 79.15,
+  "hi90": 87.51,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 90.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.69,
+  "p_gt_50": 0.892,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3001,15 +4518,15 @@
   "country": "Sierra Leone",
   "year": 2027,
   "horizon": 3,
-  "yhat": 77.6,
-  "lo90": 72.48,
-  "hi90": 82.72,
+  "yhat": 81.87,
+  "lo90": 76.75,
+  "hi90": 86.99,
   "last_observed_year": 2024,
   "last_observed_u5m": 90.5,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.591,
-  "p_gt_50": 0.799,
+  "p_gt_70": 0.641,
+  "p_gt_50": 0.833,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3036,17 +4553,54 @@
  {
   "iso3": "SOM",
   "country": "Somalia, Fed. Rep.",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 78.39,
-  "lo90": 74.21,
-  "hi90": 82.57,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 98.4,
+  "lo90": 95.44,
+  "hi90": 101.36,
   "last_observed_year": 2024,
   "last_observed_u5m": 101.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.622,
-  "p_gt_50": 0.854,
+  "p_gt_70": 0.932,
+  "p_gt_50": 0.995,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 23.004
+   },
+   {
+    "feature": "year",
+    "shap": -1.115
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.489
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.411
+   }
+  ]
+ },
+ {
+  "iso3": "SOM",
+  "country": "Somalia, Fed. Rep.",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 95.32,
+  "lo90": 91.14,
+  "hi90": 99.5,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 101.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.827,
+  "p_gt_50": 0.954,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3075,15 +4629,15 @@
   "country": "Somalia, Fed. Rep.",
   "year": 2027,
   "horizon": 3,
-  "yhat": 76.73,
-  "lo90": 71.61,
-  "hi90": 81.85,
+  "yhat": 94.05,
+  "lo90": 88.93,
+  "hi90": 99.17,
   "last_observed_year": 2024,
   "last_observed_u5m": 101.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.581,
-  "p_gt_50": 0.791,
+  "p_gt_70": 0.767,
+  "p_gt_50": 0.909,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3110,17 +4664,54 @@
  {
   "iso3": "SSD",
   "country": "South Sudan",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.86,
-  "lo90": 76.68,
-  "hi90": 85.05,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 96.46,
+  "lo90": 93.5,
+  "hi90": 99.41,
   "last_observed_year": 2024,
   "last_observed_u5m": 96.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.657,
-  "p_gt_50": 0.874,
+  "p_gt_70": 0.918,
+  "p_gt_50": 0.993,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 18.386
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.513
+   },
+   {
+    "feature": "year",
+    "shap": -0.432
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": 0.325
+   }
+  ]
+ },
+ {
+  "iso3": "SSD",
+  "country": "South Sudan",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 95.45,
+  "lo90": 91.27,
+  "hi90": 99.63,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 96.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.828,
+  "p_gt_50": 0.954,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3149,15 +4740,15 @@
   "country": "South Sudan",
   "year": 2027,
   "horizon": 3,
-  "yhat": 77.97,
-  "lo90": 72.85,
-  "hi90": 83.09,
+  "yhat": 94.2,
+  "lo90": 89.08,
+  "hi90": 99.32,
   "last_observed_year": 2024,
   "last_observed_u5m": 96.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.596,
-  "p_gt_50": 0.802,
+  "p_gt_70": 0.769,
+  "p_gt_50": 0.91,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3184,17 +4775,54 @@
  {
   "iso3": "STP",
   "country": "Sao Tome and Principe",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.6,
-  "lo90": 75.41,
-  "hi90": 83.78,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 15.23,
+  "lo90": 12.28,
+  "hi90": 18.19,
   "last_observed_year": 2024,
   "last_observed_u5m": 13.6,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.639,
-  "p_gt_50": 0.864,
+  "p_gt_70": 0.002,
+  "p_gt_50": 0.034,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.343
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.589
+   },
+   {
+    "feature": "year",
+    "shap": -1.071
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.837
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.141
+   }
+  ]
+ },
+ {
+  "iso3": "STP",
+  "country": "Sao Tome and Principe",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 15.39,
+  "lo90": 11.21,
+  "hi90": 19.57,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 13.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.021,
+  "p_gt_50": 0.099,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3223,15 +4851,15 @@
   "country": "Sao Tome and Principe",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.16,
-  "lo90": 73.04,
-  "hi90": 83.28,
+  "yhat": 15.65,
+  "lo90": 10.53,
+  "hi90": 20.77,
   "last_observed_year": 2024,
   "last_observed_u5m": 13.6,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.598,
-  "p_gt_50": 0.804,
+  "p_gt_70": 0.05,
+  "p_gt_50": 0.149,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3258,17 +4886,54 @@
  {
   "iso3": "SWZ",
   "country": "Eswatini",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.75,
-  "lo90": 77.57,
-  "hi90": 85.93,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 43.95,
+  "lo90": 40.99,
+  "hi90": 46.9,
   "last_observed_year": 2024,
   "last_observed_u5m": 45.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.669,
-  "p_gt_50": 0.881,
+  "p_gt_70": 0.085,
+  "p_gt_50": 0.375,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -31.928
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.805
+   },
+   {
+    "feature": "year",
+    "shap": -0.711
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.606
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.209
+   }
+  ]
+ },
+ {
+  "iso3": "SWZ",
+  "country": "Eswatini",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 42.79,
+  "lo90": 38.61,
+  "hi90": 46.97,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 45.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.156,
+  "p_gt_50": 0.394,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3297,15 +4962,15 @@
   "country": "Eswatini",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.8,
-  "lo90": 74.68,
-  "hi90": 84.92,
+  "yhat": 41.74,
+  "lo90": 36.62,
+  "hi90": 46.86,
   "last_observed_year": 2024,
   "last_observed_u5m": 45.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.196,
+  "p_gt_50": 0.401,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3332,17 +4997,54 @@
  {
   "iso3": "SYC",
   "country": "Seychelles",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 80.26,
-  "lo90": 76.08,
-  "hi90": 84.44,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 15.24,
+  "lo90": 12.28,
+  "hi90": 18.2,
   "last_observed_year": 2024,
   "last_observed_u5m": 14.0,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.649,
-  "p_gt_50": 0.87,
+  "p_gt_70": 0.002,
+  "p_gt_50": 0.034,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.069
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.584
+   },
+   {
+    "feature": "year",
+    "shap": -0.879
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.83
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.222
+   }
+  ]
+ },
+ {
+  "iso3": "SYC",
+  "country": "Seychelles",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 15.41,
+  "lo90": 11.23,
+  "hi90": 19.59,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 14.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.021,
+  "p_gt_50": 0.099,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3371,15 +5073,15 @@
   "country": "Seychelles",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.92,
-  "lo90": 73.8,
-  "hi90": 84.04,
+  "yhat": 15.65,
+  "lo90": 10.53,
+  "hi90": 20.77,
   "last_observed_year": 2024,
   "last_observed_u5m": 14.0,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.607,
-  "p_gt_50": 0.81,
+  "p_gt_70": 0.05,
+  "p_gt_50": 0.149,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3406,17 +5108,54 @@
  {
   "iso3": "TCD",
   "country": "Chad",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 78.89,
-  "lo90": 74.71,
-  "hi90": 83.07,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 95.29,
+  "lo90": 92.34,
+  "hi90": 98.25,
   "last_observed_year": 2024,
   "last_observed_u5m": 97.3,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.63,
-  "p_gt_50": 0.859,
+  "p_gt_70": 0.908,
+  "p_gt_50": 0.991,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 22.306
+   },
+   {
+    "feature": "year",
+    "shap": -0.987
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.918
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.368
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.263
+   }
+  ]
+ },
+ {
+  "iso3": "TCD",
+  "country": "Chad",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 93.27,
+  "lo90": 89.09,
+  "hi90": 97.45,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 97.3,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.807,
+  "p_gt_50": 0.946,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3445,15 +5184,15 @@
   "country": "Chad",
   "year": 2027,
   "horizon": 3,
-  "yhat": 76.71,
-  "lo90": 71.59,
-  "hi90": 81.83,
+  "yhat": 90.52,
+  "lo90": 85.4,
+  "hi90": 95.64,
   "last_observed_year": 2024,
   "last_observed_u5m": 97.3,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.581,
-  "p_gt_50": 0.791,
+  "p_gt_70": 0.733,
+  "p_gt_50": 0.891,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3480,17 +5219,54 @@
  {
   "iso3": "TGO",
   "country": "Togo",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.63,
-  "lo90": 77.45,
-  "hi90": 85.81,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 54.26,
+  "lo90": 51.31,
+  "hi90": 57.22,
   "last_observed_year": 2024,
   "last_observed_u5m": 56.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.667,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.204,
+  "p_gt_50": 0.589,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -19.807
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "year",
+    "shap": -0.585
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.248
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.199
+   }
+  ]
+ },
+ {
+  "iso3": "TGO",
+  "country": "Togo",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 52.63,
+  "lo90": 48.45,
+  "hi90": 56.81,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 56.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.259,
+  "p_gt_50": 0.539,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3519,15 +5295,15 @@
   "country": "Togo",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.78,
-  "lo90": 74.66,
-  "hi90": 84.9,
+  "yhat": 51.17,
+  "lo90": 46.05,
+  "hi90": 56.29,
   "last_observed_year": 2024,
   "last_observed_u5m": 56.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.284,
+  "p_gt_50": 0.514,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3554,17 +5330,54 @@
  {
   "iso3": "TUN",
   "country": "Tunisia",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 79.27,
-  "lo90": 75.09,
-  "hi90": 83.45,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 15.24,
+  "lo90": 12.28,
+  "hi90": 18.2,
   "last_observed_year": 2024,
   "last_observed_u5m": 12.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.635,
-  "p_gt_50": 0.862,
+  "p_gt_70": 0.002,
+  "p_gt_50": 0.034,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.362
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.599
+   },
+   {
+    "feature": "year",
+    "shap": -0.86
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.48
+   }
+  ]
+ },
+ {
+  "iso3": "TUN",
+  "country": "Tunisia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 15.4,
+  "lo90": 11.22,
+  "hi90": 19.58,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 12.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.021,
+  "p_gt_50": 0.099,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3593,15 +5406,15 @@
   "country": "Tunisia",
   "year": 2027,
   "horizon": 3,
-  "yhat": 78.05,
-  "lo90": 72.93,
-  "hi90": 83.17,
+  "yhat": 15.65,
+  "lo90": 10.53,
+  "hi90": 20.77,
   "last_observed_year": 2024,
   "last_observed_u5m": 12.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.597,
-  "p_gt_50": 0.803,
+  "p_gt_70": 0.05,
+  "p_gt_50": 0.149,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3628,17 +5441,54 @@
  {
   "iso3": "TZA",
   "country": "Tanzania",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.64,
-  "lo90": 77.46,
-  "hi90": 85.83,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 35.99,
+  "lo90": 33.04,
+  "hi90": 38.95,
   "last_observed_year": 2024,
   "last_observed_u5m": 37.0,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.667,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.037,
+  "p_gt_50": 0.231,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.135
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.841
+   },
+   {
+    "feature": "year",
+    "shap": -0.774
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.127
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.12
+   }
+  ]
+ },
+ {
+  "iso3": "TZA",
+  "country": "Tanzania",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 34.59,
+  "lo90": 30.41,
+  "hi90": 38.77,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 37.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.094,
+  "p_gt_50": 0.283,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3667,15 +5517,15 @@
   "country": "Tanzania",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 34.81,
+  "lo90": 29.69,
+  "hi90": 39.93,
   "last_observed_year": 2024,
   "last_observed_u5m": 37.0,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.143,
+  "p_gt_50": 0.322,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3702,17 +5552,54 @@
  {
   "iso3": "UGA",
   "country": "Uganda",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.58,
-  "lo90": 77.4,
-  "hi90": 85.76,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 47.78,
+  "lo90": 44.82,
+  "hi90": 50.73,
   "last_observed_year": 2024,
   "last_observed_u5m": 48.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.667,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.121,
+  "p_gt_50": 0.453,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -29.227
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.85
+   },
+   {
+    "feature": "year",
+    "shap": -0.711
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.173
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.171
+   }
+  ]
+ },
+ {
+  "iso3": "UGA",
+  "country": "Uganda",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 46.7,
+  "lo90": 42.52,
+  "hi90": 50.88,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.193,
+  "p_gt_50": 0.451,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3741,15 +5628,15 @@
   "country": "Uganda",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 45.99,
+  "lo90": 40.87,
+  "hi90": 51.11,
   "last_observed_year": 2024,
   "last_observed_u5m": 48.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.233,
+  "p_gt_50": 0.452,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3776,17 +5663,54 @@
  {
   "iso3": "ZAF",
   "country": "South Africa",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.25,
-  "lo90": 77.07,
-  "hi90": 85.43,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 34.35,
+  "lo90": 31.39,
+  "hi90": 37.3,
   "last_observed_year": 2024,
   "last_observed_u5m": 35.1,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.662,
-  "p_gt_50": 0.877,
+  "p_gt_70": 0.03,
+  "p_gt_50": 0.205,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.467
+   },
+   {
+    "feature": "year",
+    "shap": -0.903
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.807
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.488
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.097
+   }
+  ]
+ },
+ {
+  "iso3": "ZAF",
+  "country": "South Africa",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 34.15,
+  "lo90": 29.97,
+  "hi90": 38.33,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 35.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.091,
+  "p_gt_50": 0.278,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3815,15 +5739,15 @@
   "country": "South Africa",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.79,
-  "lo90": 74.67,
-  "hi90": 84.91,
+  "yhat": 34.81,
+  "lo90": 29.69,
+  "hi90": 39.93,
   "last_observed_year": 2024,
   "last_observed_u5m": 35.1,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.143,
+  "p_gt_50": 0.322,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3850,17 +5774,54 @@
  {
   "iso3": "ZMB",
   "country": "Zambia",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.64,
-  "lo90": 77.46,
-  "hi90": 85.82,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 46.6,
+  "lo90": 43.65,
+  "hi90": 49.56,
   "last_observed_year": 2024,
   "last_observed_u5m": 48.4,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.667,
-  "p_gt_50": 0.88,
+  "p_gt_70": 0.109,
+  "p_gt_50": 0.429,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -29.399
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.816
+   },
+   {
+    "feature": "year",
+    "shap": -0.622
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.211
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.18
+   }
+  ]
+ },
+ {
+  "iso3": "ZMB",
+  "country": "Zambia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 45.52,
+  "lo90": 41.34,
+  "hi90": 49.7,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.181,
+  "p_gt_50": 0.434,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3889,15 +5850,15 @@
   "country": "Zambia",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 44.88,
+  "lo90": 39.76,
+  "hi90": 50.0,
   "last_observed_year": 2024,
   "last_observed_u5m": 48.4,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.223,
+  "p_gt_50": 0.438,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3924,17 +5885,54 @@
  {
   "iso3": "ZWE",
   "country": "Zimbabwe",
-  "year": 2026,
-  "horizon": 2,
-  "yhat": 81.77,
-  "lo90": 77.59,
-  "hi90": 85.95,
+  "year": 2025,
+  "horizon": 1,
+  "yhat": 65.0,
+  "lo90": 62.05,
+  "hi90": 67.96,
   "last_observed_year": 2024,
   "last_observed_u5m": 64.7,
   "drivers_default_missing": false,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.669,
-  "p_gt_50": 0.881,
+  "p_gt_70": 0.396,
+  "p_gt_50": 0.785,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -13.626
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.738
+   },
+   {
+    "feature": "year",
+    "shap": -0.528
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.174
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.137
+   }
+  ]
+ },
+ {
+  "iso3": "ZWE",
+  "country": "Zimbabwe",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 64.61,
+  "lo90": 60.43,
+  "hi90": 68.79,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.421,
+  "p_gt_50": 0.706,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
@@ -3963,15 +5961,15 @@
   "country": "Zimbabwe",
   "year": 2027,
   "horizon": 3,
-  "yhat": 79.77,
-  "lo90": 74.65,
-  "hi90": 84.89,
+  "yhat": 64.62,
+  "lo90": 59.5,
+  "hi90": 69.74,
   "last_observed_year": 2024,
   "last_observed_u5m": 64.7,
   "drivers_default_missing": true,
   "sparse_hwf_missing": true,
-  "p_gt_70": 0.617,
-  "p_gt_50": 0.817,
+  "p_gt_70": 0.435,
+  "p_gt_50": 0.671,
   "top_drivers_shap": [
    {
     "feature": "u5m_lag1",
