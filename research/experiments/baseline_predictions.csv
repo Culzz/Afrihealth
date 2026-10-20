@@ -1,0 +1,1297 @@
+iso3,country,year,horizon,model,yhat,y
+AGO,Angola,2013,1,naive_last,72.0,67.9
+AGO,Angola,2013,1,drift,62.583,67.9
+AGO,Angola,2014,1,naive_last,67.9,64.5
+AGO,Angola,2014,1,drift,58.892,64.5
+AGO,Angola,2015,1,naive_last,64.5,61.8
+AGO,Angola,2015,1,drift,55.893,61.8
+AGO,Angola,2016,1,naive_last,61.8,59.6
+AGO,Angola,2016,1,drift,53.587,59.6
+AGO,Angola,2017,1,naive_last,59.6,57.9
+AGO,Angola,2017,1,drift,51.763,57.9
+AGO,Angola,2018,1,naive_last,57.9,56.5
+AGO,Angola,2018,1,drift,50.424,56.5
+AGO,Angola,2019,1,naive_last,56.5,55.3
+AGO,Angola,2019,1,drift,49.361,55.3
+AGO,Angola,2020,1,naive_last,55.3,54.2
+AGO,Angola,2020,1,drift,48.474,54.2
+AGO,Angola,2021,1,naive_last,54.2,53.2
+AGO,Angola,2021,1,drift,47.66,53.2
+AGO,Angola,2022,1,naive_last,53.2,51.9
+AGO,Angola,2022,1,drift,46.924,51.9
+AGO,Angola,2023,1,naive_last,51.9,50.5
+AGO,Angola,2023,1,drift,45.85,50.5
+AGO,Angola,2024,1,naive_last,50.5,49.0
+AGO,Angola,2024,1,drift,44.652,49.0
+BDI,Burundi,2013,1,naive_last,79.6,74.9
+BDI,Burundi,2013,1,drift,73.533,74.9
+BDI,Burundi,2014,1,naive_last,74.9,70.6
+BDI,Burundi,2014,1,drift,68.938,70.6
+BDI,Burundi,2015,1,naive_last,70.6,66.9
+BDI,Burundi,2015,1,drift,64.757,66.9
+BDI,Burundi,2016,1,naive_last,66.9,63.7
+BDI,Burundi,2016,1,drift,61.2,63.7
+BDI,Burundi,2017,1,naive_last,63.7,60.9
+BDI,Burundi,2017,1,drift,58.156,60.9
+BDI,Burundi,2018,1,naive_last,60.9,58.5
+BDI,Burundi,2018,1,drift,55.518,58.5
+BDI,Burundi,2019,1,naive_last,58.5,56.2
+BDI,Burundi,2019,1,drift,53.283,56.2
+BDI,Burundi,2020,1,naive_last,56.2,54.3
+BDI,Burundi,2020,1,drift,51.137,54.3
+BDI,Burundi,2021,1,naive_last,54.3,52.3
+BDI,Burundi,2021,1,drift,49.395,52.3
+BDI,Burundi,2022,1,naive_last,52.3,50.3
+BDI,Burundi,2022,1,drift,47.533,50.3
+BDI,Burundi,2023,1,naive_last,50.3,48.7
+BDI,Burundi,2023,1,drift,45.659,48.7
+BDI,Burundi,2024,1,naive_last,48.7,47.1
+BDI,Burundi,2024,1,drift,44.191,47.1
+BEN,Benin,2013,1,naive_last,102.9,100.6
+BEN,Benin,2013,1,drift,100.225,100.6
+BEN,Benin,2014,1,naive_last,100.6,98.4
+BEN,Benin,2014,1,drift,97.954,98.4
+BEN,Benin,2015,1,naive_last,98.4,96.1
+BEN,Benin,2015,1,drift,95.786,96.1
+BEN,Benin,2016,1,naive_last,96.1,94.0
+BEN,Benin,2016,1,drift,93.507,94.0
+BEN,Benin,2017,1,naive_last,94.0,91.8
+BEN,Benin,2017,1,drift,91.438,91.8
+BEN,Benin,2018,1,naive_last,91.8,89.4
+BEN,Benin,2018,1,drift,89.259,89.4
+BEN,Benin,2019,1,naive_last,89.4,87.0
+BEN,Benin,2019,1,drift,86.867,87.0
+BEN,Benin,2020,1,naive_last,87.0,84.6
+BEN,Benin,2020,1,drift,84.474,84.6
+BEN,Benin,2021,1,naive_last,84.6,82.2
+BEN,Benin,2021,1,drift,82.08,82.2
+BEN,Benin,2022,1,naive_last,82.2,79.6
+BEN,Benin,2022,1,drift,79.686,79.6
+BEN,Benin,2023,1,naive_last,79.6,77.2
+BEN,Benin,2023,1,drift,77.082,77.2
+BEN,Benin,2024,1,naive_last,77.2,74.7
+BEN,Benin,2024,1,drift,74.687,74.7
+BFA,Burkina Faso,2013,1,naive_last,112.3,108.2
+BFA,Burkina Faso,2013,1,drift,106.992,108.2
+BFA,Burkina Faso,2014,1,naive_last,108.2,104.3
+BFA,Burkina Faso,2014,1,drift,102.985,104.3
+BFA,Burkina Faso,2015,1,naive_last,104.3,100.8
+BFA,Burkina Faso,2015,1,drift,99.179,100.8
+BFA,Burkina Faso,2016,1,naive_last,100.8,97.4
+BFA,Burkina Faso,2016,1,drift,95.787,97.4
+BFA,Burkina Faso,2017,1,naive_last,97.4,94.1
+BFA,Burkina Faso,2017,1,drift,92.488,94.1
+BFA,Burkina Faso,2018,1,naive_last,94.1,91.0
+BFA,Burkina Faso,2018,1,drift,89.282,91.0
+BFA,Burkina Faso,2019,1,naive_last,91.0,88.1
+BFA,Burkina Faso,2019,1,drift,86.278,88.1
+BFA,Burkina Faso,2020,1,naive_last,88.1,85.1
+BFA,Burkina Faso,2020,1,drift,83.474,85.1
+BFA,Burkina Faso,2021,1,naive_last,85.1,82.4
+BFA,Burkina Faso,2021,1,drift,80.555,82.4
+BFA,Burkina Faso,2022,1,naive_last,82.4,79.8
+BFA,Burkina Faso,2022,1,drift,77.943,79.8
+BFA,Burkina Faso,2023,1,naive_last,79.8,77.4
+BFA,Burkina Faso,2023,1,drift,75.427,77.4
+BFA,Burkina Faso,2024,1,naive_last,77.4,74.9
+BFA,Burkina Faso,2024,1,drift,73.113,74.9
+BWA,Botswana,2013,1,naive_last,53.9,50.3
+BWA,Botswana,2013,1,drift,51.742,50.3
+BWA,Botswana,2014,1,naive_last,50.3,49.0
+BWA,Botswana,2014,1,drift,48.031,49.0
+BWA,Botswana,2015,1,naive_last,49.0,46.7
+BWA,Botswana,2015,1,drift,46.8,46.7
+BWA,Botswana,2016,1,naive_last,46.7,45.1
+BWA,Botswana,2016,1,drift,44.493,45.1
+BWA,Botswana,2017,1,naive_last,45.1,42.1
+BWA,Botswana,2017,1,drift,42.931,42.1
+BWA,Botswana,2018,1,naive_last,42.1,41.2
+BWA,Botswana,2018,1,drift,39.882,41.2
+BWA,Botswana,2019,1,naive_last,41.2,40.0
+BWA,Botswana,2019,1,drift,39.056,40.0
+BWA,Botswana,2020,1,naive_last,40.0,38.9
+BWA,Botswana,2020,1,drift,37.905,38.9
+BWA,Botswana,2021,1,naive_last,38.9,37.1
+BWA,Botswana,2021,1,drift,36.855,37.1
+BWA,Botswana,2022,1,naive_last,37.1,35.7
+BWA,Botswana,2022,1,drift,35.067,35.7
+BWA,Botswana,2023,1,naive_last,35.7,34.6
+BWA,Botswana,2023,1,drift,33.695,34.6
+BWA,Botswana,2024,1,naive_last,34.6,33.3
+BWA,Botswana,2024,1,drift,32.635,33.3
+CAF,Central African Republic,2013,1,naive_last,121.9,134.2
+CAF,Central African Republic,2013,1,drift,118.267,134.2
+CAF,Central African Republic,2014,1,naive_last,134.2,186.8
+CAF,Central African Republic,2014,1,drift,131.792,186.8
+CAF,Central African Republic,2015,1,naive_last,186.8,113.7
+CAF,Central African Republic,2015,1,drift,188.321,113.7
+CAF,Central African Republic,2016,1,naive_last,113.7,126.8
+CAF,Central African Republic,2016,1,drift,110.247,126.8
+CAF,Central African Republic,2017,1,naive_last,126.8,155.2
+CAF,Central African Republic,2017,1,drift,124.381,155.2
+CAF,Central African Republic,2018,1,naive_last,155.2,120.2
+CAF,Central African Republic,2018,1,drift,154.594,120.2
+CAF,Central African Republic,2019,1,naive_last,120.2,254.7
+CAF,Central African Republic,2019,1,drift,117.683,254.7
+CAF,Central African Republic,2020,1,naive_last,254.7,124.2
+CAF,Central African Republic,2020,1,drift,259.395,124.2
+CAF,Central African Republic,2021,1,naive_last,124.2,178.7
+CAF,Central African Republic,2021,1,drift,122.135,178.7
+CAF,Central African Republic,2022,1,naive_last,178.7,424.6
+CAF,Central African Republic,2022,1,drift,179.329,424.6
+CAF,Central African Republic,2023,1,naive_last,424.6,92.6
+CAF,Central African Republic,2023,1,drift,436.377,92.6
+CAF,Central African Republic,2024,1,naive_last,92.6,89.7
+CAF,Central African Republic,2024,1,drift,89.43,89.7
+CIV,Cote d'Ivoire,2013,1,naive_last,95.3,92.0
+CIV,Cote d'Ivoire,2013,1,drift,91.542,92.0
+CIV,Cote d'Ivoire,2014,1,naive_last,92.0,88.6
+CIV,Cote d'Ivoire,2014,1,drift,88.277,88.6
+CIV,Cote d'Ivoire,2015,1,naive_last,88.6,85.5
+CIV,Cote d'Ivoire,2015,1,drift,84.9,85.5
+CIV,Cote d'Ivoire,2016,1,naive_last,85.5,83.0
+CIV,Cote d'Ivoire,2016,1,drift,81.84,83.0
+CIV,Cote d'Ivoire,2017,1,naive_last,83.0,80.5
+CIV,Cote d'Ivoire,2017,1,drift,79.412,80.5
+CIV,Cote d'Ivoire,2018,1,naive_last,80.5,77.9
+CIV,Cote d'Ivoire,2018,1,drift,76.976,77.9
+CIV,Cote d'Ivoire,2019,1,naive_last,77.9,75.3
+CIV,Cote d'Ivoire,2019,1,drift,74.428,75.3
+CIV,Cote d'Ivoire,2020,1,naive_last,75.3,73.0
+CIV,Cote d'Ivoire,2020,1,drift,71.874,73.0
+CIV,Cote d'Ivoire,2021,1,naive_last,73.0,70.8
+CIV,Cote d'Ivoire,2021,1,drift,69.63,70.8
+CIV,Cote d'Ivoire,2022,1,naive_last,70.8,68.7
+CIV,Cote d'Ivoire,2022,1,drift,67.486,68.7
+CIV,Cote d'Ivoire,2023,1,naive_last,68.7,66.5
+CIV,Cote d'Ivoire,2023,1,drift,65.441,66.5
+CIV,Cote d'Ivoire,2024,1,naive_last,66.5,64.5
+CIV,Cote d'Ivoire,2024,1,drift,63.287,64.5
+CMR,Cameroon,2013,1,naive_last,100.8,96.5
+CMR,Cameroon,2013,1,drift,97.208,96.5
+CMR,Cameroon,2014,1,naive_last,96.5,92.4
+CMR,Cameroon,2014,1,drift,92.854,92.4
+CMR,Cameroon,2015,1,naive_last,92.4,88.5
+CMR,Cameroon,2015,1,drift,88.721,88.5
+CMR,Cameroon,2016,1,naive_last,88.5,85.1
+CMR,Cameroon,2016,1,drift,84.807,85.1
+CMR,Cameroon,2017,1,naive_last,85.1,81.9
+CMR,Cameroon,2017,1,drift,81.425,81.9
+CMR,Cameroon,2018,1,naive_last,81.9,78.9
+CMR,Cameroon,2018,1,drift,78.253,78.9
+CMR,Cameroon,2019,1,naive_last,78.9,76.6
+CMR,Cameroon,2019,1,drift,75.289,76.6
+CMR,Cameroon,2020,1,naive_last,76.6,74.4
+CMR,Cameroon,2020,1,drift,73.058,74.4
+CMR,Cameroon,2021,1,naive_last,74.4,71.9
+CMR,Cameroon,2021,1,drift,70.925,71.9
+CMR,Cameroon,2022,1,naive_last,71.9,69.4
+CMR,Cameroon,2022,1,drift,68.471,69.4
+CMR,Cameroon,2023,1,naive_last,69.4,67.0
+CMR,Cameroon,2023,1,drift,66.014,67.0
+CMR,Cameroon,2024,1,naive_last,67.0,64.8
+CMR,Cameroon,2024,1,drift,63.657,64.8
+COD,"Congo, Dem. Rep.",2013,1,naive_last,95.9,94.1
+COD,"Congo, Dem. Rep.",2013,1,drift,88.508,94.1
+COD,"Congo, Dem. Rep.",2014,1,naive_last,94.1,92.7
+COD,"Congo, Dem. Rep.",2014,1,drift,87.138,92.7
+COD,"Congo, Dem. Rep.",2015,1,naive_last,92.7,91.9
+COD,"Congo, Dem. Rep.",2015,1,drift,86.136,91.9
+COD,"Congo, Dem. Rep.",2016,1,naive_last,91.9,91.5
+COD,"Congo, Dem. Rep.",2016,1,drift,85.72,91.5
+COD,"Congo, Dem. Rep.",2017,1,naive_last,91.5,91.5
+COD,"Congo, Dem. Rep.",2017,1,drift,85.681,91.5
+COD,"Congo, Dem. Rep.",2018,1,naive_last,91.5,91.7
+COD,"Congo, Dem. Rep.",2018,1,drift,86.024,91.7
+COD,"Congo, Dem. Rep.",2019,1,naive_last,91.7,92.2
+COD,"Congo, Dem. Rep.",2019,1,drift,86.539,92.2
+COD,"Congo, Dem. Rep.",2020,1,naive_last,92.2,92.7
+COD,"Congo, Dem. Rep.",2020,1,drift,87.337,92.7
+COD,"Congo, Dem. Rep.",2021,1,naive_last,92.7,92.9
+COD,"Congo, Dem. Rep.",2021,1,drift,88.105,92.9
+COD,"Congo, Dem. Rep.",2022,1,naive_last,92.9,92.5
+COD,"Congo, Dem. Rep.",2022,1,drift,88.533,92.5
+COD,"Congo, Dem. Rep.",2023,1,naive_last,92.5,91.3
+COD,"Congo, Dem. Rep.",2023,1,drift,88.314,91.3
+COD,"Congo, Dem. Rep.",2024,1,naive_last,91.3,89.7
+COD,"Congo, Dem. Rep.",2024,1,drift,87.243,89.7
+COG,"Congo, Rep.",2013,1,naive_last,57.9,56.2
+COG,"Congo, Rep.",2013,1,drift,53.35,56.2
+COG,"Congo, Rep.",2014,1,naive_last,56.2,54.5
+COG,"Congo, Rep.",2014,1,drift,51.869,54.5
+COG,"Congo, Rep.",2015,1,naive_last,54.5,52.7
+COG,"Congo, Rep.",2015,1,drift,50.357,52.7
+COG,"Congo, Rep.",2016,1,naive_last,52.7,51.0
+COG,"Congo, Rep.",2016,1,drift,48.713,51.0
+COG,"Congo, Rep.",2017,1,naive_last,51.0,49.3
+COG,"Congo, Rep.",2017,1,drift,47.156,49.3
+COG,"Congo, Rep.",2018,1,naive_last,49.3,47.6
+COG,"Congo, Rep.",2018,1,drift,45.582,47.6
+COG,"Congo, Rep.",2019,1,naive_last,47.6,52.2
+COG,"Congo, Rep.",2019,1,drift,43.994,52.2
+COG,"Congo, Rep.",2020,1,naive_last,52.2,44.5
+COG,"Congo, Rep.",2020,1,drift,49.026,44.5
+COG,"Congo, Rep.",2021,1,naive_last,44.5,43.0
+COG,"Congo, Rep.",2021,1,drift,41.1,43.0
+COG,"Congo, Rep.",2022,1,naive_last,43.0,41.5
+COG,"Congo, Rep.",2022,1,drift,39.69,41.5
+COG,"Congo, Rep.",2023,1,naive_last,41.5,40.3
+COG,"Congo, Rep.",2023,1,drift,38.273,40.3
+COG,"Congo, Rep.",2024,1,naive_last,40.3,39.1
+COG,"Congo, Rep.",2024,1,drift,37.161,39.1
+COM,Comoros,2013,1,naive_last,52.5,51.2
+COM,Comoros,2013,1,drift,50.217,51.2
+COM,Comoros,2014,1,naive_last,51.2,50.0
+COM,Comoros,2014,1,drift,48.992,50.0
+COM,Comoros,2015,1,naive_last,50.0,48.9
+COM,Comoros,2015,1,drift,47.864,48.9
+COM,Comoros,2016,1,naive_last,48.9,47.9
+COM,Comoros,2016,1,drift,46.833,47.9
+COM,Comoros,2017,1,naive_last,47.9,46.9
+COM,Comoros,2017,1,drift,45.9,46.9
+COM,Comoros,2018,1,naive_last,46.9,45.8
+COM,Comoros,2018,1,drift,44.959,45.8
+COM,Comoros,2019,1,naive_last,45.8,44.8
+COM,Comoros,2019,1,drift,43.906,44.8
+COM,Comoros,2020,1,naive_last,44.8,43.7
+COM,Comoros,2020,1,drift,42.953,43.7
+COM,Comoros,2021,1,naive_last,43.7,42.6
+COM,Comoros,2021,1,drift,41.89,42.6
+COM,Comoros,2022,1,naive_last,42.6,41.4
+COM,Comoros,2022,1,drift,40.824,41.4
+COM,Comoros,2023,1,naive_last,41.4,40.2
+COM,Comoros,2023,1,drift,39.65,40.2
+COM,Comoros,2024,1,naive_last,40.2,39.0
+COM,Comoros,2024,1,drift,38.474,39.0
+CPV,Cabo Verde,2013,1,naive_last,24.2,22.6
+CPV,Cabo Verde,2013,1,drift,23.217,22.6
+CPV,Cabo Verde,2014,1,naive_last,22.6,20.9
+CPV,Cabo Verde,2014,1,drift,21.569,20.9
+CPV,Cabo Verde,2015,1,naive_last,20.9,19.2
+CPV,Cabo Verde,2015,1,drift,19.821,19.2
+CPV,Cabo Verde,2016,1,naive_last,19.2,17.6
+CPV,Cabo Verde,2016,1,drift,18.08,17.6
+CPV,Cabo Verde,2017,1,naive_last,17.6,16.2
+CPV,Cabo Verde,2017,1,drift,16.45,16.2
+CPV,Cabo Verde,2018,1,naive_last,16.2,15.1
+CPV,Cabo Verde,2018,1,drift,15.035,15.1
+CPV,Cabo Verde,2019,1,naive_last,15.1,14.1
+CPV,Cabo Verde,2019,1,drift,13.939,14.1
+CPV,Cabo Verde,2020,1,naive_last,14.1,13.3
+CPV,Cabo Verde,2020,1,drift,12.947,13.3
+CPV,Cabo Verde,2021,1,naive_last,13.3,12.7
+CPV,Cabo Verde,2021,1,drift,12.165,12.7
+CPV,Cabo Verde,2022,1,naive_last,12.7,12.1
+CPV,Cabo Verde,2022,1,drift,11.59,12.1
+CPV,Cabo Verde,2023,1,naive_last,12.1,11.6
+CPV,Cabo Verde,2023,1,drift,11.014,11.6
+CPV,Cabo Verde,2024,1,naive_last,11.6,11.1
+CPV,Cabo Verde,2024,1,drift,10.539,11.1
+DJI,Djibouti,2013,1,naive_last,71.3,69.2
+DJI,Djibouti,2013,1,drift,69.033,69.2
+DJI,Djibouti,2014,1,naive_last,69.2,67.2
+DJI,Djibouti,2014,1,drift,66.946,67.2
+DJI,Djibouti,2015,1,naive_last,67.2,65.2
+DJI,Djibouti,2015,1,drift,64.964,65.2
+DJI,Djibouti,2016,1,naive_last,65.2,63.2
+DJI,Djibouti,2016,1,drift,62.98,63.2
+DJI,Djibouti,2017,1,naive_last,63.2,61.2
+DJI,Djibouti,2017,1,drift,60.994,61.2
+DJI,Djibouti,2018,1,naive_last,61.2,59.4
+DJI,Djibouti,2018,1,drift,59.006,59.4
+DJI,Djibouti,2019,1,naive_last,59.4,57.5
+DJI,Djibouti,2019,1,drift,57.228,57.5
+DJI,Djibouti,2020,1,naive_last,57.5,55.7
+DJI,Djibouti,2020,1,drift,55.342,55.7
+DJI,Djibouti,2021,1,naive_last,55.7,54.0
+DJI,Djibouti,2021,1,drift,53.56,54.0
+DJI,Djibouti,2022,1,naive_last,54.0,52.1
+DJI,Djibouti,2022,1,drift,51.881,52.1
+DJI,Djibouti,2023,1,naive_last,52.1,50.5
+DJI,Djibouti,2023,1,drift,49.991,50.5
+DJI,Djibouti,2024,1,naive_last,50.5,48.9
+DJI,Djibouti,2024,1,drift,48.413,48.9
+DZA,Algeria,2013,1,naive_last,26.6,25.9
+DZA,Algeria,2013,1,drift,25.342,25.9
+DZA,Algeria,2014,1,naive_last,25.9,25.4
+DZA,Algeria,2014,1,drift,24.685,25.4
+DZA,Algeria,2015,1,naive_last,25.4,24.9
+DZA,Algeria,2015,1,drift,24.236,24.9
+DZA,Algeria,2016,1,naive_last,24.9,24.5
+DZA,Algeria,2016,1,drift,23.78,24.5
+DZA,Algeria,2017,1,naive_last,24.5,24.0
+DZA,Algeria,2017,1,drift,23.425,24.0
+DZA,Algeria,2018,1,naive_last,24.0,23.7
+DZA,Algeria,2018,1,drift,22.959,23.7
+DZA,Algeria,2019,1,naive_last,23.7,23.3
+DZA,Algeria,2019,1,drift,22.7,23.3
+DZA,Algeria,2020,1,naive_last,23.3,22.9
+DZA,Algeria,2020,1,drift,22.332,22.9
+DZA,Algeria,2021,1,naive_last,22.9,22.6
+DZA,Algeria,2021,1,drift,21.96,22.6
+DZA,Algeria,2022,1,naive_last,22.6,22.3
+DZA,Algeria,2022,1,drift,21.69,22.3
+DZA,Algeria,2023,1,naive_last,22.3,22.0
+DZA,Algeria,2023,1,drift,21.418,22.0
+DZA,Algeria,2024,1,naive_last,22.0,21.6
+DZA,Algeria,2024,1,drift,21.143,21.6
+EGY,"Egypt, Arab Rep.",2013,1,naive_last,28.6,27.8
+EGY,"Egypt, Arab Rep.",2013,1,drift,27.042,27.8
+EGY,"Egypt, Arab Rep.",2014,1,naive_last,27.8,27.1
+EGY,"Egypt, Arab Rep.",2014,1,drift,26.3,27.1
+EGY,"Egypt, Arab Rep.",2015,1,naive_last,27.1,26.5
+EGY,"Egypt, Arab Rep.",2015,1,drift,25.657,26.5
+EGY,"Egypt, Arab Rep.",2016,1,naive_last,26.5,26.0
+EGY,"Egypt, Arab Rep.",2016,1,drift,25.113,26.0
+EGY,"Egypt, Arab Rep.",2017,1,naive_last,26.0,25.6
+EGY,"Egypt, Arab Rep.",2017,1,drift,24.669,25.6
+EGY,"Egypt, Arab Rep.",2018,1,naive_last,25.6,25.2
+EGY,"Egypt, Arab Rep.",2018,1,drift,24.324,25.2
+EGY,"Egypt, Arab Rep.",2019,1,naive_last,25.2,24.8
+EGY,"Egypt, Arab Rep.",2019,1,drift,23.972,24.8
+EGY,"Egypt, Arab Rep.",2020,1,naive_last,24.8,24.4
+EGY,"Egypt, Arab Rep.",2020,1,drift,23.616,24.4
+EGY,"Egypt, Arab Rep.",2021,1,naive_last,24.4,24.0
+EGY,"Egypt, Arab Rep.",2021,1,drift,23.255,24.0
+EGY,"Egypt, Arab Rep.",2022,1,naive_last,24.0,23.5
+EGY,"Egypt, Arab Rep.",2022,1,drift,22.89,23.5
+EGY,"Egypt, Arab Rep.",2023,1,naive_last,23.5,22.9
+EGY,"Egypt, Arab Rep.",2023,1,drift,22.418,22.9
+EGY,"Egypt, Arab Rep.",2024,1,naive_last,22.9,22.4
+EGY,"Egypt, Arab Rep.",2024,1,drift,21.839,22.4
+ERI,Eritrea,2013,1,naive_last,51.4,49.7
+ERI,Eritrea,2013,1,drift,48.575,49.7
+ERI,Eritrea,2014,1,naive_last,49.7,48.1
+ERI,Eritrea,2014,1,drift,46.962,48.1
+ERI,Eritrea,2015,1,naive_last,48.1,46.4
+ERI,Eritrea,2015,1,drift,45.443,46.4
+ERI,Eritrea,2016,1,naive_last,46.4,44.7
+ERI,Eritrea,2016,1,drift,43.807,44.7
+ERI,Eritrea,2017,1,naive_last,44.7,43.3
+ERI,Eritrea,2017,1,drift,42.163,43.3
+ERI,Eritrea,2018,1,naive_last,43.3,41.9
+ERI,Eritrea,2018,1,drift,40.829,41.9
+ERI,Eritrea,2019,1,naive_last,41.9,40.5
+ERI,Eritrea,2019,1,drift,39.489,40.5
+ERI,Eritrea,2020,1,naive_last,40.5,39.1
+ERI,Eritrea,2020,1,drift,38.142,39.1
+ERI,Eritrea,2021,1,naive_last,39.1,37.8
+ERI,Eritrea,2021,1,drift,36.79,37.8
+ERI,Eritrea,2022,1,naive_last,37.8,36.6
+ERI,Eritrea,2022,1,drift,35.538,36.6
+ERI,Eritrea,2023,1,naive_last,36.6,35.4
+ERI,Eritrea,2023,1,drift,34.386,35.4
+ERI,Eritrea,2024,1,naive_last,35.4,34.3
+ERI,Eritrea,2024,1,drift,33.23,34.3
+ETH,Ethiopia,2013,1,naive_last,74.8,71.2
+ETH,Ethiopia,2013,1,drift,69.358,71.2
+ETH,Ethiopia,2014,1,naive_last,71.2,67.7
+ETH,Ethiopia,2014,1,drift,65.9,67.7
+ETH,Ethiopia,2015,1,naive_last,67.7,64.4
+ETH,Ethiopia,2015,1,drift,62.529,64.4
+ETH,Ethiopia,2016,1,naive_last,64.4,61.3
+ETH,Ethiopia,2016,1,drift,59.353,61.3
+ETH,Ethiopia,2017,1,naive_last,61.3,58.4
+ETH,Ethiopia,2017,1,drift,56.375,58.4
+ETH,Ethiopia,2018,1,naive_last,58.4,55.8
+ETH,Ethiopia,2018,1,drift,53.594,55.8
+ETH,Ethiopia,2019,1,naive_last,55.8,53.6
+ETH,Ethiopia,2019,1,drift,51.117,53.6
+ETH,Ethiopia,2020,1,naive_last,53.6,51.5
+ETH,Ethiopia,2020,1,drift,49.047,51.5
+ETH,Ethiopia,2021,1,naive_last,51.5,70.4
+ETH,Ethiopia,2021,1,drift,47.07,70.4
+ETH,Ethiopia,2022,1,naive_last,70.4,68.1
+ETH,Ethiopia,2022,1,drift,67.081,68.1
+ETH,Ethiopia,2023,1,naive_last,68.1,51.5
+ETH,Ethiopia,2023,1,drift,64.827,51.5
+ETH,Ethiopia,2024,1,naive_last,51.5,44.5
+ETH,Ethiopia,2024,1,drift,47.648,44.5
+GAB,Gabon,2013,1,naive_last,49.4,47.3
+GAB,Gabon,2013,1,drift,47.408,47.3
+GAB,Gabon,2014,1,naive_last,47.3,45.8
+GAB,Gabon,2014,1,drift,45.3,45.8
+GAB,Gabon,2015,1,naive_last,45.8,44.4
+GAB,Gabon,2015,1,drift,43.836,44.4
+GAB,Gabon,2016,1,naive_last,44.4,42.7
+GAB,Gabon,2016,1,drift,42.473,42.7
+GAB,Gabon,2017,1,naive_last,42.7,41.4
+GAB,Gabon,2017,1,drift,40.788,41.4
+GAB,Gabon,2018,1,naive_last,41.4,39.9
+GAB,Gabon,2018,1,drift,39.524,39.9
+GAB,Gabon,2019,1,naive_last,39.9,38.5
+GAB,Gabon,2019,1,drift,38.044,38.5
+GAB,Gabon,2020,1,naive_last,38.5,36.8
+GAB,Gabon,2020,1,drift,36.668,36.8
+GAB,Gabon,2021,1,naive_last,36.8,35.8
+GAB,Gabon,2021,1,drift,34.975,35.8
+GAB,Gabon,2022,1,naive_last,35.8,34.7
+GAB,Gabon,2022,1,drift,34.014,34.7
+GAB,Gabon,2023,1,naive_last,34.7,33.8
+GAB,Gabon,2023,1,drift,32.945,33.8
+GAB,Gabon,2024,1,naive_last,33.8,32.6
+GAB,Gabon,2024,1,drift,32.083,32.6
+GHA,Ghana,2013,1,naive_last,60.3,57.5
+GHA,Ghana,2013,1,drift,57.0,57.5
+GHA,Ghana,2014,1,naive_last,57.5,54.9
+GHA,Ghana,2014,1,drift,54.238,54.9
+GHA,Ghana,2015,1,naive_last,54.9,52.5
+GHA,Ghana,2015,1,drift,51.686,52.5
+GHA,Ghana,2016,1,naive_last,52.5,50.3
+GHA,Ghana,2016,1,drift,49.34,50.3
+GHA,Ghana,2017,1,naive_last,50.3,48.2
+GHA,Ghana,2017,1,drift,47.2,48.2
+GHA,Ghana,2018,1,naive_last,48.2,46.1
+GHA,Ghana,2018,1,drift,45.159,46.1
+GHA,Ghana,2019,1,naive_last,46.1,44.1
+GHA,Ghana,2019,1,drift,43.111,44.1
+GHA,Ghana,2020,1,naive_last,44.1,42.2
+GHA,Ghana,2020,1,drift,41.163,42.2
+GHA,Ghana,2021,1,naive_last,42.2,40.3
+GHA,Ghana,2021,1,drift,39.315,40.3
+GHA,Ghana,2022,1,naive_last,40.3,38.6
+GHA,Ghana,2022,1,drift,37.462,38.6
+GHA,Ghana,2023,1,naive_last,38.6,37.2
+GHA,Ghana,2023,1,drift,35.814,37.2
+GHA,Ghana,2024,1,naive_last,37.2,35.9
+GHA,Ghana,2024,1,drift,34.474,35.9
+GIN,Guinea,2013,1,naive_last,118.4,116.6
+GIN,Guinea,2013,1,drift,114.458,116.6
+GIN,Guinea,2014,1,naive_last,116.6,115.4
+GIN,Guinea,2014,1,drift,112.823,115.4
+GIN,Guinea,2015,1,naive_last,115.4,113.7
+GIN,Guinea,2015,1,drift,111.807,113.7
+GIN,Guinea,2016,1,naive_last,113.7,111.4
+GIN,Guinea,2016,1,drift,110.233,111.4
+GIN,Guinea,2017,1,naive_last,111.4,109.5
+GIN,Guinea,2017,1,drift,108.006,109.5
+GIN,Guinea,2018,1,naive_last,109.5,107.5
+GIN,Guinea,2018,1,drift,106.194,107.5
+GIN,Guinea,2019,1,naive_last,107.5,105.4
+GIN,Guinea,2019,1,drift,104.267,105.4
+GIN,Guinea,2020,1,naive_last,105.4,102.9
+GIN,Guinea,2020,1,drift,102.226,102.9
+GIN,Guinea,2021,1,naive_last,102.9,100.3
+GIN,Guinea,2021,1,drift,99.76,100.3
+GIN,Guinea,2022,1,naive_last,100.3,97.6
+GIN,Guinea,2022,1,drift,97.186,97.6
+GIN,Guinea,2023,1,naive_last,97.6,95.0
+GIN,Guinea,2023,1,drift,94.505,95.0
+GIN,Guinea,2024,1,naive_last,95.0,92.1
+GIN,Guinea,2024,1,drift,91.926,92.1
+GMB,"Gambia, The",2013,1,naive_last,66.8,64.0
+GMB,"Gambia, The",2013,1,drift,62.967,64.0
+GMB,"Gambia, The",2014,1,naive_last,64.0,61.4
+GMB,"Gambia, The",2014,1,drift,60.246,61.4
+GMB,"Gambia, The",2015,1,naive_last,61.4,58.9
+GMB,"Gambia, The",2015,1,drift,57.729,58.9
+GMB,"Gambia, The",2016,1,naive_last,58.9,56.6
+GMB,"Gambia, The",2016,1,drift,55.307,56.6
+GMB,"Gambia, The",2017,1,naive_last,56.6,54.3
+GMB,"Gambia, The",2017,1,drift,53.087,54.3
+GMB,"Gambia, The",2018,1,naive_last,54.3,52.3
+GMB,"Gambia, The",2018,1,drift,50.859,52.3
+GMB,"Gambia, The",2019,1,naive_last,52.3,50.4
+GMB,"Gambia, The",2019,1,drift,48.939,50.4
+GMB,"Gambia, The",2020,1,naive_last,50.4,48.6
+GMB,"Gambia, The",2020,1,drift,47.116,48.6
+GMB,"Gambia, The",2021,1,naive_last,48.6,47.0
+GMB,"Gambia, The",2021,1,drift,45.39,47.0
+GMB,"Gambia, The",2022,1,naive_last,47.0,45.3
+GMB,"Gambia, The",2022,1,drift,43.867,45.3
+GMB,"Gambia, The",2023,1,naive_last,45.3,43.8
+GMB,"Gambia, The",2023,1,drift,42.232,43.8
+GMB,"Gambia, The",2024,1,naive_last,43.8,42.4
+GMB,"Gambia, The",2024,1,drift,40.8,42.4
+GNB,Guinea-Bissau,2013,1,naive_last,103.6,99.1
+GNB,Guinea-Bissau,2013,1,drift,97.667,99.1
+GNB,Guinea-Bissau,2014,1,naive_last,99.1,95.2
+GNB,Guinea-Bissau,2014,1,drift,93.277,95.2
+GNB,Guinea-Bissau,2015,1,naive_last,95.2,91.6
+GNB,Guinea-Bissau,2015,1,drift,89.514,91.6
+GNB,Guinea-Bissau,2016,1,naive_last,91.6,88.2
+GNB,Guinea-Bissau,2016,1,drift,86.053,88.2
+GNB,Guinea-Bissau,2017,1,naive_last,88.2,85.1
+GNB,Guinea-Bissau,2017,1,drift,82.788,85.1
+GNB,Guinea-Bissau,2018,1,naive_last,85.1,82.2
+GNB,Guinea-Bissau,2018,1,drift,79.824,82.2
+GNB,Guinea-Bissau,2019,1,naive_last,82.2,79.5
+GNB,Guinea-Bissau,2019,1,drift,77.056,79.5
+GNB,Guinea-Bissau,2020,1,naive_last,79.5,76.7
+GNB,Guinea-Bissau,2020,1,drift,74.484,76.7
+GNB,Guinea-Bissau,2021,1,naive_last,76.7,74.3
+GNB,Guinea-Bissau,2021,1,drift,71.795,74.3
+GNB,Guinea-Bissau,2022,1,naive_last,74.3,72.0
+GNB,Guinea-Bissau,2022,1,drift,69.514,72.0
+GNB,Guinea-Bissau,2023,1,naive_last,72.0,69.7
+GNB,Guinea-Bissau,2023,1,drift,67.327,69.7
+GNB,Guinea-Bissau,2024,1,naive_last,69.7,67.3
+GNB,Guinea-Bissau,2024,1,drift,65.13,67.3
+GNQ,Equatorial Guinea,2013,1,naive_last,102.0,98.6
+GNQ,Equatorial Guinea,2013,1,drift,97.625,98.6
+GNQ,Equatorial Guinea,2014,1,naive_last,98.6,95.3
+GNQ,Equatorial Guinea,2014,1,drift,94.3,95.3
+GNQ,Equatorial Guinea,2015,1,naive_last,95.3,92.1
+GNQ,Equatorial Guinea,2015,1,drift,91.071,92.1
+GNQ,Equatorial Guinea,2016,1,naive_last,92.1,89.0
+GNQ,Equatorial Guinea,2016,1,drift,87.94,89.0
+GNQ,Equatorial Guinea,2017,1,naive_last,89.0,86.1
+GNQ,Equatorial Guinea,2017,1,drift,84.906,86.1
+GNQ,Equatorial Guinea,2018,1,naive_last,86.1,83.2
+GNQ,Equatorial Guinea,2018,1,drift,82.076,83.2
+GNQ,Equatorial Guinea,2019,1,naive_last,83.2,80.7
+GNQ,Equatorial Guinea,2019,1,drift,79.239,80.7
+GNQ,Equatorial Guinea,2020,1,naive_last,80.7,77.9
+GNQ,Equatorial Guinea,2020,1,drift,76.816,77.9
+GNQ,Equatorial Guinea,2021,1,naive_last,77.9,75.1
+GNQ,Equatorial Guinea,2021,1,drift,74.07,75.1
+GNQ,Equatorial Guinea,2022,1,naive_last,75.1,72.8
+GNQ,Equatorial Guinea,2022,1,drift,71.319,72.8
+GNQ,Equatorial Guinea,2023,1,naive_last,72.8,70.4
+GNQ,Equatorial Guinea,2023,1,drift,69.086,70.4
+GNQ,Equatorial Guinea,2024,1,naive_last,70.4,68.0
+GNQ,Equatorial Guinea,2024,1,drift,66.743,68.0
+KEN,Kenya,2013,1,naive_last,50.7,49.4
+KEN,Kenya,2013,1,drift,46.992,49.4
+KEN,Kenya,2014,1,naive_last,49.4,48.3
+KEN,Kenya,2014,1,drift,45.877,48.3
+KEN,Kenya,2015,1,naive_last,48.3,46.8
+KEN,Kenya,2015,1,drift,44.95,46.8
+KEN,Kenya,2016,1,naive_last,46.8,45.5
+KEN,Kenya,2016,1,drift,43.573,45.5
+KEN,Kenya,2017,1,naive_last,45.5,44.7
+KEN,Kenya,2017,1,drift,42.394,44.7
+KEN,Kenya,2018,1,naive_last,44.7,43.7
+KEN,Kenya,2018,1,drift,41.729,43.7
+KEN,Kenya,2019,1,naive_last,43.7,42.7
+KEN,Kenya,2019,1,drift,40.839,42.7
+KEN,Kenya,2020,1,naive_last,42.7,42.1
+KEN,Kenya,2020,1,drift,39.937,42.1
+KEN,Kenya,2021,1,naive_last,42.1,41.3
+KEN,Kenya,2021,1,drift,39.445,41.3
+KEN,Kenya,2022,1,naive_last,41.3,40.5
+KEN,Kenya,2022,1,drift,38.733,40.5
+KEN,Kenya,2023,1,naive_last,40.5,39.6
+KEN,Kenya,2023,1,drift,38.014,39.6
+KEN,Kenya,2024,1,naive_last,39.6,38.8
+KEN,Kenya,2024,1,drift,37.183,38.8
+LBR,Liberia,2013,1,naive_last,99.5,97.0
+LBR,Liberia,2013,1,drift,91.55,97.0
+LBR,Liberia,2014,1,naive_last,97.0,97.0
+LBR,Liberia,2014,1,drift,89.469,97.0
+LBR,Liberia,2015,1,naive_last,97.0,93.2
+LBR,Liberia,2015,1,drift,90.007,93.2
+LBR,Liberia,2016,1,naive_last,93.2,91.5
+LBR,Liberia,2016,1,drift,86.42,91.5
+LBR,Liberia,2017,1,naive_last,91.5,90.3
+LBR,Liberia,2017,1,drift,85.037,90.3
+LBR,Liberia,2018,1,naive_last,90.3,89.4
+LBR,Liberia,2018,1,drift,84.147,89.4
+LBR,Liberia,2019,1,naive_last,89.4,88.7
+LBR,Liberia,2019,1,drift,83.539,88.7
+LBR,Liberia,2020,1,naive_last,88.7,88.3
+LBR,Liberia,2020,1,drift,83.111,88.3
+LBR,Liberia,2021,1,naive_last,88.3,88.0
+LBR,Liberia,2021,1,drift,82.97,88.0
+LBR,Liberia,2022,1,naive_last,88.0,87.8
+LBR,Liberia,2022,1,drift,82.91,87.8
+LBR,Liberia,2023,1,naive_last,87.8,87.3
+LBR,Liberia,2023,1,drift,82.932,87.3
+LBR,Liberia,2024,1,naive_last,87.3,86.4
+LBR,Liberia,2024,1,drift,82.622,86.4
+LBY,Libya,2013,1,naive_last,15.0,14.4
+LBY,Libya,2013,1,drift,13.908,14.4
+LBY,Libya,2014,1,naive_last,14.4,13.8
+LBY,Libya,2014,1,drift,13.346,13.8
+LBY,Libya,2015,1,naive_last,13.8,13.3
+LBY,Libya,2015,1,drift,12.779,13.3
+LBY,Libya,2016,1,naive_last,13.3,12.8
+LBY,Libya,2016,1,drift,12.313,12.8
+LBY,Libya,2017,1,naive_last,12.8,12.4
+LBY,Libya,2017,1,drift,11.844,12.4
+LBY,Libya,2018,1,naive_last,12.4,11.9
+LBY,Libya,2018,1,drift,11.476,11.9
+LBY,Libya,2019,1,naive_last,11.9,11.6
+LBY,Libya,2019,1,drift,11.0,11.6
+LBY,Libya,2020,1,naive_last,11.6,11.2
+LBY,Libya,2020,1,drift,10.732,11.2
+LBY,Libya,2021,1,naive_last,11.2,10.8
+LBY,Libya,2021,1,drift,10.355,10.8
+LBY,Libya,2022,1,naive_last,10.8,10.4
+LBY,Libya,2022,1,drift,9.976,10.4
+LBY,Libya,2023,1,naive_last,10.4,31.7
+LBY,Libya,2023,1,drift,9.595,31.7
+LBY,Libya,2024,1,naive_last,31.7,9.8
+LBY,Libya,2024,1,drift,31.857,9.8
+LSO,Lesotho,2013,1,naive_last,81.4,79.3
+LSO,Lesotho,2013,1,drift,79.158,79.3
+LSO,Lesotho,2014,1,naive_last,79.3,77.6
+LSO,Lesotho,2014,1,drift,77.069,77.6
+LSO,Lesotho,2015,1,naive_last,77.6,75.1
+LSO,Lesotho,2015,1,drift,75.407,75.1
+LSO,Lesotho,2016,1,naive_last,75.1,71.4
+LSO,Lesotho,2016,1,drift,72.887,71.4
+LSO,Lesotho,2017,1,naive_last,71.4,70.1
+LSO,Lesotho,2017,1,drift,69.094,70.1
+LSO,Lesotho,2018,1,naive_last,70.1,68.8
+LSO,Lesotho,2018,1,drift,67.853,68.8
+LSO,Lesotho,2019,1,naive_last,68.8,68.1
+LSO,Lesotho,2019,1,drift,66.606,68.1
+LSO,Lesotho,2020,1,naive_last,68.1,66.3
+LSO,Lesotho,2020,1,drift,65.984,66.3
+LSO,Lesotho,2021,1,naive_last,66.3,64.0
+LSO,Lesotho,2021,1,drift,64.2,64.0
+LSO,Lesotho,2022,1,naive_last,64.0,62.0
+LSO,Lesotho,2022,1,drift,61.89,62.0
+LSO,Lesotho,2023,1,naive_last,62.0,61.3
+LSO,Lesotho,2023,1,drift,59.895,61.3
+LSO,Lesotho,2024,1,naive_last,61.3,60.0
+LSO,Lesotho,2024,1,drift,59.257,60.0
+MAR,Morocco,2013,1,naive_last,27.5,26.0
+MAR,Morocco,2013,1,drift,25.425,26.0
+MAR,Morocco,2014,1,naive_last,26.0,24.5
+MAR,Morocco,2014,1,drift,23.969,24.5
+MAR,Morocco,2015,1,naive_last,24.5,23.1
+MAR,Morocco,2015,1,drift,22.507,23.1
+MAR,Morocco,2016,1,naive_last,23.1,21.9
+MAR,Morocco,2016,1,drift,21.147,21.9
+MAR,Morocco,2017,1,naive_last,21.9,20.8
+MAR,Morocco,2017,1,drift,19.994,20.8
+MAR,Morocco,2018,1,naive_last,20.8,19.9
+MAR,Morocco,2018,1,drift,18.941,19.9
+MAR,Morocco,2019,1,naive_last,19.9,19.1
+MAR,Morocco,2019,1,drift,18.094,19.1
+MAR,Morocco,2020,1,naive_last,19.1,18.3
+MAR,Morocco,2020,1,drift,17.347,18.3
+MAR,Morocco,2021,1,naive_last,18.3,17.6
+MAR,Morocco,2021,1,drift,16.595,17.6
+MAR,Morocco,2022,1,naive_last,17.6,17.0
+MAR,Morocco,2022,1,drift,15.943,17.0
+MAR,Morocco,2023,1,naive_last,17.0,16.3
+MAR,Morocco,2023,1,drift,15.391,16.3
+MAR,Morocco,2024,1,naive_last,16.3,15.7
+MAR,Morocco,2024,1,drift,14.73,15.7
+MDG,Madagascar,2013,1,naive_last,67.3,66.4
+MDG,Madagascar,2013,1,drift,64.208,66.4
+MDG,Madagascar,2014,1,naive_last,66.4,65.7
+MDG,Madagascar,2014,1,drift,63.477,65.7
+MDG,Madagascar,2015,1,naive_last,65.7,65.3
+MDG,Madagascar,2015,1,drift,62.936,65.3
+MDG,Madagascar,2016,1,naive_last,65.3,64.9
+MDG,Madagascar,2016,1,drift,62.693,64.9
+MDG,Madagascar,2017,1,naive_last,64.9,64.9
+MDG,Madagascar,2017,1,drift,62.431,64.9
+MDG,Madagascar,2018,1,naive_last,64.9,64.9
+MDG,Madagascar,2018,1,drift,62.576,64.9
+MDG,Madagascar,2019,1,naive_last,64.9,65.0
+MDG,Madagascar,2019,1,drift,62.706,65.0
+MDG,Madagascar,2020,1,naive_last,65.0,65.1
+MDG,Madagascar,2020,1,drift,62.926,65.1
+MDG,Madagascar,2021,1,naive_last,65.1,65.0
+MDG,Madagascar,2021,1,drift,63.135,65.0
+MDG,Madagascar,2022,1,naive_last,65.0,64.5
+MDG,Madagascar,2022,1,drift,63.124,64.5
+MDG,Madagascar,2023,1,naive_last,64.5,63.6
+MDG,Madagascar,2023,1,drift,62.686,63.6
+MDG,Madagascar,2024,1,naive_last,63.6,62.4
+MDG,Madagascar,2024,1,drift,61.826,62.4
+MLI,Mali,2013,1,naive_last,123.9,119.1
+MLI,Mali,2013,1,drift,118.4,119.1
+MLI,Mali,2014,1,naive_last,119.1,114.4
+MLI,Mali,2014,1,drift,113.654,114.4
+MLI,Mali,2015,1,naive_last,114.4,109.7
+MLI,Mali,2015,1,drift,109.007,109.7
+MLI,Mali,2016,1,naive_last,109.7,105.1
+MLI,Mali,2016,1,drift,104.353,105.1
+MLI,Mali,2017,1,naive_last,105.1,100.6
+MLI,Mali,2017,1,drift,99.8,100.6
+MLI,Mali,2018,1,naive_last,100.6,96.2
+MLI,Mali,2018,1,drift,95.347,96.2
+MLI,Mali,2019,1,naive_last,96.2,91.9
+MLI,Mali,2019,1,drift,90.994,91.9
+MLI,Mali,2020,1,naive_last,91.9,87.6
+MLI,Mali,2020,1,drift,86.742,87.6
+MLI,Mali,2021,1,naive_last,87.6,83.6
+MLI,Mali,2021,1,drift,82.485,83.6
+MLI,Mali,2022,1,naive_last,83.6,79.7
+MLI,Mali,2022,1,drift,78.538,79.7
+MLI,Mali,2023,1,naive_last,79.7,76.2
+MLI,Mali,2023,1,drift,74.691,76.2
+MLI,Mali,2024,1,naive_last,76.2,73.0
+MLI,Mali,2024,1,drift,71.257,73.0
+MOZ,Mozambique,2013,1,naive_last,86.5,82.9
+MOZ,Mozambique,2013,1,drift,79.992,82.9
+MOZ,Mozambique,2014,1,naive_last,82.9,79.7
+MOZ,Mozambique,2014,1,drift,76.615,79.7
+MOZ,Mozambique,2015,1,naive_last,79.7,75.8
+MOZ,Mozambique,2015,1,drift,73.636,75.8
+MOZ,Mozambique,2016,1,naive_last,75.8,73.3
+MOZ,Mozambique,2016,1,drift,69.88,73.3
+MOZ,Mozambique,2017,1,naive_last,73.3,72.0
+MOZ,Mozambique,2017,1,drift,67.594,72.0
+MOZ,Mozambique,2018,1,naive_last,72.0,70.2
+MOZ,Mozambique,2018,1,drift,66.553,70.2
+MOZ,Mozambique,2019,1,naive_last,70.2,68.6
+MOZ,Mozambique,2019,1,drift,64.956,68.6
+MOZ,Mozambique,2020,1,naive_last,68.6,67.6
+MOZ,Mozambique,2020,1,drift,63.547,67.6
+MOZ,Mozambique,2021,1,naive_last,67.6,65.5
+MOZ,Mozambique,2021,1,drift,62.75,65.5
+MOZ,Mozambique,2022,1,naive_last,65.5,63.9
+MOZ,Mozambique,2022,1,drift,60.781,63.9
+MOZ,Mozambique,2023,1,naive_last,63.9,61.7
+MOZ,Mozambique,2023,1,drift,59.323,61.7
+MOZ,Mozambique,2024,1,naive_last,61.7,59.4
+MOZ,Mozambique,2024,1,drift,57.226,59.4
+MRT,Mauritania,2013,1,naive_last,53.5,52.1
+MRT,Mauritania,2013,1,drift,49.792,52.1
+MRT,Mauritania,2014,1,naive_last,52.1,50.6
+MRT,Mauritania,2014,1,drift,48.569,50.6
+MRT,Mauritania,2015,1,naive_last,50.6,49.1
+MRT,Mauritania,2015,1,drift,47.214,49.1
+MRT,Mauritania,2016,1,naive_last,49.1,47.7
+MRT,Mauritania,2016,1,drift,45.84,47.7
+MRT,Mauritania,2017,1,naive_last,47.7,46.2
+MRT,Mauritania,2017,1,drift,44.556,46.2
+MRT,Mauritania,2018,1,naive_last,46.2,44.7
+MRT,Mauritania,2018,1,drift,43.153,44.7
+MRT,Mauritania,2019,1,naive_last,44.7,43.4
+MRT,Mauritania,2019,1,drift,41.739,43.4
+MRT,Mauritania,2020,1,naive_last,43.4,42.0
+MRT,Mauritania,2020,1,drift,40.526,42.0
+MRT,Mauritania,2021,1,naive_last,42.0,40.7
+MRT,Mauritania,2021,1,drift,39.2,40.7
+MRT,Mauritania,2022,1,naive_last,40.7,39.4
+MRT,Mauritania,2022,1,drift,37.971,39.4
+MRT,Mauritania,2023,1,naive_last,39.4,38.1
+MRT,Mauritania,2023,1,drift,36.736,38.1
+MRT,Mauritania,2024,1,naive_last,38.1,36.9
+MRT,Mauritania,2024,1,drift,35.496,36.9
+MUS,Mauritius,2013,1,naive_last,15.0,14.9
+MUS,Mauritius,2013,1,drift,14.683,14.9
+MUS,Mauritius,2014,1,naive_last,14.9,14.7
+MUS,Mauritius,2014,1,drift,14.6,14.7
+MUS,Mauritius,2015,1,naive_last,14.7,14.5
+MUS,Mauritius,2015,1,drift,14.407,14.5
+MUS,Mauritius,2016,1,naive_last,14.5,14.6
+MUS,Mauritius,2016,1,drift,14.213,14.6
+MUS,Mauritius,2017,1,naive_last,14.6,15.0
+MUS,Mauritius,2017,1,drift,14.338,15.0
+MUS,Mauritius,2018,1,naive_last,15.0,15.4
+MUS,Mauritius,2018,1,drift,14.776,15.4
+MUS,Mauritius,2019,1,naive_last,15.4,15.7
+MUS,Mauritius,2019,1,drift,15.211,15.7
+MUS,Mauritius,2020,1,naive_last,15.7,15.8
+MUS,Mauritius,2020,1,drift,15.537,15.8
+MUS,Mauritius,2021,1,naive_last,15.8,15.7
+MUS,Mauritius,2021,1,drift,15.65,15.7
+MUS,Mauritius,2022,1,naive_last,15.7,15.5
+MUS,Mauritius,2022,1,drift,15.552,15.5
+MUS,Mauritius,2023,1,naive_last,15.5,15.4
+MUS,Mauritius,2023,1,drift,15.35,15.4
+MUS,Mauritius,2024,1,naive_last,15.4,15.4
+MUS,Mauritius,2024,1,drift,15.252,15.4
+MWI,Malawi,2013,1,naive_last,67.9,62.9
+MWI,Malawi,2013,1,drift,59.308,62.9
+MWI,Malawi,2014,1,naive_last,62.9,60.0
+MWI,Malawi,2014,1,drift,54.585,60.0
+MWI,Malawi,2015,1,naive_last,60.0,57.4
+MWI,Malawi,2015,1,drift,52.071,57.4
+MWI,Malawi,2016,1,naive_last,57.4,55.8
+MWI,Malawi,2016,1,drift,49.827,55.8
+MWI,Malawi,2017,1,naive_last,55.8,53.8
+MWI,Malawi,2017,1,drift,48.6,53.8
+MWI,Malawi,2018,1,naive_last,53.8,52.0
+MWI,Malawi,2018,1,drift,46.906,52.0
+MWI,Malawi,2019,1,naive_last,52.0,51.3
+MWI,Malawi,2019,1,drift,45.389,51.3
+MWI,Malawi,2020,1,naive_last,51.3,50.4
+MWI,Malawi,2020,1,drift,45.0,50.4
+MWI,Malawi,2021,1,naive_last,50.4,50.0
+MWI,Malawi,2021,1,drift,44.37,50.0
+MWI,Malawi,2022,1,naive_last,50.0,50.1
+MWI,Malawi,2022,1,drift,44.238,50.1
+MWI,Malawi,2023,1,naive_last,50.1,49.6
+MWI,Malawi,2023,1,drift,44.605,49.6
+MWI,Malawi,2024,1,naive_last,49.6,48.8
+MWI,Malawi,2024,1,drift,44.322,48.8
+NAM,Namibia,2013,1,naive_last,52.6,50.8
+NAM,Namibia,2013,1,drift,50.467,50.8
+NAM,Namibia,2014,1,naive_last,50.8,50.0
+NAM,Namibia,2014,1,drift,48.692,50.0
+NAM,Namibia,2015,1,naive_last,50.0,51.8
+NAM,Namibia,2015,1,drift,47.986,51.8
+NAM,Namibia,2016,1,naive_last,51.8,51.4
+NAM,Namibia,2016,1,drift,50.04,51.4
+NAM,Namibia,2017,1,naive_last,51.4,49.8
+NAM,Namibia,2017,1,drift,49.725,49.8
+NAM,Namibia,2018,1,naive_last,49.8,48.5
+NAM,Namibia,2018,1,drift,48.129,48.5
+NAM,Namibia,2019,1,naive_last,48.5,46.6
+NAM,Namibia,2019,1,drift,46.85,46.6
+NAM,Namibia,2020,1,naive_last,46.6,44.8
+NAM,Namibia,2020,1,drift,44.937,44.8
+NAM,Namibia,2021,1,naive_last,44.8,43.2
+NAM,Namibia,2021,1,drift,43.13,43.2
+NAM,Namibia,2022,1,naive_last,43.2,41.6
+NAM,Namibia,2022,1,drift,41.533,41.6
+NAM,Namibia,2023,1,naive_last,41.6,41.1
+NAM,Namibia,2023,1,drift,39.936,41.1
+NAM,Namibia,2024,1,naive_last,41.1,39.5
+NAM,Namibia,2024,1,drift,39.487,39.5
+NER,Niger,2013,1,naive_last,130.3,128.3
+NER,Niger,2013,1,drift,122.167,128.3
+NER,Niger,2014,1,naive_last,128.3,126.8
+NER,Niger,2014,1,drift,120.638,126.8
+NER,Niger,2015,1,naive_last,126.8,125.4
+NER,Niger,2015,1,drift,119.579,125.4
+NER,Niger,2016,1,naive_last,125.4,124.3
+NER,Niger,2016,1,drift,118.567,124.3
+NER,Niger,2017,1,naive_last,124.3,123.1
+NER,Niger,2017,1,drift,117.825,123.1
+NER,Niger,2018,1,naive_last,123.1,121.9
+NER,Niger,2018,1,drift,116.935,121.9
+NER,Niger,2019,1,naive_last,121.9,120.8
+NER,Niger,2019,1,drift,116.011,120.8
+NER,Niger,2020,1,naive_last,120.8,119.5
+NER,Niger,2020,1,drift,115.163,119.5
+NER,Niger,2021,1,naive_last,119.5,118.0
+NER,Niger,2021,1,drift,114.08,118.0
+NER,Niger,2022,1,naive_last,118.0,116.0
+NER,Niger,2022,1,drift,112.767,116.0
+NER,Niger,2023,1,naive_last,116.0,113.5
+NER,Niger,2023,1,drift,110.914,113.5
+NER,Niger,2024,1,naive_last,113.5,110.7
+NER,Niger,2024,1,drift,108.526,110.7
+NGA,Nigeria,2013,1,naive_last,121.6,119.9
+NGA,Nigeria,2013,1,drift,116.958,119.9
+NGA,Nigeria,2014,1,naive_last,119.9,118.7
+NGA,Nigeria,2014,1,drift,115.485,118.7
+NGA,Nigeria,2015,1,naive_last,118.7,117.8
+NGA,Nigeria,2015,1,drift,114.514,117.8
+NGA,Nigeria,2016,1,naive_last,117.8,117.4
+NGA,Nigeria,2016,1,drift,113.833,117.4
+NGA,Nigeria,2017,1,naive_last,117.4,117.2
+NGA,Nigeria,2017,1,drift,113.656,117.2
+NGA,Nigeria,2018,1,naive_last,117.2,117.2
+NGA,Nigeria,2018,1,drift,113.665,117.2
+NGA,Nigeria,2019,1,naive_last,117.2,117.4
+NGA,Nigeria,2019,1,drift,113.861,117.4
+NGA,Nigeria,2020,1,naive_last,117.4,117.4
+NGA,Nigeria,2020,1,drift,114.247,117.4
+NGA,Nigeria,2021,1,naive_last,117.4,117.6
+NGA,Nigeria,2021,1,drift,114.405,117.6
+NGA,Nigeria,2022,1,naive_last,117.6,117.5
+NGA,Nigeria,2022,1,drift,114.757,117.5
+NGA,Nigeria,2023,1,naive_last,117.5,116.8
+NGA,Nigeria,2023,1,drift,114.782,116.8
+NGA,Nigeria,2024,1,naive_last,116.8,115.6
+NGA,Nigeria,2024,1,drift,114.17,115.6
+RWA,Rwanda,2013,1,naive_last,54.2,51.4
+RWA,Rwanda,2013,1,drift,43.367,51.4
+RWA,Rwanda,2014,1,naive_last,51.4,49.2
+RWA,Rwanda,2014,1,drift,41.185,49.2
+RWA,Rwanda,2015,1,naive_last,49.2,47.3
+RWA,Rwanda,2015,1,drift,39.557,47.3
+RWA,Rwanda,2016,1,naive_last,47.3,45.8
+RWA,Rwanda,2016,1,drift,38.173,45.8
+RWA,Rwanda,2017,1,naive_last,45.8,44.7
+RWA,Rwanda,2017,1,drift,37.15,44.7
+RWA,Rwanda,2018,1,naive_last,44.7,43.7
+RWA,Rwanda,2018,1,drift,36.494,43.7
+RWA,Rwanda,2019,1,naive_last,43.7,42.7
+RWA,Rwanda,2019,1,drift,35.894,42.7
+RWA,Rwanda,2020,1,naive_last,42.7,41.6
+RWA,Rwanda,2020,1,drift,35.253,41.6
+RWA,Rwanda,2021,1,naive_last,41.6,40.6
+RWA,Rwanda,2021,1,drift,34.47,40.6
+RWA,Rwanda,2022,1,naive_last,40.6,39.7
+RWA,Rwanda,2022,1,drift,33.762,39.7
+RWA,Rwanda,2023,1,naive_last,39.7,38.8
+RWA,Rwanda,2023,1,drift,33.132,38.8
+RWA,Rwanda,2024,1,naive_last,38.8,37.7
+RWA,Rwanda,2024,1,drift,32.478,37.7
+SDN,Sudan,2013,1,naive_last,69.3,67.3
+SDN,Sudan,2013,1,drift,66.575,67.3
+SDN,Sudan,2014,1,naive_last,67.3,65.4
+SDN,Sudan,2014,1,drift,64.631,65.4
+SDN,Sudan,2015,1,naive_last,65.4,63.5
+SDN,Sudan,2015,1,drift,62.786,63.5
+SDN,Sudan,2016,1,naive_last,63.5,61.6
+SDN,Sudan,2016,1,drift,60.933,61.6
+SDN,Sudan,2017,1,naive_last,61.6,59.7
+SDN,Sudan,2017,1,drift,59.075,59.7
+SDN,Sudan,2018,1,naive_last,59.7,57.8
+SDN,Sudan,2018,1,drift,57.212,57.8
+SDN,Sudan,2019,1,naive_last,57.8,56.1
+SDN,Sudan,2019,1,drift,55.344,56.1
+SDN,Sudan,2020,1,naive_last,56.1,54.3
+SDN,Sudan,2020,1,drift,53.684,54.3
+SDN,Sudan,2021,1,naive_last,54.3,52.7
+SDN,Sudan,2021,1,drift,51.915,52.7
+SDN,Sudan,2022,1,naive_last,52.7,51.0
+SDN,Sudan,2022,1,drift,50.352,51.0
+SDN,Sudan,2023,1,naive_last,51.0,63.1
+SDN,Sudan,2023,1,drift,48.682,63.1
+SDN,Sudan,2024,1,naive_last,63.1,61.6
+SDN,Sudan,2024,1,drift,61.409,61.6
+SEN,Senegal,2013,1,naive_last,57.6,55.5
+SEN,Senegal,2013,1,drift,51.658,55.5
+SEN,Senegal,2014,1,naive_last,55.5,53.7
+SEN,Senegal,2014,1,drift,49.854,53.7
+SEN,Senegal,2015,1,naive_last,53.7,52.2
+SEN,Senegal,2015,1,drift,48.329,52.2
+SEN,Senegal,2016,1,naive_last,52.2,50.8
+SEN,Senegal,2016,1,drift,47.087,50.8
+SEN,Senegal,2017,1,naive_last,50.8,49.4
+SEN,Senegal,2017,1,drift,45.919,49.4
+SEN,Senegal,2018,1,naive_last,49.4,47.9
+SEN,Senegal,2018,1,drift,44.724,47.9
+SEN,Senegal,2019,1,naive_last,47.9,46.2
+SEN,Senegal,2019,1,drift,43.4,46.2
+SEN,Senegal,2020,1,naive_last,46.2,44.2
+SEN,Senegal,2020,1,drift,41.847,44.2
+SEN,Senegal,2021,1,naive_last,44.2,42.2
+SEN,Senegal,2021,1,drift,39.965,42.2
+SEN,Senegal,2022,1,naive_last,42.2,40.1
+SEN,Senegal,2022,1,drift,38.071,40.1
+SEN,Senegal,2023,1,naive_last,40.1,38.2
+SEN,Senegal,2023,1,drift,36.064,38.2
+SEN,Senegal,2024,1,naive_last,38.2,36.5
+SEN,Senegal,2024,1,drift,34.257,36.5
+SLE,Sierra Leone,2013,1,naive_last,144.1,137.9
+SLE,Sierra Leone,2013,1,drift,137.542,137.9
+SLE,Sierra Leone,2014,1,naive_last,137.9,135.9
+SLE,Sierra Leone,2014,1,drift,131.369,135.9
+SLE,Sierra Leone,2015,1,naive_last,135.9,136.8
+SLE,Sierra Leone,2015,1,drift,129.693,136.8
+SLE,Sierra Leone,2016,1,naive_last,136.8,121.8
+SLE,Sierra Leone,2016,1,drift,131.067,121.8
+SLE,Sierra Leone,2017,1,naive_last,121.8,117.0
+SLE,Sierra Leone,2017,1,drift,115.487,117.0
+SLE,Sierra Leone,2018,1,naive_last,117.0,112.4
+SLE,Sierra Leone,2018,1,drift,110.776,112.4
+SLE,Sierra Leone,2019,1,naive_last,112.4,108.3
+SLE,Sierra Leone,2019,1,drift,106.267,108.3
+SLE,Sierra Leone,2020,1,naive_last,108.3,104.4
+SLE,Sierra Leone,2020,1,drift,102.274,104.4
+SLE,Sierra Leone,2021,1,naive_last,104.4,100.6
+SLE,Sierra Leone,2021,1,drift,98.48,100.6
+SLE,Sierra Leone,2022,1,naive_last,100.6,97.1
+SLE,Sierra Leone,2022,1,drift,94.781,97.1
+SLE,Sierra Leone,2023,1,naive_last,97.1,93.8
+SLE,Sierra Leone,2023,1,drift,91.386,93.8
+SLE,Sierra Leone,2024,1,naive_last,93.8,90.5
+SLE,Sierra Leone,2024,1,drift,88.191,90.5
+SOM,"Somalia, Fed. Rep.",2013,1,naive_last,185.4,143.2
+SOM,"Somalia, Fed. Rep.",2013,1,drift,186.417,143.2
+SOM,"Somalia, Fed. Rep.",2014,1,naive_last,143.2,138.6
+SOM,"Somalia, Fed. Rep.",2014,1,drift,140.892,138.6
+SOM,"Somalia, Fed. Rep.",2015,1,naive_last,138.6,134.3
+SOM,"Somalia, Fed. Rep.",2015,1,drift,136.129,134.3
+SOM,"Somalia, Fed. Rep.",2016,1,naive_last,134.3,130.2
+SOM,"Somalia, Fed. Rep.",2016,1,drift,131.707,130.2
+SOM,"Somalia, Fed. Rep.",2017,1,naive_last,130.2,156.4
+SOM,"Somalia, Fed. Rep.",2017,1,drift,127.512,156.4
+SOM,"Somalia, Fed. Rep.",2018,1,naive_last,156.4,136.4
+SOM,"Somalia, Fed. Rep.",2018,1,drift,155.412,136.4
+SOM,"Somalia, Fed. Rep.",2019,1,naive_last,136.4,118.4
+SOM,"Somalia, Fed. Rep.",2019,1,drift,134.356,118.4
+SOM,"Somalia, Fed. Rep.",2020,1,naive_last,118.4,114.7
+SOM,"Somalia, Fed. Rep.",2020,1,drift,115.516,114.7
+SOM,"Somalia, Fed. Rep.",2021,1,naive_last,114.7,111.0
+SOM,"Somalia, Fed. Rep.",2021,1,drift,111.775,111.0
+SOM,"Somalia, Fed. Rep.",2022,1,naive_last,111.0,143.1
+SOM,"Somalia, Fed. Rep.",2022,1,drift,108.038,143.1
+SOM,"Somalia, Fed. Rep.",2023,1,naive_last,143.1,104.3
+SOM,"Somalia, Fed. Rep.",2023,1,drift,141.732,104.3
+SOM,"Somalia, Fed. Rep.",2024,1,naive_last,104.3,101.1
+SOM,"Somalia, Fed. Rep.",2024,1,drift,101.304,101.1
+SSD,South Sudan,2013,1,naive_last,98.9,97.2
+SSD,South Sudan,2013,1,drift,92.133,97.2
+SSD,South Sudan,2014,1,naive_last,97.2,182.6
+SSD,South Sudan,2014,1,drift,90.823,182.6
+SSD,South Sudan,2015,1,naive_last,182.6,240.8
+SSD,South Sudan,2015,1,drift,182.779,240.8
+SSD,South Sudan,2016,1,naive_last,240.8,272.9
+SSD,South Sudan,2016,1,drift,244.847,272.9
+SSD,South Sudan,2017,1,naive_last,272.9,292.0
+SSD,South Sudan,2017,1,drift,278.7,292.0
+SSD,South Sudan,2018,1,naive_last,292.0,133.7
+SSD,South Sudan,2018,1,drift,298.582,133.7
+SSD,South Sudan,2019,1,naive_last,133.7,96.7
+SSD,South Sudan,2019,1,drift,131.122,96.7
+SSD,South Sudan,2020,1,naive_last,96.7,96.7
+SSD,South Sudan,2020,1,drift,92.311,96.7
+SSD,South Sudan,2021,1,naive_last,96.7,96.7
+SSD,South Sudan,2021,1,drift,92.53,96.7
+SSD,South Sudan,2022,1,naive_last,96.7,96.7
+SSD,South Sudan,2022,1,drift,92.729,96.7
+SSD,South Sudan,2023,1,naive_last,96.7,96.7
+SSD,South Sudan,2023,1,drift,92.909,96.7
+SSD,South Sudan,2024,1,naive_last,96.7,96.7
+SSD,South Sudan,2024,1,drift,93.074,96.7
+STP,Sao Tome and Principe,2013,1,naive_last,30.4,27.9
+STP,Sao Tome and Principe,2013,1,drift,26.083,27.9
+STP,Sao Tome and Principe,2014,1,naive_last,27.9,25.5
+STP,Sao Tome and Principe,2014,1,drift,23.723,25.5
+STP,Sao Tome and Principe,2015,1,naive_last,25.5,23.3
+STP,Sao Tome and Principe,2015,1,drift,21.45,23.3
+STP,Sao Tome and Principe,2016,1,naive_last,23.3,21.3
+STP,Sao Tome and Principe,2016,1,drift,19.373,21.3
+STP,Sao Tome and Principe,2017,1,naive_last,21.3,19.6
+STP,Sao Tome and Principe,2017,1,drift,17.494,19.6
+STP,Sao Tome and Principe,2018,1,naive_last,19.6,18.2
+STP,Sao Tome and Principe,2018,1,drift,15.918,18.2
+STP,Sao Tome and Principe,2019,1,naive_last,18.2,17.1
+STP,Sao Tome and Principe,2019,1,drift,14.644,17.1
+STP,Sao Tome and Principe,2020,1,naive_last,17.1,16.1
+STP,Sao Tome and Principe,2020,1,drift,13.674,16.1
+STP,Sao Tome and Principe,2021,1,naive_last,16.1,15.3
+STP,Sao Tome and Principe,2021,1,drift,12.795,15.3
+STP,Sao Tome and Principe,2022,1,naive_last,15.3,14.7
+STP,Sao Tome and Principe,2022,1,drift,12.114,14.7
+STP,Sao Tome and Principe,2023,1,naive_last,14.7,14.1
+STP,Sao Tome and Principe,2023,1,drift,11.632,14.1
+STP,Sao Tome and Principe,2024,1,naive_last,14.1,13.6
+STP,Sao Tome and Principe,2024,1,drift,11.139,13.6
+SWZ,Eswatini,2013,1,naive_last,62.7,59.7
+SWZ,Eswatini,2013,1,drift,58.55,59.7
+SWZ,Eswatini,2014,1,naive_last,59.7,60.0
+SWZ,Eswatini,2014,1,drift,55.638,60.0
+SWZ,Eswatini,2015,1,naive_last,60.0,57.5
+SWZ,Eswatini,2015,1,drift,56.25,57.5
+SWZ,Eswatini,2016,1,naive_last,57.5,54.4
+SWZ,Eswatini,2016,1,drift,53.833,54.4
+SWZ,Eswatini,2017,1,naive_last,54.4,53.6
+SWZ,Eswatini,2017,1,drift,50.769,53.6
+SWZ,Eswatini,2018,1,naive_last,53.6,50.4
+SWZ,Eswatini,2018,1,drift,50.135,50.4
+SWZ,Eswatini,2019,1,naive_last,50.4,51.5
+SWZ,Eswatini,2019,1,drift,46.95,51.5
+SWZ,Eswatini,2020,1,naive_last,51.5,50.5
+SWZ,Eswatini,2020,1,drift,48.289,50.5
+SWZ,Eswatini,2021,1,naive_last,50.5,47.9
+SWZ,Eswatini,2021,1,drift,47.4,47.9
+SWZ,Eswatini,2022,1,naive_last,47.9,47.3
+SWZ,Eswatini,2022,1,drift,44.824,47.3
+SWZ,Eswatini,2023,1,naive_last,47.3,46.2
+SWZ,Eswatini,2023,1,drift,44.336,46.2
+SWZ,Eswatini,2024,1,naive_last,46.2,45.1
+SWZ,Eswatini,2024,1,drift,43.317,45.1
+SYC,Seychelles,2013,1,naive_last,14.3,14.4
+SYC,Seychelles,2013,1,drift,14.342,14.4
+SYC,Seychelles,2014,1,naive_last,14.4,14.5
+SYC,Seychelles,2014,1,drift,14.446,14.5
+SYC,Seychelles,2015,1,naive_last,14.5,14.6
+SYC,Seychelles,2015,1,drift,14.55,14.6
+SYC,Seychelles,2016,1,naive_last,14.6,14.7
+SYC,Seychelles,2016,1,drift,14.653,14.7
+SYC,Seychelles,2017,1,naive_last,14.7,14.7
+SYC,Seychelles,2017,1,drift,14.756,14.7
+SYC,Seychelles,2018,1,naive_last,14.7,14.8
+SYC,Seychelles,2018,1,drift,14.753,14.8
+SYC,Seychelles,2019,1,naive_last,14.8,14.8
+SYC,Seychelles,2019,1,drift,14.856,14.8
+SYC,Seychelles,2020,1,naive_last,14.8,14.8
+SYC,Seychelles,2020,1,drift,14.853,14.8
+SYC,Seychelles,2021,1,naive_last,14.8,14.7
+SYC,Seychelles,2021,1,drift,14.85,14.7
+SYC,Seychelles,2022,1,naive_last,14.7,14.5
+SYC,Seychelles,2022,1,drift,14.743,14.5
+SYC,Seychelles,2023,1,naive_last,14.5,14.3
+SYC,Seychelles,2023,1,drift,14.532,14.3
+SYC,Seychelles,2024,1,naive_last,14.3,14.0
+SYC,Seychelles,2024,1,drift,14.322,14.0
+TCD,Chad,2013,1,naive_last,139.3,135.8
+TCD,Chad,2013,1,drift,135.708,135.8
+TCD,Chad,2014,1,naive_last,135.8,132.3
+TCD,Chad,2014,1,drift,132.215,132.3
+TCD,Chad,2015,1,naive_last,132.3,128.7
+TCD,Chad,2015,1,drift,128.721,128.7
+TCD,Chad,2016,1,naive_last,128.7,125.0
+TCD,Chad,2016,1,drift,125.12,125.0
+TCD,Chad,2017,1,naive_last,125.0,121.4
+TCD,Chad,2017,1,drift,121.412,121.4
+TCD,Chad,2018,1,naive_last,121.4,117.6
+TCD,Chad,2018,1,drift,117.812,117.6
+TCD,Chad,2019,1,naive_last,117.6,114.0
+TCD,Chad,2019,1,drift,114.0,114.0
+TCD,Chad,2020,1,naive_last,114.0,110.6
+TCD,Chad,2020,1,drift,110.4,110.6
+TCD,Chad,2021,1,naive_last,110.6,107.3
+TCD,Chad,2021,1,drift,107.01,107.3
+TCD,Chad,2022,1,naive_last,107.3,103.9
+TCD,Chad,2022,1,drift,103.724,103.9
+TCD,Chad,2023,1,naive_last,103.9,100.6
+TCD,Chad,2023,1,drift,100.332,100.6
+TCD,Chad,2024,1,naive_last,100.6,97.3
+TCD,Chad,2024,1,drift,97.043,97.3
+TGO,Togo,2013,1,naive_last,82.9,80.2
+TGO,Togo,2013,1,drift,79.875,80.2
+TGO,Togo,2014,1,naive_last,80.2,77.7
+TGO,Togo,2014,1,drift,77.2,77.7
+TGO,Togo,2015,1,naive_last,77.7,75.2
+TGO,Togo,2015,1,drift,74.736,75.2
+TGO,Togo,2016,1,naive_last,75.2,72.8
+TGO,Togo,2016,1,drift,72.267,72.8
+TGO,Togo,2017,1,naive_last,72.8,70.4
+TGO,Togo,2017,1,drift,69.9,70.4
+TGO,Togo,2018,1,naive_last,70.4,68.1
+TGO,Togo,2018,1,drift,67.529,68.1
+TGO,Togo,2019,1,naive_last,68.1,66.0
+TGO,Togo,2019,1,drift,65.261,66.0
+TGO,Togo,2020,1,naive_last,66.0,63.9
+TGO,Togo,2020,1,drift,63.2,63.9
+TGO,Togo,2021,1,naive_last,63.9,62.0
+TGO,Togo,2021,1,drift,61.135,62.0
+TGO,Togo,2022,1,naive_last,62.0,60.0
+TGO,Togo,2022,1,drift,59.276,60.0
+TGO,Togo,2023,1,naive_last,60.0,58.1
+TGO,Togo,2023,1,drift,57.309,58.1
+TGO,Togo,2024,1,naive_last,58.1,56.1
+TGO,Togo,2024,1,drift,55.443,56.1
+TUN,Tunisia,2013,1,naive_last,18.4,18.3
+TUN,Tunisia,2013,1,drift,17.5,18.3
+TUN,Tunisia,2014,1,naive_last,18.3,18.3
+TUN,Tunisia,2014,1,drift,17.462,18.3
+TUN,Tunisia,2015,1,naive_last,18.3,18.2
+TUN,Tunisia,2015,1,drift,17.521,18.2
+TUN,Tunisia,2016,1,naive_last,18.2,18.1
+TUN,Tunisia,2016,1,drift,17.467,18.1
+TUN,Tunisia,2017,1,naive_last,18.1,17.9
+TUN,Tunisia,2017,1,drift,17.406,17.9
+TUN,Tunisia,2018,1,naive_last,17.9,17.5
+TUN,Tunisia,2018,1,drift,17.235,17.5
+TUN,Tunisia,2019,1,naive_last,17.5,16.9
+TUN,Tunisia,2019,1,drift,16.85,16.9
+TUN,Tunisia,2020,1,naive_last,16.9,16.0
+TUN,Tunisia,2020,1,drift,16.253,16.0
+TUN,Tunisia,2021,1,naive_last,16.0,15.0
+TUN,Tunisia,2021,1,drift,15.34,15.0
+TUN,Tunisia,2022,1,naive_last,15.0,13.9
+TUN,Tunisia,2022,1,drift,14.324,13.9
+TUN,Tunisia,2023,1,naive_last,13.9,12.9
+TUN,Tunisia,2023,1,drift,13.205,12.9
+TUN,Tunisia,2024,1,naive_last,12.9,12.1
+TUN,Tunisia,2024,1,drift,12.191,12.1
+TZA,Tanzania,2013,1,naive_last,61.7,59.0
+TZA,Tanzania,2013,1,drift,56.175,59.0
+TZA,Tanzania,2014,1,naive_last,59.0,56.3
+TZA,Tanzania,2014,1,drift,53.692,56.3
+TZA,Tanzania,2015,1,naive_last,56.3,54.3
+TZA,Tanzania,2015,1,drift,51.179,54.3
+TZA,Tanzania,2016,1,naive_last,54.3,52.0
+TZA,Tanzania,2016,1,drift,49.387,52.0
+TZA,Tanzania,2017,1,naive_last,52.0,49.8
+TZA,Tanzania,2017,1,drift,47.25,49.8
+TZA,Tanzania,2018,1,naive_last,49.8,47.6
+TZA,Tanzania,2018,1,drift,45.2,47.6
+TZA,Tanzania,2019,1,naive_last,47.6,45.6
+TZA,Tanzania,2019,1,drift,43.133,45.6
+TZA,Tanzania,2020,1,naive_last,45.6,43.8
+TZA,Tanzania,2020,1,drift,41.263,43.8
+TZA,Tanzania,2021,1,naive_last,43.8,41.7
+TZA,Tanzania,2021,1,drift,39.59,41.7
+TZA,Tanzania,2022,1,naive_last,41.7,40.1
+TZA,Tanzania,2022,1,drift,37.59,40.1
+TZA,Tanzania,2023,1,naive_last,40.1,38.5
+TZA,Tanzania,2023,1,drift,36.105,38.5
+TZA,Tanzania,2024,1,naive_last,38.5,37.0
+TZA,Tanzania,2024,1,drift,34.609,37.0
+UGA,Uganda,2013,1,naive_last,66.5,62.8
+UGA,Uganda,2013,1,drift,60.05,62.8
+UGA,Uganda,2014,1,naive_last,62.8,60.2
+UGA,Uganda,2014,1,drift,56.562,60.2
+UGA,Uganda,2015,1,naive_last,60.2,57.9
+UGA,Uganda,2015,1,drift,54.221,57.9
+UGA,Uganda,2016,1,naive_last,57.9,55.6
+UGA,Uganda,2016,1,drift,52.167,55.6
+UGA,Uganda,2017,1,naive_last,55.6,54.0
+UGA,Uganda,2017,1,drift,50.081,54.0
+UGA,Uganda,2018,1,naive_last,54.0,52.7
+UGA,Uganda,2018,1,drift,48.712,52.7
+UGA,Uganda,2019,1,naive_last,52.7,51.6
+UGA,Uganda,2019,1,drift,47.633,51.6
+UGA,Uganda,2020,1,naive_last,51.6,50.9
+UGA,Uganda,2020,1,drift,46.742,50.9
+UGA,Uganda,2021,1,naive_last,50.9,50.2
+UGA,Uganda,2021,1,drift,46.25,50.2
+UGA,Uganda,2022,1,naive_last,50.2,50.0
+UGA,Uganda,2022,1,drift,45.738,50.0
+UGA,Uganda,2023,1,naive_last,50.0,49.4
+UGA,Uganda,2023,1,drift,45.732,49.4
+UGA,Uganda,2024,1,naive_last,49.4,48.7
+UGA,Uganda,2024,1,drift,45.291,48.7
+ZAF,South Africa,2013,1,naive_last,43.1,41.4
+ZAF,South Africa,2013,1,drift,40.742,41.4
+ZAF,South Africa,2014,1,naive_last,41.4,39.7
+ZAF,South Africa,2014,1,drift,39.092,39.7
+ZAF,South Africa,2015,1,naive_last,39.7,38.2
+ZAF,South Africa,2015,1,drift,37.436,38.2
+ZAF,South Africa,2016,1,naive_last,38.2,36.8
+ZAF,South Africa,2016,1,drift,35.987,36.8
+ZAF,South Africa,2017,1,naive_last,36.8,35.7
+ZAF,South Africa,2017,1,drift,34.637,35.7
+ZAF,South Africa,2018,1,naive_last,35.7,34.9
+ZAF,South Africa,2018,1,drift,33.6,34.9
+ZAF,South Africa,2019,1,naive_last,34.9,34.3
+ZAF,South Africa,2019,1,drift,32.872,34.3
+ZAF,South Africa,2020,1,naive_last,34.3,33.9
+ZAF,South Africa,2020,1,drift,32.347,33.9
+ZAF,South Africa,2021,1,naive_last,33.9,34.0
+ZAF,South Africa,2021,1,drift,32.025,34.0
+ZAF,South Africa,2022,1,naive_last,34.0,34.3
+ZAF,South Africa,2022,1,drift,32.219,34.3
+ZAF,South Africa,2023,1,naive_last,34.3,34.8
+ZAF,South Africa,2023,1,drift,32.614,34.8
+ZAF,South Africa,2024,1,naive_last,34.8,35.1
+ZAF,South Africa,2024,1,drift,33.209,35.1
+ZMB,Zambia,2013,1,naive_last,69.2,66.0
+ZMB,Zambia,2013,1,drift,62.317,66.0
+ZMB,Zambia,2014,1,naive_last,66.0,62.6
+ZMB,Zambia,2014,1,drift,59.4,62.6
+ZMB,Zambia,2015,1,naive_last,62.6,60.2
+ZMB,Zambia,2015,1,drift,56.229,60.2
+ZMB,Zambia,2016,1,naive_last,60.2,57.1
+ZMB,Zambia,2016,1,drift,54.093,57.1
+ZMB,Zambia,2017,1,naive_last,57.1,55.2
+ZMB,Zambia,2017,1,drift,51.181,55.2
+ZMB,Zambia,2018,1,naive_last,55.2,54.7
+ZMB,Zambia,2018,1,drift,49.518,54.7
+ZMB,Zambia,2019,1,naive_last,54.7,53.5
+ZMB,Zambia,2019,1,drift,49.306,53.5
+ZMB,Zambia,2020,1,naive_last,53.5,52.5
+ZMB,Zambia,2020,1,drift,48.326,52.5
+ZMB,Zambia,2021,1,naive_last,52.5,50.4
+ZMB,Zambia,2021,1,drift,47.535,50.4
+ZMB,Zambia,2022,1,naive_last,50.4,49.5
+ZMB,Zambia,2022,1,drift,45.571,49.5
+ZMB,Zambia,2023,1,naive_last,49.5,49.1
+ZMB,Zambia,2023,1,drift,44.85,49.1
+ZMB,Zambia,2024,1,naive_last,49.1,48.4
+ZMB,Zambia,2024,1,drift,44.635,48.4
+ZWE,Zimbabwe,2013,1,naive_last,68.0,62.6
+ZWE,Zimbabwe,2013,1,drift,65.383,62.6
+ZWE,Zimbabwe,2014,1,naive_last,62.6,59.8
+ZWE,Zimbabwe,2014,1,drift,59.769,59.8
+ZWE,Zimbabwe,2015,1,naive_last,59.8,59.2
+ZWE,Zimbabwe,2015,1,drift,56.971,59.2
+ZWE,Zimbabwe,2016,1,naive_last,59.2,57.5
+ZWE,Zimbabwe,2016,1,drift,56.52,57.5
+ZWE,Zimbabwe,2017,1,naive_last,57.5,56.7
+ZWE,Zimbabwe,2017,1,drift,54.881,56.7
+ZWE,Zimbabwe,2018,1,naive_last,56.7,56.3
+ZWE,Zimbabwe,2018,1,drift,54.188,56.3
+ZWE,Zimbabwe,2019,1,naive_last,56.3,58.6
+ZWE,Zimbabwe,2019,1,drift,53.906,58.6
+ZWE,Zimbabwe,2020,1,naive_last,58.6,61.7
+ZWE,Zimbabwe,2020,1,drift,56.453,61.7
+ZWE,Zimbabwe,2021,1,naive_last,61.7,62.4
+ZWE,Zimbabwe,2021,1,drift,59.815,62.4
+ZWE,Zimbabwe,2022,1,naive_last,62.4,64.0
+ZWE,Zimbabwe,2022,1,drift,60.638,64.0
+ZWE,Zimbabwe,2023,1,naive_last,64.0,64.2
+ZWE,Zimbabwe,2023,1,drift,62.391,64.2
+ZWE,Zimbabwe,2024,1,naive_last,64.2,64.7
+ZWE,Zimbabwe,2024,1,drift,62.67,64.7
