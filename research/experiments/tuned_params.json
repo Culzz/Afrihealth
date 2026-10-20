@@ -1,0 +1,42 @@
+{
+  "xgb": {
+    "n_estimators": 314,
+    "learning_rate": 0.026000059117302653,
+    "max_depth": 5,
+    "subsample": 0.5704621124873813,
+    "colsample_bytree": 0.9010984903770198,
+    "min_child_weight": 2,
+    "reg_lambda": 8.862326508576253
+  },
+  "lgb": {
+    "n_estimators": 456,
+    "learning_rate": 0.011711509955524094,
+    "num_leaves": 81,
+    "min_child_samples": 14,
+    "subsample": 0.5325257964926398,
+    "colsample_bytree": 0.9744427686266666,
+    "reg_lambda": 7.2866537374910445
+  },
+  "cv_mae": {
+    "xgb": 3.92952439626058,
+    "lgb": 3.313134393480695
+  },
+  "features": [
+    "u5m_lag1",
+    "u5m_lag2",
+    "u5m_lag3",
+    "year",
+    "region_afr",
+    "region_mena",
+    "gdp_pc_p1",
+    "chexp_pctgdp_p1",
+    "phys_1k_p1",
+    "nurses_1k_p1",
+    "dpt_cov_p1",
+    "meas_cov_p1",
+    "san_basic_p1",
+    "water_basic_p1",
+    "urb_pct_p1"
+  ],
+  "note": "tuned on folds with years < 2019 only"
+}
