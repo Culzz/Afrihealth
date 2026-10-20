@@ -1,0 +1,60 @@
+{
+  "model_version": "u5m-lgb-v1",
+  "framework": "lightgbm",
+  "task": "forecast annual under-5 mortality (per 1,000 live births)",
+  "trained_on": "country-years with label present (2000-2024, n=1350)",
+  "params": {
+    "n_estimators": 456,
+    "learning_rate": 0.011711509955524094,
+    "num_leaves": 81,
+    "min_child_samples": 14,
+    "subsample": 0.5325257964926398,
+    "colsample_bytree": 0.9744427686266666,
+    "reg_lambda": 7.2866537374910445
+  },
+  "features": [
+    "u5m_lag1",
+    "u5m_lag2",
+    "u5m_lag3",
+    "year",
+    "region_afr",
+    "region_mena",
+    "gdp_pc_p1",
+    "chexp_pctgdp_p1",
+    "phys_1k_p1",
+    "nurses_1k_p1",
+    "dpt_cov_p1",
+    "meas_cov_p1",
+    "san_basic_p1",
+    "water_basic_p1",
+    "urb_pct_p1"
+  ],
+  "dataset_version": "v1__20261019",
+  "metrics_testholdout": {
+    "mae": 3.49,
+    "rmse": 19.29,
+    "wape": 0.0609
+  },
+  "metrics_holdout_note": "from Week-4 evaluation on 2021-2024; re-tuned artifacts would re-measure",
+  "uncertainty": {
+    "method": "empirical |residual| quantiles from the Week-4 holdout",
+    "sigma": 19.021,
+    "q90h1": 2.956,
+    "h_rule": "interval widens with sqrt(horizon)"
+  },
+  "thresholds": [
+    70.0,
+    50.0
+  ],
+  "registry_files": [
+    "model_v1.pkl",
+    "forecasts.json"
+  ],
+  "created_at": "2026-10-20T13:29:03.820897+00:00",
+  "limitations": [
+    "Country-level, population-level tool; never an individual clinical predictor.",
+    "Horizon-1 MAE is the only empirically validated horizon; h>1 intervals widen by sqrt(h).",
+    "Sparse workforce features (physicians/nurses) lowered confidence where flagged.",
+    "SHAP attributions describe model behaviour - they are NOT causal effects."
+  ]
+}

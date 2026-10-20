@@ -1,0 +1,3998 @@
+[
+ {
+  "iso3": "AGO",
+  "country": "Angola",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.16,
+  "lo90": 76.98,
+  "hi90": 85.34,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 49.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.661,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.728
+   },
+   {
+    "feature": "year",
+    "shap": -1.015
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.848
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.139
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.126
+   }
+  ]
+ },
+ {
+  "iso3": "AGO",
+  "country": "Angola",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 49.0,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.728
+   },
+   {
+    "feature": "year",
+    "shap": -1.015
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.848
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.139
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.126
+   }
+  ]
+ },
+ {
+  "iso3": "BDI",
+  "country": "Burundi",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 82.89,
+  "lo90": 78.71,
+  "hi90": 87.07,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 47.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.684,
+  "p_gt_50": 0.889,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -28.917
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.828
+   },
+   {
+    "feature": "year",
+    "shap": -0.689
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.608
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.189
+   }
+  ]
+ },
+ {
+  "iso3": "BDI",
+  "country": "Burundi",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 81.63,
+  "lo90": 76.51,
+  "hi90": 86.75,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 47.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.638,
+  "p_gt_50": 0.831,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -28.917
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.828
+   },
+   {
+    "feature": "year",
+    "shap": -0.689
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.608
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.189
+   }
+  ]
+ },
+ {
+  "iso3": "BEN",
+  "country": "Benin",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.31,
+  "lo90": 77.13,
+  "hi90": 85.49,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 74.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.663,
+  "p_gt_50": 0.878,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -2.533
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.846
+   },
+   {
+    "feature": "year",
+    "shap": -0.738
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.525
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.291
+   }
+  ]
+ },
+ {
+  "iso3": "BEN",
+  "country": "Benin",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 74.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -2.533
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.846
+   },
+   {
+    "feature": "year",
+    "shap": -0.738
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.525
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.291
+   }
+  ]
+ },
+ {
+  "iso3": "BFA",
+  "country": "Burkina Faso",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.48,
+  "lo90": 77.3,
+  "hi90": 85.66,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 74.9,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.665,
+  "p_gt_50": 0.879,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -1.553
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.802
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.575
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.516
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.327
+   }
+  ]
+ },
+ {
+  "iso3": "BFA",
+  "country": "Burkina Faso",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 74.9,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -1.553
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.802
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.575
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.516
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.327
+   }
+  ]
+ },
+ {
+  "iso3": "BWA",
+  "country": "Botswana",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.21,
+  "lo90": 77.03,
+  "hi90": 85.39,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 33.3,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.662,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.937
+   },
+   {
+    "feature": "year",
+    "shap": -1.001
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.813
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.208
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.174
+   }
+  ]
+ },
+ {
+  "iso3": "BWA",
+  "country": "Botswana",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 33.3,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.937
+   },
+   {
+    "feature": "year",
+    "shap": -1.001
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.813
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.208
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.174
+   }
+  ]
+ },
+ {
+  "iso3": "CAF",
+  "country": "Central African Republic",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.21,
+  "lo90": 76.03,
+  "hi90": 84.39,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 89.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.648,
+  "p_gt_50": 0.869,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 12.008
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.521
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.473
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": 0.377
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.369
+   }
+  ]
+ },
+ {
+  "iso3": "CAF",
+  "country": "Central African Republic",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.42,
+  "lo90": 73.3,
+  "hi90": 83.54,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 89.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.601,
+  "p_gt_50": 0.806,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 12.008
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.521
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.473
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": 0.377
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.369
+   }
+  ]
+ },
+ {
+  "iso3": "CIV",
+  "country": "Cote d'Ivoire",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.17,
+  "lo90": 76.99,
+  "hi90": 85.35,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.661,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -12.941
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.883
+   },
+   {
+    "feature": "year",
+    "shap": -0.662
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.221
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.165
+   }
+  ]
+ },
+ {
+  "iso3": "CIV",
+  "country": "Cote d'Ivoire",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.5,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -12.941
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.883
+   },
+   {
+    "feature": "year",
+    "shap": -0.662
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.221
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.165
+   }
+  ]
+ },
+ {
+  "iso3": "CMR",
+  "country": "Cameroon",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.22,
+  "lo90": 77.04,
+  "hi90": 85.4,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.8,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.662,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -12.846
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.844
+   },
+   {
+    "feature": "year",
+    "shap": -0.722
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.253
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.17
+   }
+  ]
+ },
+ {
+  "iso3": "CMR",
+  "country": "Cameroon",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.8,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -12.846
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.844
+   },
+   {
+    "feature": "year",
+    "shap": -0.722
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.253
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.17
+   }
+  ]
+ },
+ {
+  "iso3": "COD",
+  "country": "Congo, Dem. Rep.",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.65,
+  "lo90": 75.47,
+  "hi90": 83.83,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 89.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.64,
+  "p_gt_50": 0.865,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 12.558
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.856
+   },
+   {
+    "feature": "year",
+    "shap": -0.425
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.424
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.168
+   }
+  ]
+ },
+ {
+  "iso3": "COD",
+  "country": "Congo, Dem. Rep.",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 77.65,
+  "lo90": 72.53,
+  "hi90": 82.77,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 89.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.592,
+  "p_gt_50": 0.799,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 12.558
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.856
+   },
+   {
+    "feature": "year",
+    "shap": -0.425
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.424
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.168
+   }
+  ]
+ },
+ {
+  "iso3": "COG",
+  "country": "Congo, Rep.",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.21,
+  "lo90": 77.03,
+  "hi90": 85.39,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.662,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.596
+   },
+   {
+    "feature": "year",
+    "shap": -1.018
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.829
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.13
+   },
+   {
+    "feature": "region_afr",
+    "shap": 0.057
+   }
+  ]
+ },
+ {
+  "iso3": "COG",
+  "country": "Congo, Rep.",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.596
+   },
+   {
+    "feature": "year",
+    "shap": -1.018
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.829
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.13
+   },
+   {
+    "feature": "region_afr",
+    "shap": 0.057
+   }
+  ]
+ },
+ {
+  "iso3": "COM",
+  "country": "Comoros",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.87,
+  "lo90": 77.69,
+  "hi90": 86.05,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.67,
+  "p_gt_50": 0.882,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.305
+   },
+   {
+    "feature": "year",
+    "shap": -0.906
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.807
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.138
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.075
+   }
+  ]
+ },
+ {
+  "iso3": "COM",
+  "country": "Comoros",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.0,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.305
+   },
+   {
+    "feature": "year",
+    "shap": -0.906
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.807
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.138
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.075
+   }
+  ]
+ },
+ {
+  "iso3": "CPV",
+  "country": "Cabo Verde",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.64,
+  "lo90": 75.46,
+  "hi90": 83.82,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 11.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.64,
+  "p_gt_50": 0.865,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.271
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.591
+   },
+   {
+    "feature": "year",
+    "shap": -1.082
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.833
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.22
+   }
+  ]
+ },
+ {
+  "iso3": "CPV",
+  "country": "Cabo Verde",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.16,
+  "lo90": 73.04,
+  "hi90": 83.28,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 11.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.598,
+  "p_gt_50": 0.804,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.271
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.591
+   },
+   {
+    "feature": "year",
+    "shap": -1.082
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.833
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.22
+   }
+  ]
+ },
+ {
+  "iso3": "DJI",
+  "country": "Djibouti",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.83,
+  "lo90": 76.65,
+  "hi90": 85.01,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.9,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.656,
+  "p_gt_50": 0.874,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.544
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.854
+   },
+   {
+    "feature": "year",
+    "shap": -0.848
+   },
+   {
+    "feature": "region_afr",
+    "shap": -0.205
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.173
+   }
+  ]
+ },
+ {
+  "iso3": "DJI",
+  "country": "Djibouti",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.67,
+  "lo90": 73.55,
+  "hi90": 83.79,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.9,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.604,
+  "p_gt_50": 0.808,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.544
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.854
+   },
+   {
+    "feature": "year",
+    "shap": -0.848
+   },
+   {
+    "feature": "region_afr",
+    "shap": -0.205
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.173
+   }
+  ]
+ },
+ {
+  "iso3": "DZA",
+  "country": "Algeria",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.2,
+  "lo90": 76.02,
+  "hi90": 84.38,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 21.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.648,
+  "p_gt_50": 0.869,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -54.832
+   },
+   {
+    "feature": "year",
+    "shap": -0.96
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.83
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.636
+   },
+   {
+    "feature": "region_afr",
+    "shap": -0.236
+   }
+  ]
+ },
+ {
+  "iso3": "DZA",
+  "country": "Algeria",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.88,
+  "lo90": 73.76,
+  "hi90": 84.0,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 21.6,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.606,
+  "p_gt_50": 0.81,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -54.832
+   },
+   {
+    "feature": "year",
+    "shap": -0.96
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.83
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.636
+   },
+   {
+    "feature": "region_afr",
+    "shap": -0.236
+   }
+  ]
+ },
+ {
+  "iso3": "EGY",
+  "country": "Egypt, Arab Rep.",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.81,
+  "lo90": 76.63,
+  "hi90": 84.99,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 22.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.656,
+  "p_gt_50": 0.874,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -53.843
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.827
+   },
+   {
+    "feature": "year",
+    "shap": -0.806
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.639
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.208
+   }
+  ]
+ },
+ {
+  "iso3": "EGY",
+  "country": "Egypt, Arab Rep.",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.7,
+  "lo90": 73.58,
+  "hi90": 83.82,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 22.4,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.604,
+  "p_gt_50": 0.808,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -53.843
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.827
+   },
+   {
+    "feature": "year",
+    "shap": -0.806
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -0.639
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.208
+   }
+  ]
+ },
+ {
+  "iso3": "ERI",
+  "country": "Eritrea",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 83.29,
+  "lo90": 79.11,
+  "hi90": 87.47,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 34.3,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.689,
+  "p_gt_50": 0.892,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.971
+   },
+   {
+    "feature": "year",
+    "shap": -1.044
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.841
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.25
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.216
+   }
+  ]
+ },
+ {
+  "iso3": "ERI",
+  "country": "Eritrea",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 82.01,
+  "lo90": 76.89,
+  "hi90": 87.13,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 34.3,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.642,
+  "p_gt_50": 0.834,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.971
+   },
+   {
+    "feature": "year",
+    "shap": -1.044
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.841
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.25
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.216
+   }
+  ]
+ },
+ {
+  "iso3": "ETH",
+  "country": "Ethiopia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.95,
+  "lo90": 76.76,
+  "hi90": 85.13,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 44.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.658,
+  "p_gt_50": 0.875,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.116
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.9
+   },
+   {
+    "feature": "year",
+    "shap": -0.84
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": 0.231
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.201
+   }
+  ]
+ },
+ {
+  "iso3": "ETH",
+  "country": "Ethiopia",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.74,
+  "lo90": 73.62,
+  "hi90": 83.86,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 44.5,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.605,
+  "p_gt_50": 0.809,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -27.116
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.9
+   },
+   {
+    "feature": "year",
+    "shap": -0.84
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": 0.231
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.201
+   }
+  ]
+ },
+ {
+  "iso3": "GAB",
+  "country": "Gabon",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.21,
+  "lo90": 77.03,
+  "hi90": 85.39,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 32.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.662,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -43.85
+   },
+   {
+    "feature": "year",
+    "shap": -1.164
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.836
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.172
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.131
+   }
+  ]
+ },
+ {
+  "iso3": "GAB",
+  "country": "Gabon",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 32.6,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -43.85
+   },
+   {
+    "feature": "year",
+    "shap": -1.164
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.836
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.172
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.131
+   }
+  ]
+ },
+ {
+  "iso3": "GHA",
+  "country": "Ghana",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.22,
+  "lo90": 77.04,
+  "hi90": 85.4,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 35.9,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.662,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -41.098
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.819
+   },
+   {
+    "feature": "year",
+    "shap": -0.77
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.244
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.197
+   }
+  ]
+ },
+ {
+  "iso3": "GHA",
+  "country": "Ghana",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 35.9,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -41.098
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.819
+   },
+   {
+    "feature": "year",
+    "shap": -0.77
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.244
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.197
+   }
+  ]
+ },
+ {
+  "iso3": "GIN",
+  "country": "Guinea",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.7,
+  "lo90": 75.52,
+  "hi90": 83.88,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 92.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.641,
+  "p_gt_50": 0.865,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 15.688
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.949
+   },
+   {
+    "feature": "year",
+    "shap": -0.913
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.338
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.263
+   }
+  ]
+ },
+ {
+  "iso3": "GIN",
+  "country": "Guinea",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 77.65,
+  "lo90": 72.53,
+  "hi90": 82.77,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 92.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.592,
+  "p_gt_50": 0.799,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 15.688
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.949
+   },
+   {
+    "feature": "year",
+    "shap": -0.913
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.338
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.263
+   }
+  ]
+ },
+ {
+  "iso3": "GMB",
+  "country": "Gambia, The",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.8,
+  "lo90": 76.62,
+  "hi90": 84.98,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 42.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.656,
+  "p_gt_50": 0.874,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -34.767
+   },
+   {
+    "feature": "year",
+    "shap": -0.985
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.84
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.107
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.102
+   }
+  ]
+ },
+ {
+  "iso3": "GMB",
+  "country": "Gambia, The",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.74,
+  "lo90": 73.62,
+  "hi90": 83.86,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 42.4,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.605,
+  "p_gt_50": 0.808,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -34.767
+   },
+   {
+    "feature": "year",
+    "shap": -0.985
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.84
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.107
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.102
+   }
+  ]
+ },
+ {
+  "iso3": "GNB",
+  "country": "Guinea-Bissau",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.58,
+  "lo90": 77.4,
+  "hi90": 85.76,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 67.3,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.667,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -9.618
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.87
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.562
+   },
+   {
+    "feature": "year",
+    "shap": -0.438
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.243
+   }
+  ]
+ },
+ {
+  "iso3": "GNB",
+  "country": "Guinea-Bissau",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.76,
+  "lo90": 74.64,
+  "hi90": 84.88,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 67.3,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.616,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -9.618
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.87
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.562
+   },
+   {
+    "feature": "year",
+    "shap": -0.438
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.243
+   }
+  ]
+ },
+ {
+  "iso3": "GNQ",
+  "country": "Equatorial Guinea",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.17,
+  "lo90": 76.99,
+  "hi90": 85.35,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 68.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.661,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -9.512
+   },
+   {
+    "feature": "year",
+    "shap": -1.141
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.877
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.163
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.128
+   }
+  ]
+ },
+ {
+  "iso3": "GNQ",
+  "country": "Equatorial Guinea",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.76,
+  "lo90": 74.64,
+  "hi90": 84.88,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 68.0,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.616,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -9.512
+   },
+   {
+    "feature": "year",
+    "shap": -1.141
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.877
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.163
+   },
+   {
+    "feature": "water_basic_p1",
+    "shap": 0.128
+   }
+  ]
+ },
+ {
+  "iso3": "KEN",
+  "country": "Kenya",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.85,
+  "lo90": 77.67,
+  "hi90": 86.03,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 38.8,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.67,
+  "p_gt_50": 0.882,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.88
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.836
+   },
+   {
+    "feature": "year",
+    "shap": -0.785
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.16
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.148
+   }
+  ]
+ },
+ {
+  "iso3": "KEN",
+  "country": "Kenya",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 38.8,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -38.88
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.836
+   },
+   {
+    "feature": "year",
+    "shap": -0.785
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.16
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.148
+   }
+  ]
+ },
+ {
+  "iso3": "LBR",
+  "country": "Liberia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 78.98,
+  "lo90": 74.79,
+  "hi90": 83.16,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 86.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.631,
+  "p_gt_50": 0.859,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 7.758
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.756
+   },
+   {
+    "feature": "year",
+    "shap": -0.626
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.469
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.384
+   }
+  ]
+ },
+ {
+  "iso3": "LBR",
+  "country": "Liberia",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 77.41,
+  "lo90": 72.29,
+  "hi90": 82.53,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 86.4,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.589,
+  "p_gt_50": 0.797,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 7.758
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.756
+   },
+   {
+    "feature": "year",
+    "shap": -0.626
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.469
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.384
+   }
+  ]
+ },
+ {
+  "iso3": "LBY",
+  "country": "Libya",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.3,
+  "lo90": 75.12,
+  "hi90": 83.48,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 9.8,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.635,
+  "p_gt_50": 0.862,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -45.752
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.606
+   },
+   {
+    "feature": "year",
+    "shap": -0.867
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.811
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.493
+   }
+  ]
+ },
+ {
+  "iso3": "LBY",
+  "country": "Libya",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.05,
+  "lo90": 72.93,
+  "hi90": 83.17,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 9.8,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.597,
+  "p_gt_50": 0.803,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -45.752
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.606
+   },
+   {
+    "feature": "year",
+    "shap": -0.867
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.811
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.493
+   }
+  ]
+ },
+ {
+  "iso3": "LSO",
+  "country": "Lesotho",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.6,
+  "lo90": 77.42,
+  "hi90": 85.78,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 60.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.667,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -17.71
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.789
+   },
+   {
+    "feature": "year",
+    "shap": -0.553
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.515
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.196
+   }
+  ]
+ },
+ {
+  "iso3": "LSO",
+  "country": "Lesotho",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.78,
+  "lo90": 74.66,
+  "hi90": 84.9,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 60.0,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -17.71
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.789
+   },
+   {
+    "feature": "year",
+    "shap": -0.553
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.515
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.196
+   }
+  ]
+ },
+ {
+  "iso3": "MAR",
+  "country": "Morocco",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.29,
+  "lo90": 75.11,
+  "hi90": 83.47,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 15.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.635,
+  "p_gt_50": 0.862,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.493
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.575
+   },
+   {
+    "feature": "year",
+    "shap": -0.866
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.255
+   }
+  ]
+ },
+ {
+  "iso3": "MAR",
+  "country": "Morocco",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.05,
+  "lo90": 72.93,
+  "hi90": 83.17,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 15.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.597,
+  "p_gt_50": 0.803,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.493
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.575
+   },
+   {
+    "feature": "year",
+    "shap": -0.866
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.255
+   }
+  ]
+ },
+ {
+  "iso3": "MDG",
+  "country": "Madagascar",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.98,
+  "lo90": 77.8,
+  "hi90": 86.16,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 62.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.672,
+  "p_gt_50": 0.883,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -15.772
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "year",
+    "shap": -0.763
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.15
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": 0.1
+   }
+  ]
+ },
+ {
+  "iso3": "MDG",
+  "country": "Madagascar",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 80.33,
+  "lo90": 75.21,
+  "hi90": 85.45,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 62.4,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.623,
+  "p_gt_50": 0.821,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -15.772
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "year",
+    "shap": -0.763
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.15
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": 0.1
+   }
+  ]
+ },
+ {
+  "iso3": "MLI",
+  "country": "Mali",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.56,
+  "lo90": 77.38,
+  "hi90": 85.74,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 73.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.666,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -3.831
+   },
+   {
+    "feature": "year",
+    "shap": -0.951
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.92
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.374
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.128
+   }
+  ]
+ },
+ {
+  "iso3": "MLI",
+  "country": "Mali",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 73.0,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -3.831
+   },
+   {
+    "feature": "year",
+    "shap": -0.951
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.92
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.374
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.128
+   }
+  ]
+ },
+ {
+  "iso3": "MOZ",
+  "country": "Mozambique",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.65,
+  "lo90": 77.47,
+  "hi90": 85.83,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 59.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.668,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -17.05
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.848
+   },
+   {
+    "feature": "year",
+    "shap": -0.665
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.648
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.244
+   }
+  ]
+ },
+ {
+  "iso3": "MOZ",
+  "country": "Mozambique",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.78,
+  "lo90": 74.66,
+  "hi90": 84.9,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 59.4,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -17.05
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.848
+   },
+   {
+    "feature": "year",
+    "shap": -0.665
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.648
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.244
+   }
+  ]
+ },
+ {
+  "iso3": "MRT",
+  "country": "Mauritania",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.18,
+  "lo90": 77.0,
+  "hi90": 85.36,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 36.9,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.661,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.071
+   },
+   {
+    "feature": "year",
+    "shap": -0.855
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.834
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.261
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.172
+   }
+  ]
+ },
+ {
+  "iso3": "MRT",
+  "country": "Mauritania",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 36.9,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.071
+   },
+   {
+    "feature": "year",
+    "shap": -0.855
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.834
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.261
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.172
+   }
+  ]
+ },
+ {
+  "iso3": "MUS",
+  "country": "Mauritius",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.26,
+  "lo90": 76.08,
+  "hi90": 84.45,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 15.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.649,
+  "p_gt_50": 0.87,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.951
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.603
+   },
+   {
+    "feature": "year",
+    "shap": -0.868
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.831
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.203
+   }
+  ]
+ },
+ {
+  "iso3": "MUS",
+  "country": "Mauritius",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.92,
+  "lo90": 73.8,
+  "hi90": 84.04,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 15.4,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.607,
+  "p_gt_50": 0.81,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.951
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.603
+   },
+   {
+    "feature": "year",
+    "shap": -0.868
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.831
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.203
+   }
+  ]
+ },
+ {
+  "iso3": "MWI",
+  "country": "Malawi",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.94,
+  "lo90": 76.76,
+  "hi90": 85.12,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.8,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.658,
+  "p_gt_50": 0.875,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -28.155
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.817
+   },
+   {
+    "feature": "year",
+    "shap": -0.653
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.261
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.192
+   }
+  ]
+ },
+ {
+  "iso3": "MWI",
+  "country": "Malawi",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.71,
+  "lo90": 73.59,
+  "hi90": 83.83,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.8,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.604,
+  "p_gt_50": 0.808,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -28.155
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.817
+   },
+   {
+    "feature": "year",
+    "shap": -0.653
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.261
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.192
+   }
+  ]
+ },
+ {
+  "iso3": "NAM",
+  "country": "Namibia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.84,
+  "lo90": 77.66,
+  "hi90": 86.02,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.67,
+  "p_gt_50": 0.882,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -37.11
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.795
+   },
+   {
+    "feature": "year",
+    "shap": -0.697
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.599
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.22
+   }
+  ]
+ },
+ {
+  "iso3": "NAM",
+  "country": "Namibia",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 39.5,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -37.11
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.795
+   },
+   {
+    "feature": "year",
+    "shap": -0.697
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.599
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.22
+   }
+  ]
+ },
+ {
+  "iso3": "NER",
+  "country": "Niger",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.01,
+  "lo90": 74.83,
+  "hi90": 83.19,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 110.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.631,
+  "p_gt_50": 0.86,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 34.542
+   },
+   {
+    "feature": "year",
+    "shap": -0.908
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.859
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.557
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.309
+   }
+  ]
+ },
+ {
+  "iso3": "NER",
+  "country": "Niger",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 76.66,
+  "lo90": 71.54,
+  "hi90": 81.78,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 110.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.58,
+  "p_gt_50": 0.791,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 34.542
+   },
+   {
+    "feature": "year",
+    "shap": -0.908
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.859
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.557
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.309
+   }
+  ]
+ },
+ {
+  "iso3": "NGA",
+  "country": "Nigeria",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 78.67,
+  "lo90": 74.49,
+  "hi90": 82.85,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 115.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.626,
+  "p_gt_50": 0.857,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 38.675
+   },
+   {
+    "feature": "year",
+    "shap": -2.427
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.844
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.562
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.219
+   }
+  ]
+ },
+ {
+  "iso3": "NGA",
+  "country": "Nigeria",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 76.65,
+  "lo90": 71.53,
+  "hi90": 81.77,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 115.6,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.58,
+  "p_gt_50": 0.791,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 38.675
+   },
+   {
+    "feature": "year",
+    "shap": -2.427
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.844
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.562
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.219
+   }
+  ]
+ },
+ {
+  "iso3": "RWA",
+  "country": "Rwanda",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.53,
+  "lo90": 77.35,
+  "hi90": 85.71,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 37.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.666,
+  "p_gt_50": 0.879,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -39.724
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.824
+   },
+   {
+    "feature": "year",
+    "shap": -0.714
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.209
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.184
+   }
+  ]
+ },
+ {
+  "iso3": "RWA",
+  "country": "Rwanda",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 37.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -39.724
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.824
+   },
+   {
+    "feature": "year",
+    "shap": -0.714
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.209
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.184
+   }
+  ]
+ },
+ {
+  "iso3": "SDN",
+  "country": "Sudan",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.6,
+  "lo90": 77.42,
+  "hi90": 85.78,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 61.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.667,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -16.224
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.741
+   },
+   {
+    "feature": "year",
+    "shap": -0.717
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.163
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.118
+   }
+  ]
+ },
+ {
+  "iso3": "SDN",
+  "country": "Sudan",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.78,
+  "lo90": 74.66,
+  "hi90": 84.9,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 61.6,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -16.224
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.741
+   },
+   {
+    "feature": "year",
+    "shap": -0.717
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.163
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.118
+   }
+  ]
+ },
+ {
+  "iso3": "SEN",
+  "country": "Senegal",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.29,
+  "lo90": 77.11,
+  "hi90": 85.47,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 36.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.663,
+  "p_gt_50": 0.878,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.097
+   },
+   {
+    "feature": "year",
+    "shap": -0.861
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.824
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.252
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.166
+   }
+  ]
+ },
+ {
+  "iso3": "SEN",
+  "country": "Senegal",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 36.5,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.097
+   },
+   {
+    "feature": "year",
+    "shap": -0.861
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.824
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.252
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.166
+   }
+  ]
+ },
+ {
+  "iso3": "SLE",
+  "country": "Sierra Leone",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.34,
+  "lo90": 75.16,
+  "hi90": 83.53,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 90.5,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.636,
+  "p_gt_50": 0.862,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 15.467
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.937
+   },
+   {
+    "feature": "year",
+    "shap": -0.587
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.512
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.454
+   }
+  ]
+ },
+ {
+  "iso3": "SLE",
+  "country": "Sierra Leone",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 77.6,
+  "lo90": 72.48,
+  "hi90": 82.72,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 90.5,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.591,
+  "p_gt_50": 0.799,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 15.467
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.937
+   },
+   {
+    "feature": "year",
+    "shap": -0.587
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.512
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.454
+   }
+  ]
+ },
+ {
+  "iso3": "SOM",
+  "country": "Somalia, Fed. Rep.",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 78.39,
+  "lo90": 74.21,
+  "hi90": 82.57,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 101.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.622,
+  "p_gt_50": 0.854,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 23.004
+   },
+   {
+    "feature": "year",
+    "shap": -1.115
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.489
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.411
+   }
+  ]
+ },
+ {
+  "iso3": "SOM",
+  "country": "Somalia, Fed. Rep.",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 76.73,
+  "lo90": 71.61,
+  "hi90": 81.85,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 101.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.581,
+  "p_gt_50": 0.791,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 23.004
+   },
+   {
+    "feature": "year",
+    "shap": -1.115
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.489
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.411
+   }
+  ]
+ },
+ {
+  "iso3": "SSD",
+  "country": "South Sudan",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.86,
+  "lo90": 76.68,
+  "hi90": 85.05,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 96.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.657,
+  "p_gt_50": 0.874,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 18.386
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.513
+   },
+   {
+    "feature": "year",
+    "shap": -0.432
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": 0.325
+   }
+  ]
+ },
+ {
+  "iso3": "SSD",
+  "country": "South Sudan",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 77.97,
+  "lo90": 72.85,
+  "hi90": 83.09,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 96.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.596,
+  "p_gt_50": 0.802,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 18.386
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.513
+   },
+   {
+    "feature": "year",
+    "shap": -0.432
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": 0.325
+   }
+  ]
+ },
+ {
+  "iso3": "STP",
+  "country": "Sao Tome and Principe",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.6,
+  "lo90": 75.41,
+  "hi90": 83.78,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 13.6,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.639,
+  "p_gt_50": 0.864,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.343
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.589
+   },
+   {
+    "feature": "year",
+    "shap": -1.071
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.837
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.141
+   }
+  ]
+ },
+ {
+  "iso3": "STP",
+  "country": "Sao Tome and Principe",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.16,
+  "lo90": 73.04,
+  "hi90": 83.28,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 13.6,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.598,
+  "p_gt_50": 0.804,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.343
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.589
+   },
+   {
+    "feature": "year",
+    "shap": -1.071
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.837
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": 0.141
+   }
+  ]
+ },
+ {
+  "iso3": "SWZ",
+  "country": "Eswatini",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.75,
+  "lo90": 77.57,
+  "hi90": 85.93,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 45.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.669,
+  "p_gt_50": 0.881,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -31.928
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.805
+   },
+   {
+    "feature": "year",
+    "shap": -0.711
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.606
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.209
+   }
+  ]
+ },
+ {
+  "iso3": "SWZ",
+  "country": "Eswatini",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.8,
+  "lo90": 74.68,
+  "hi90": 84.92,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 45.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -31.928
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.805
+   },
+   {
+    "feature": "year",
+    "shap": -0.711
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.606
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.209
+   }
+  ]
+ },
+ {
+  "iso3": "SYC",
+  "country": "Seychelles",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 80.26,
+  "lo90": 76.08,
+  "hi90": 84.44,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 14.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.649,
+  "p_gt_50": 0.87,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.069
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.584
+   },
+   {
+    "feature": "year",
+    "shap": -0.879
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.83
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.222
+   }
+  ]
+ },
+ {
+  "iso3": "SYC",
+  "country": "Seychelles",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.92,
+  "lo90": 73.8,
+  "hi90": 84.04,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 14.0,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.607,
+  "p_gt_50": 0.81,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -60.069
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.584
+   },
+   {
+    "feature": "year",
+    "shap": -0.879
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.83
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.222
+   }
+  ]
+ },
+ {
+  "iso3": "TCD",
+  "country": "Chad",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 78.89,
+  "lo90": 74.71,
+  "hi90": 83.07,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 97.3,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.63,
+  "p_gt_50": 0.859,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 22.306
+   },
+   {
+    "feature": "year",
+    "shap": -0.987
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.918
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.368
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.263
+   }
+  ]
+ },
+ {
+  "iso3": "TCD",
+  "country": "Chad",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 76.71,
+  "lo90": 71.59,
+  "hi90": 81.83,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 97.3,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.581,
+  "p_gt_50": 0.791,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": 22.306
+   },
+   {
+    "feature": "year",
+    "shap": -0.987
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.918
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.368
+   },
+   {
+    "feature": "gdp_pc_p1",
+    "shap": -0.263
+   }
+  ]
+ },
+ {
+  "iso3": "TGO",
+  "country": "Togo",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.63,
+  "lo90": 77.45,
+  "hi90": 85.81,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 56.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.667,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -19.807
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "year",
+    "shap": -0.585
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.248
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.199
+   }
+  ]
+ },
+ {
+  "iso3": "TGO",
+  "country": "Togo",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.78,
+  "lo90": 74.66,
+  "hi90": 84.9,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 56.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -19.807
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.818
+   },
+   {
+    "feature": "year",
+    "shap": -0.585
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.248
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.199
+   }
+  ]
+ },
+ {
+  "iso3": "TUN",
+  "country": "Tunisia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 79.27,
+  "lo90": 75.09,
+  "hi90": 83.45,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 12.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.635,
+  "p_gt_50": 0.862,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.362
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.599
+   },
+   {
+    "feature": "year",
+    "shap": -0.86
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.48
+   }
+  ]
+ },
+ {
+  "iso3": "TUN",
+  "country": "Tunisia",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 78.05,
+  "lo90": 72.93,
+  "hi90": 83.17,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 12.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.597,
+  "p_gt_50": 0.803,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -59.362
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": -1.599
+   },
+   {
+    "feature": "year",
+    "shap": -0.86
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.812
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.48
+   }
+  ]
+ },
+ {
+  "iso3": "TZA",
+  "country": "Tanzania",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.64,
+  "lo90": 77.46,
+  "hi90": 85.83,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 37.0,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.667,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.135
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.841
+   },
+   {
+    "feature": "year",
+    "shap": -0.774
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.127
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.12
+   }
+  ]
+ },
+ {
+  "iso3": "TZA",
+  "country": "Tanzania",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 37.0,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -40.135
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.841
+   },
+   {
+    "feature": "year",
+    "shap": -0.774
+   },
+   {
+    "feature": "meas_cov_p1",
+    "shap": -0.127
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.12
+   }
+  ]
+ },
+ {
+  "iso3": "UGA",
+  "country": "Uganda",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.58,
+  "lo90": 77.4,
+  "hi90": 85.76,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.667,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -29.227
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.85
+   },
+   {
+    "feature": "year",
+    "shap": -0.711
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.173
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.171
+   }
+  ]
+ },
+ {
+  "iso3": "UGA",
+  "country": "Uganda",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -29.227
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.85
+   },
+   {
+    "feature": "year",
+    "shap": -0.711
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.173
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.171
+   }
+  ]
+ },
+ {
+  "iso3": "ZAF",
+  "country": "South Africa",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.25,
+  "lo90": 77.07,
+  "hi90": 85.43,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 35.1,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.662,
+  "p_gt_50": 0.877,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.467
+   },
+   {
+    "feature": "year",
+    "shap": -0.903
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.807
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.488
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.097
+   }
+  ]
+ },
+ {
+  "iso3": "ZAF",
+  "country": "South Africa",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.79,
+  "lo90": 74.67,
+  "hi90": 84.91,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 35.1,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -42.467
+   },
+   {
+    "feature": "year",
+    "shap": -0.903
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.807
+   },
+   {
+    "feature": "chexp_pctgdp_p1",
+    "shap": -0.488
+   },
+   {
+    "feature": "san_basic_p1",
+    "shap": -0.097
+   }
+  ]
+ },
+ {
+  "iso3": "ZMB",
+  "country": "Zambia",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.64,
+  "lo90": 77.46,
+  "hi90": 85.82,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.4,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.667,
+  "p_gt_50": 0.88,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -29.399
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.816
+   },
+   {
+    "feature": "year",
+    "shap": -0.622
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.211
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.18
+   }
+  ]
+ },
+ {
+  "iso3": "ZMB",
+  "country": "Zambia",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 48.4,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -29.399
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.816
+   },
+   {
+    "feature": "year",
+    "shap": -0.622
+   },
+   {
+    "feature": "urb_pct_p1",
+    "shap": -0.211
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.18
+   }
+  ]
+ },
+ {
+  "iso3": "ZWE",
+  "country": "Zimbabwe",
+  "year": 2026,
+  "horizon": 2,
+  "yhat": 81.77,
+  "lo90": 77.59,
+  "hi90": 85.95,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.7,
+  "drivers_default_missing": false,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.669,
+  "p_gt_50": 0.881,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -13.626
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.738
+   },
+   {
+    "feature": "year",
+    "shap": -0.528
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.174
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.137
+   }
+  ]
+ },
+ {
+  "iso3": "ZWE",
+  "country": "Zimbabwe",
+  "year": 2027,
+  "horizon": 3,
+  "yhat": 79.77,
+  "lo90": 74.65,
+  "hi90": 84.89,
+  "last_observed_year": 2024,
+  "last_observed_u5m": 64.7,
+  "drivers_default_missing": true,
+  "sparse_hwf_missing": true,
+  "p_gt_70": 0.617,
+  "p_gt_50": 0.817,
+  "top_drivers_shap": [
+   {
+    "feature": "u5m_lag1",
+    "shap": -13.626
+   },
+   {
+    "feature": "u5m_lag3",
+    "shap": -0.738
+   },
+   {
+    "feature": "year",
+    "shap": -0.528
+   },
+   {
+    "feature": "u5m_lag2",
+    "shap": 0.174
+   },
+   {
+    "feature": "dpt_cov_p1",
+    "shap": -0.137
+   }
+  ]
+ }
+]
