@@ -1,0 +1,7 @@
+# Serverless function dependencies (Vercel Python runtime)
+fastapi==0.115.6
+pydantic==2.10.4
+pydantic-settings==2.7.1
+pandas==2.2.3
+reportlab==4.2.5
+psycopg[binary]==3.2.3

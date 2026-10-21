@@ -11,6 +11,7 @@ REPO = Path(__file__).resolve().parents[4]
 
 class Settings(BaseSettings):
     app_env: str = os.environ.get("API_ENV", "development")
+    database_url: str = os.environ.get("DATABASE_URL", "")
     cors_origins: list[str] = [
         o.strip() for o in os.environ.get(
             "CORS_ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:4173"

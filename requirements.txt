@@ -17,6 +17,7 @@ fastapi
 uvicorn[standard]
 pydantic
 pydantic-settings
+psycopg[binary]
 
 # Docs / exports
 reportlab

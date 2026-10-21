@@ -11,6 +11,7 @@ class Health(BaseModel):
     data_max_year: int
     model_version: str
     countries: int
+    db: str = "artifacts"
 
 
 class Country(BaseModel):

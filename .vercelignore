@@ -1,0 +1,17 @@
+.venv/
+node_modules/
+data/raw/
+research/experiments/
+tests/
+docs/SRS.md
+docs/SECURITY.md
+apps/web/node_modules/
+infra/
+*.log
+services/api/tests/
+ml/explainability/
+ml/validation/
+ml/features/
+ml/evaluation/
+ml/training/
+ml/ingestion/
