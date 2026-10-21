@@ -24,6 +24,17 @@ coverage, target-missing, sparse-workforce flags). Seven unit tests guard the
 validation suite; the build writes a sha256 hashed manifest and refuses to pass
 if any blocking check fails.
 
+## Week-3 build in one line
+
+The Week-3 baseline suite nailed the yardstick: naive_last **MAE 4.42** over 648
+rolling-origin country-year evaluations. Week 4 then beat it — tuned LightGBM
+**MAE 3.49 (−31%)** on the locked 2021–24 holdout, and the ablation answered the
+research question: history-only 3.78 → full drivers 3.49, so the driver series
+carry real signal, not decoration. Week 5 registered `u5m-lgb-v1` with
+uncertainty-aware forecasts for 2025–27 and per-country SHAP; Week 6 exposed it
+as a typed FastAPI; Week 7 gave it a React face; Week 8 packaged it in Docker
+with CI.
+
 ## Status overview
 
 | Phase | State |
@@ -31,10 +42,12 @@ if any blocking check fails.
 | Blueprint + monorepo scaffold | ✅ done |
 | Wk 1 — Data audit (WHO/WB U5M + drivers) | ✅ done — [`data/manifests/audit_report.md`](data/manifests/audit_report.md) |
 | Wk 2 — Ingestion + validation pipeline | ✅ done — `panel_long.csv` + `panel_wide.csv` (1,404 country-years), manifest + gate report |
-| Wk 3–5 — Forecasting research core | planned |
-| Wk 6 — FastAPI (typed /api/v1) | planned |
-| Wk 7 — React atlas + forecast + explainability | planned |
-| Wk 8 — Deploy + hardening | planned |
+| Wk 3 — Baselines (the yardstick) | ✅ done — naive_last MAE 4.42, drift 4.64 over 648 rolling-origin evals |
+| Wk 4 — Model training + ablation | ✅ done — LightGBM **MAE 3.49 vs naive 5.06 (−31%)** on locked 2021–24 holdout |
+| Wk 5 — Registry + SHAP + uncertainty | ✅ done — `u5m-lgb-v1`: 162 forecasts (2025–27 × 54 countries), empirical 90% intervals, exceedance probs, SHAP |
+| Wk 6 — FastAPI (typed /api/v1) | ✅ done — 9 contract tests green |
+| Wk 7 — React atlas + country deep-dive | ✅ done — Plotly choropleth, forecast bands, SHAP bars |
+| Wk 8 — Deploy + hardening | ✅ done — single-container Docker, compose, GitHub Actions CI |
 
 ## The three-layer framework
 
@@ -45,19 +58,29 @@ if any blocking check fails.
 No opaque universal risk score. Every displayed number is traceable to
 source → dataset version → model version.
 
-## Stack (Release 1)
+## Stack as actually shipped (Release 1)
 
-React + TypeScript + Vite + Tailwind · MapLibre GL JS · Plotly.js ·
-FastAPI · Pydantic · PostgreSQL + PostGIS · Alembic ·
-scikit-learn · XGBoost · LightGBM · Optuna · SHAP · Docker · GitHub Actions
+React + TypeScript + Vite (Plotly.js) · FastAPI + Pydantic ·
+scikit-learn · XGBoost · LightGBM · Optuna · SHAP · ReportLab · Docker ·
+GitHub Actions.
 
-## Quickstart (once Week 1 scaffolding lands)
+Documented deviations from the original blueprint: Tailwind → plain-CSS design
+system (deterministic builds); MapLibre → Plotly's built-in African choropleth
+(no tile dependency); PostgreSQL/PostGIS moved to R1.5 — the API serves
+immutable, sha256-manifested artifacts by design
+(see [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)).
+
+## Quickstart
 
 ```bash
-docker compose -f infra/docker-compose.yml up   # web + api + postgres/postgis
-```
+# everything in one container (API + built web)
+docker compose -f infra/docker-compose.yml up --build
+# → http://localhost:8000  ·  OpenAPI docs at /docs
 
-Modern detail: `services/api` docs at `/api/docs`; web at the frontend dev URL.
+# or the dev loop
+python -m uvicorn services.api.app.main:app --reload --port 8000
+cd apps/web && npm install && npm run dev   # http://localhost:5173
+```
 
 ## Documentation
 

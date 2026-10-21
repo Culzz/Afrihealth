@@ -1,0 +1,15 @@
+# AfriHealth Release 1 — single API container (reads versioned artifacts).
+# The Postgres layer lands with the R1.5 ingestion-cadence work; the API today
+# serves immutable, sha256-manifested files by design (provenance-first R1).
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+    image: afrihealth/api:1.0.0
+    ports:
+      - "8000:8000"
+    environment:
+      - API_ENV=production
+      - CORS_ALLOWED_ORIGINS=http://localhost:3000
+    restart: unless-stopped

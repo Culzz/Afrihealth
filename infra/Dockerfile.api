@@ -1,0 +1,30 @@
+# AfriHealth API + web — single-container production image.
+# Multistage: Node builds the React bundle; Python serves API + static dist.
+FROM node:20-alpine AS web
+WORKDIR /web
+COPY apps/web/package*.json ./
+RUN npm ci --no-audit --no-fund
+COPY apps/web/ ./
+# VITE_API_BASE_URL empty => same-origin /api requests
+RUN npm run build
+
+FROM python:3.11-slim
+WORKDIR /srv
+ENV PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Runtime artifacts + code (mirrors repo layout: services.* / data.* resolve via REPO path math)
+COPY ml/ ./ml/
+COPY data/processed/ ./data/processed/
+COPY data/manifests/ ./data/manifests/
+COPY docs/MODEL_CARD.md ./docs/MODEL_CARD.md
+COPY services/ ./services/
+COPY --from=web /web/dist/ ./apps/web/dist/
+
+ENV API_ENV=production
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+  CMD python -c "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8000/api/health').read()"
+CMD ["python", "-m", "uvicorn", "services.api.app.main:app", "--host", "0.0.0.0", "--port", "8000"]
