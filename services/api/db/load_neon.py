@@ -15,17 +15,18 @@ from pathlib import Path
 
 import pandas as pd
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[3]
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 SCHEMA_SQL = (REPO / "services" / "api" / "db" / "schema.sql").read_text(encoding="utf-8")
 UPSERT_OBS = """
-INSERT INTO observations (iso3, year, indicator, value, unit, source)
-VALUES (%(iso3)s, %(year)s, %(indicator)s, %(value)s, %(unit)s, %(source)s)
+INSERT INTO observations (iso3, year, indicator, value, unit, source, source_url)
+VALUES (%(iso3)s, %(year)s, %(indicator)s, %(value)s, %(unit)s, %(source)s, %(source_url)s)
 ON CONFLICT (iso3, year, indicator) DO UPDATE
-SET value = EXCLUDED.value, unit = EXCLUDED.unit, source = EXCLUDED.source
+SET value = EXCLUDED.value, unit = EXCLUDED.unit, source = EXCLUDED.source,
+    source_url = EXCLUDED.source_url
 """
 UPSERT_CY = """
 INSERT INTO country_year_meta (iso3, year, q_driver_coverage_pct,
@@ -73,15 +74,16 @@ def main() -> int:
     manifest = json.loads((REPO / "data" / "manifests" / "dataset_manifest.json").read_text(encoding="utf-8"))
 
     obs_records = []
-    for r in long_df.rename(columns=str.lower).to_dict("records"):
-        iso = r.get("iso3") or r.get("iso_3")
+    for r in long_df.to_dict("records"):
         v = r.get("value")
+        iso = r.get("iso3")
         if iso is None:
             continue
         obs_records.append({
-            "iso3": iso, "year": int(r["year"]), "indicator": r["indicator"],
+            "iso3": iso, "year": int(r["year"]), "indicator": r["indicator_short"],
             "value": None if v is None or pd.isna(v) else float(v),
             "unit": r.get("unit"), "source": r.get("source", "unknown"),
+            "source_url": r.get("source_url"),
         })
 
     cy_records = []

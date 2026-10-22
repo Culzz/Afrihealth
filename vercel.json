@@ -1,10 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd apps/web && npm ci --no-audit --no-fund && npm run build",
-  "outputDirectory": "apps/web/dist",
-  "installCommand": "echo \"(deps installed per-build command)\"",
-  "rewrites": [
-    { "source": "/api/v1/:path*", "destination": "/api/index.py" },
-    { "source": "/api/health", "destination": "/api/index.py" }
+  "builds": [
+    { "src": "apps/web/package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } },
+    { "src": "api/index.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "api/index.py" },
+    { "src": "/assets/(.*)", "dest": "apps/web/assets/$1" },
+    { "src": "/(?:index\\.html)?", "dest": "apps/web/index.html" },
+    { "src": "/(.*)", "dest": "apps/web/index.html" }
   ]
 }

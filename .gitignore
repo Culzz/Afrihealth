@@ -35,3 +35,6 @@ Thumbs.db
 # Large model artifacts (small final artifacts may be committed selectively)
 *.pkl
 !ml/registry/*.pkl
+
+.vercel
+.env*

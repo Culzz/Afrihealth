@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS observations (
   value     double precision,
   unit      text,
   source    text NOT NULL,
+  source_url text,
   PRIMARY KEY (iso3, year, indicator)
 );
 CREATE INDEX IF NOT EXISTS obs_indicator_year ON observations (indicator, year);

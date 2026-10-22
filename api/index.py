@@ -1,14 +1,29 @@
 """Vercel serverless entrypoint — wraps the FastAPI app as an ASGI function.
 
-Rewrites send /api/v1/* (and /api/health) here; the original URL path is
-preserved, so no root_path gymnastics is needed.
+Rewrites send /api/v1/* here; the original URL path is preserved, so no
+root_path gymnastics is needed. Import failures surface as a visible
+diagnostic response (cloud logs hide tracebacks on this plan).
 """
 import os
 import sys
+import traceback
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
 
-from services.api.app.main import app  # noqa: E402
+app = None  # top-level ASGI app; set in both branches below
 
-# Vercel's Python runtime looks for a module-level ASGI app named after the file.
-run = app
+try:
+    from services.api.app.main import app as _real_app
+    app = _real_app
+except Exception:  # pragma: no cover - diagnostics only
+    import fastapi
+    from fastapi.responses import JSONResponse
+
+    _tb = traceback.format_exc()
+
+    app = fastapi.FastAPI()
+
+    @app.get("/{_p:path}")
+    @app.get("/")
+    def _diag(_p: str = "") -> JSONResponse:
+        return JSONResponse({"import_error": _tb}, status_code=500)
