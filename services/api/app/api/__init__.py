@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import io
 import tempfile
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -91,8 +92,15 @@ def export_panel() -> FileResponse:
 
 @router.get("/db-status")
 def db_status() -> dict:
-    return {"database": "neon" if L.using_db() else "artifacts",
-            "reachable": dbsession.ping() if L.using_db() else None}
+    if not L.using_db():
+        return {"database": "artifacts", "reachable": None, "error": None}
+    try:
+        from services.api.db.session import connect
+        with connect() as conn, conn.cursor() as cur:
+            cur.execute("SELECT 1")
+        return {"database": "neon", "reachable": True, "error": None}
+    except Exception as exc:
+        return {"database": "neon", "reachable": False, "error": repr(exc)[:300]}
 
 
 @router.post("/reports")
