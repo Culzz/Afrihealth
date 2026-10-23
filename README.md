@@ -1,6 +1,7 @@
 # AfriHealth 🌍
 
-> **AI-powered African population health intelligence**
+> **AI-powered African population health intelligence — LIVE**
+> https://afrihealth-nine.vercel.app
 > Reproducible, geospatial platform that integrates WHO / World Bank evidence,
 > validates forecasting models against temporal baselines, explains predictions
 > with SHAP, quantifies uncertainty, and exposes the evidence behind regional
@@ -48,6 +49,20 @@ with CI.
 | Wk 6 — FastAPI (typed /api/v1) | ✅ done — 9 contract tests green |
 | Wk 7 — React atlas + country deep-dive | ✅ done — Plotly choropleth, forecast bands, SHAP bars |
 | Wk 8 — Deploy + hardening | ✅ done — single-container Docker, compose, GitHub Actions CI |
+| **R1.5 — Neon Postgres + Vercel** | 🟡 shipping — data loaded in Neon, app live on Vercel; API↔DB TLS quirk fixed, final DB-backed deploy in flight |
+
+## Live deployment
+
+- **Web + API:** https://afrihealth-nine.vercel.app
+- **Database:** Neon Postgres (`ep-odd-mud-b75f15hv-pooler`) — 54 countries, 14,400
+  observations, 1,404 country-year quality-flag rows, 162 forecasts, loaded via
+  `services/api/db/load_neon.py`
+- The API reads **Neon when `DATABASE_URL` is set**, and falls back to the committed,
+  sha256-versioned artifacts everywhere else — tests and local dev never need a DB.
+- Deployment quirk (documented in `services/api/db/session.py`): Vercel's Python
+  sandbox cuts the classic PostgreSQL SSL-upgrade handshake and has no IPv6 egress,
+  so the session pins Neon's proxy to an IPv4 address and negotiates TLS directly
+  (`sslnegotiation=direct`); verified `SELECT 1` end-to-end.
 
 ## The three-layer framework
 
@@ -58,28 +73,32 @@ with CI.
 No opaque universal risk score. Every displayed number is traceable to
 source → dataset version → model version.
 
-## Stack as actually shipped (Release 1)
+## Stack as actually shipped
 
-React + TypeScript + Vite (Plotly.js) · FastAPI + Pydantic ·
-scikit-learn · XGBoost · LightGBM · Optuna · SHAP · ReportLab · Docker ·
-GitHub Actions.
+React + TypeScript + Vite (Plotly.js) · FastAPI + Pydantic · Neon Postgres
+(psycopg 3) · scikit-learn · XGBoost · LightGBM · Optuna · SHAP · ReportLab ·
+Vercel · Docker · GitHub Actions.
 
 Documented deviations from the original blueprint: Tailwind → plain-CSS design
 system (deterministic builds); MapLibre → Plotly's built-in African choropleth
-(no tile dependency); PostgreSQL/PostGIS moved to R1.5 — the API serves
-immutable, sha256-manifested artifacts by design
-(see [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)).
+(no tile dependency). The database is Neon Postgres served from Vercel — the
+original PostGIS single-container plan became a serverless stack.
 
 ## Quickstart
 
 ```bash
-# everything in one container (API + built web)
-docker compose -f infra/docker-compose.yml up --build
-# → http://localhost:8000  ·  OpenAPI docs at /docs
-
-# or the dev loop
+# local dev loop (artifact mode, no DB needed)
 python -m uvicorn services.api.app.main:app --reload --port 8000
 cd apps/web && npm install && npm run dev   # http://localhost:5173
+
+# single-container production (API + built web)
+docker compose -f infra/docker-compose.yml up --build
+
+# refresh Neon content from artifacts (once per dataset/model version)
+python -m services.api.db.load_neon --url "postgresql://...pooler...neon.tech/neondb?sslmode=require"
+
+# deploy to Vercel (project already linked)
+vercel deploy --prod --yes --force
 ```
 
 ## Documentation
