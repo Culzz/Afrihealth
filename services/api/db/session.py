@@ -1,15 +1,11 @@
 # Postgres (Neon) session — serverless-friendly single connections.
 from __future__ import annotations
 
-import os
-from functools import lru_cache
-
 import psycopg
 
 from services.api.app.core.config import settings
 
 
-@lru_cache(maxsize=8)
 def _connect(url: str):
     # Primary path (works on Vercel AND locally): resolve the pooled endpoint
     # to IPv4 (the sandbox has no IPv6 egress), then negotiate TLS *directly*

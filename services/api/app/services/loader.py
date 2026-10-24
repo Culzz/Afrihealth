@@ -107,7 +107,14 @@ def atlas_rows(year: int) -> list[dict]:
         with conn:
             rows = R.atlas_rows(conn, year)
         if rows:
-            return rows
+            return [{
+                "iso3": r["iso3"], "country": r["country"], "region": r["region"],
+                "year": int(r["year"]),
+                "u5m": None if r["u5m"] is None else float(r["u5m"]),
+                "driver_coverage_pct": float(r["q_driver_coverage_pct"]),
+                "target_missing": bool(r["q_target_missing"]),
+                "sparse_hwf_missing": bool(r["q_sparse_hwf_missing"]),
+            } for r in rows]
     wide = panel_wide()
     sel = wide[wide["year"] == year].drop_duplicates("iso3")
     out = []
