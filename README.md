@@ -49,7 +49,7 @@ with CI.
 | Wk 6 — FastAPI (typed /api/v1) | ✅ done — 9 contract tests green |
 | Wk 7 — React atlas + country deep-dive | ✅ done — Plotly choropleth, forecast bands, SHAP bars |
 | Wk 8 — Deploy + hardening | ✅ done — single-container Docker, compose, CircleCI CI |
-| **R1.5 — Neon Postgres + Vercel** | 🟡 shipping — data loaded in Neon, app live on Vercel; API↔DB TLS quirk fixed, final DB-backed deploy in flight |
+| **R1.5 — Neon Postgres + Vercel** | ✅ shipped — live DB-backed API verified end-to-end (health/atlas/series/forecasts all 200 on `db:neon`) |
 
 ## Live deployment
 

@@ -1,5 +1,34 @@
 # AfriHealth — Deployment
 
+## Live (R1.5): Vercel + Neon Postgres
+
+**Production URL:** https://afrihealth-nine.vercel.app
+
+- **Frontend:** static React build of `apps/web/dist` served by Vercel.
+- **API:** `api/index.py` serverless function (`@vercel/python`) — FastAPI app
+  with a `_sub`-style sys.path bootstrap; `vercel.json` uses the classic
+  `builds` + `routes` schema (`/api/*` → the Python function, `/*` → statics).
+- **Database:** Neon Postgres (pooled endpoint). 54 countries, 14,400
+  observations, 1,404 country-year quality-flag rows, 162 forecasts, loaded
+  from the committed artifacts via `python -m services.api.db.load_neon --url ...`.
+- **Env var:** `DATABASE_URL` is set at project level in Vercel. When present
+  the loader façade (`services/api/app/services/loader.py`) reads from Neon;
+  otherwise it serves the same committed, sha256-versioned artifacts. Tests
+  and local dev never require the DB.
+- **Health/verify:** `GET /api/v1/health` (reports `db: "neon"` when connected),
+  `GET /api/v1/db-status` for a one-shot connectivity diagnostic (reports each
+  connection variant and the resolved IPv4).
+
+Connection quirk, documented deliberately: Vercel's Python sandbox cuts the
+classic PostgreSQL `SSLRequest`→TLS renegotiation and has no IPv6 egress, so
+`services/api/db/session.py` resolves the pooled endpoint to IPv4 and passes
+`sslnegotiation=direct&hostaddr=<ipv4>` (SNI + certificate verification still
+use the hostname) as the **primary** path, falling back to a standard
+`sslmode=require` connection. Note for serverless: connections are
+**per-request and never cached** — a psycopg `Connection` used inside `with`
+is closed on exit, so caching one would hand every subsequent caller a dead
+handle (that regression shipped and was caught live on 2026-10-24).
+
 ## Release 1 runtime shape
 
 One container serves both the FastAPI API and the built React bundle:
@@ -10,12 +39,11 @@ uvicorn (python 3.11)
 └── /*               → apps/web/dist (static, built in the Node stage)
 ```
 
-**Deviation from the original plan, documented deliberately:** Release 1 ships
-*without a live Postgres layer*. The API reads only immutable, sha256-hashed
-artifacts (`data/processed/panel_wide.csv` + `data/manifests/dataset_manifest.json`
-+ `ml/registry/*`). Rationale: provenance and audit-first — every value the
-service returns is version-pinned. The DB-backed ingestion cadence (scheduled
-refresh, per-source lake tables, drift alarms) is the first item of Release 1.5.
+**Historical note (Release 1):** R1 shipped *without a live Postgres layer* —
+the API read only immutable, sha256-hashed artifacts
+(`data/processed/panel_wide.csv` + `data/manifests/dataset_manifest.json`
++ `ml/registry/*`). R1.5 added Neon behind the same façade; the fallback
+keeps every guarantee below true in artifact mode.
 
 ## Build & run
 
