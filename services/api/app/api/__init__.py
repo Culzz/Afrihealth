@@ -94,13 +94,63 @@ def export_panel() -> FileResponse:
 def db_status() -> dict:
     if not L.using_db():
         return {"database": "artifacts", "reachable": None, "error": None}
-    try:
-        from services.api.db.session import connect
-        with connect() as conn, conn.cursor() as cur:
+    import socket
+    import urllib.parse as up
+
+    import psycopg
+    from psycopg import pq
+
+    url = L.settings.database_url or ""
+    parts = up.urlparse(url)
+    host = parts.hostname
+    masked = (
+        f"postgresql://{parts.username}:***@{host}:"
+        f"{parts.port or 5432}{parts.path}?{parts.query}"
+    )
+    diag: dict = {"url": masked, "libpq": pq.version()}
+
+    def attempt(label: str, params: dict) -> dict:
+        try:
+            conn = psycopg.connect(**params, connect_timeout=8, autocommit=True)
+            cur = conn.cursor()
             cur.execute("SELECT 1")
-        return {"database": "neon", "reachable": True, "error": None}
-    except Exception as exc:
-        return {"database": "neon", "reachable": False, "error": repr(exc)[:300]}
+            ok = cur.fetchone()[0] == 1
+            cur.close()
+            conn.close()
+            return {"ok": ok}
+        except Exception as exc:  # noqa: BLE001 - diagnostics endpoint
+            return {"ok": False, "error": repr(exc)[:200]}
+
+    base = {
+        "host": host, "port": parts.port or 5432,
+        "dbname": parts.path.lstrip("/"), "user": parts.username,
+        "password": parts.password,
+    }
+    q = dict(up.parse_qsl(parts.query))
+    for k in ("sslmode", "sslnegotiation", "hostaddr", "channel_binding"):
+        q.pop(k, None)
+
+    # 1 — classic TLS upgrade (plain sslmode=require)
+    diag["classic"] = attempt("classic", {**base, "sslmode": "require", **q})
+    # 2 — TLS negotiated directly on the first bytes, pinned to IPv4
+    try:
+        infos = socket.getaddrinfo(host, 5432, socket.AF_INET,
+                                   socket.SOCK_STREAM)
+        ipv4 = infos[0][4][0]
+        diag["resolved_ipv4"] = ipv4
+        direct = {
+            **base, "sslmode": "require", "sslnegotiation": "direct",
+            "hostaddr": ipv4, **q,
+        }
+        diag["direct_ipv4"] = attempt("direct", direct)
+        # same, but without channel_binding (parity with the loader's run)
+        direct_nc = {k: v for k, v in direct.items() if k != "channel_binding"}
+        diag["direct_ipv4_no_cb"] = attempt("direct", direct_nc)
+    except Exception as exc:  # noqa: BLE001 - diagnostics endpoint
+        diag["direct_ipv4"] = {"ok": False, "error": f"resolve: {exc!r}"}
+
+    return {"database": "neon", "reachable": diag.get("direct_ipv4", {}).get("ok",
+            diag["classic"]["ok"]), "diag": diag}
 
 
 @router.post("/reports")
