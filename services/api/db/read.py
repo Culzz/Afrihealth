@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import pandas as pd
+from psycopg.rows import dict_row
 
 from services.api.app.core.config import settings
 from services.api.db.session import connect
@@ -10,14 +11,14 @@ DRIVERS = ["dpt_cov", "gdp_pc", "san_basic", "water_basic", "urb_pct"]
 
 
 def atlas_year(conn) -> int:
-    with conn.cursor() as cur:
+    with conn.cursor(row_factory=dict_row) as cur:
         cur.execute(
-            "SELECT MAX(year) FROM observations WHERE indicator = 'u5m' AND value IS NOT NULL")
-        return int(cur.fetchone()[0])
+            "SELECT MAX(year) AS max_year FROM observations WHERE indicator = 'u5m' AND value IS NOT NULL")
+        return int(cur.fetchone()["max_year"])
 
 
 def countries(conn) -> list[dict]:
-    with conn.cursor() as cur:
+    with conn.cursor(row_factory=dict_row) as cur:
         cur.execute(
             """
             SELECT iso3, country, region FROM countries
@@ -29,7 +30,7 @@ def countries(conn) -> list[dict]:
 
 
 def atlas_rows(conn, year: int) -> list[dict]:
-    with conn.cursor() as cur:
+    with conn.cursor(row_factory=dict_row) as cur:
         cur.execute(
             """
             SELECT cy.iso3, c.country, c.region, cy.year,
@@ -46,7 +47,7 @@ def atlas_rows(conn, year: int) -> list[dict]:
 
 
 def series(conn, iso3: str) -> list[dict]:
-    with conn.cursor() as cur:
+    with conn.cursor(row_factory=dict_row) as cur:
         cols = ", ".join(
             f"MAX(o.value) FILTER (WHERE o.indicator = '{d}') AS {d}" for d in DRIVERS)
         cur.execute(
@@ -65,7 +66,7 @@ def series(conn, iso3: str) -> list[dict]:
 
 
 def forecasts_conn(conn, iso3: str) -> list[dict]:
-    with conn.cursor() as cur:
+    with conn.cursor(row_factory=dict_row) as cur:
         cur.execute(
             """
             SELECT f.iso3, c.country, f.year, f.horizon, f.yhat, f.lo90, f.hi90,
@@ -83,9 +84,9 @@ def forecasts_conn(conn, iso3: str) -> list[dict]:
 
 
 def meta(conn) -> dict:
-    with conn.cursor() as cur:
+    with conn.cursor(row_factory=dict_row) as cur:
         cur.execute("SELECT key, value FROM registry_meta")
-        return {k: v for k, v in cur.fetchall()}
+        return {r["key"]: r["value"] for r in cur.fetchall()}
 
 
 def manifest(conn) -> dict:
@@ -94,3 +95,4 @@ def manifest(conn) -> dict:
 
 def model_meta(conn) -> dict:
     return meta(conn).get("model_meta", {})
+
