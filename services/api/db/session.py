@@ -11,22 +11,28 @@ from services.api.app.core.config import settings
 
 @lru_cache(maxsize=8)
 def _connect(url: str):
-    # Neon + Vercel: the sandbox cuts the classic SSLRequest->TLS upgrade and
-    # has no IPv6 egress, so connect with TLS negotiated directly, pinned to
-    # an IPv4 address (SNI + verification still use the hostname).
-    if os.environ.get("VERCEL") or os.environ.get("VERCEL_ENV"):
-        import socket
-        import urllib.parse
+    # Primary path (works on Vercel AND locally): resolve the pooled endpoint
+    # to IPv4 (the sandbox has no IPv6 egress), then negotiate TLS *directly*
+    # (the sandbox cuts the classic SSLRequest->TLS upgrade). SNI and server
+    # verification still use the hostname. If anything fails (e.g. non-Neon),
+    # fall back to the standard connection.
+    import socket
+    import urllib.parse
+    try:
         parts = urllib.parse.urlparse(url)
-        infos = socket.getaddrinfo(parts.hostname, 5432, socket.AF_INET,
-                                   socket.SOCK_STREAM)
-        ipv4 = infos[0][4][0]
-        q = [(k, v) for k, v in urllib.parse.parse_qsl(parts.query)
-             if k not in ("sslmode", "sslnegotiation", "hostaddr")]
-        q += [("sslmode", "require"), ("sslnegotiation", "direct"),
-              ("hostaddr", ipv4)]
-        tuned = urllib.parse.urlunparse(parts._replace(query=urllib.parse.urlencode(q)))
-        return psycopg.connect(tuned, autocommit=True)
+        if parts.scheme.startswith("postgres") and parts.hostname:
+            infos = socket.getaddrinfo(parts.hostname, 5432, socket.AF_INET,
+                                       socket.SOCK_STREAM)
+            ipv4 = infos[0][4][0]
+            q = [(k, v) for k, v in urllib.parse.parse_qsl(parts.query)
+                 if k not in ("sslmode", "sslnegotiation", "hostaddr")]
+            q += [("sslmode", "require"), ("sslnegotiation", "direct"),
+                  ("hostaddr", ipv4)]
+            tuned = urllib.parse.urlunparse(
+                parts._replace(query=urllib.parse.urlencode(q)))
+            return psycopg.connect(tuned, autocommit=True)
+    except (socket.gaierror, OSError, psycopg.Error):
+        pass
     return psycopg.connect(url, sslmode="require", autocommit=True)
 
 
