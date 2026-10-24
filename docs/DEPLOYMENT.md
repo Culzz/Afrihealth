@@ -44,11 +44,13 @@ defaults to the local Vite ports).
 
 ## CI
 
-`.github/workflows/ci.yml` runs on every push/PR:
+`.circleci/config.yml` runs on every push/PR (CircleCI connects to the same
+GitHub repo):
 
 1. **python-tests** — full pytest (`tests/` data-quality + feature-leakage,
-   `services/api/tests/` API contract) on Python 3.11.
-2. **web-build** — `tsc && vite build` on Node 20 with npm cache.
+   `services/api/tests/` API contract) on Python 3.11 inside `cimg/python`.
+2. **web-build** — `npm ci` + `tsc && vite build` on Node 20 inside `cimg/node`
+   with an npm cache keyed on `package-lock.json`.
 
 ## Environment contract
 

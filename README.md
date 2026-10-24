@@ -48,7 +48,7 @@ with CI.
 | Wk 5 — Registry + SHAP + uncertainty | ✅ done — `u5m-lgb-v1`: 162 forecasts (2025–27 × 54 countries), empirical 90% intervals, exceedance probs, SHAP |
 | Wk 6 — FastAPI (typed /api/v1) | ✅ done — 9 contract tests green |
 | Wk 7 — React atlas + country deep-dive | ✅ done — Plotly choropleth, forecast bands, SHAP bars |
-| Wk 8 — Deploy + hardening | ✅ done — single-container Docker, compose, GitHub Actions CI |
+| Wk 8 — Deploy + hardening | ✅ done — single-container Docker, compose, CircleCI CI |
 | **R1.5 — Neon Postgres + Vercel** | 🟡 shipping — data loaded in Neon, app live on Vercel; API↔DB TLS quirk fixed, final DB-backed deploy in flight |
 
 ## Live deployment
@@ -77,7 +77,7 @@ source → dataset version → model version.
 
 React + TypeScript + Vite (Plotly.js) · FastAPI + Pydantic · Neon Postgres
 (psycopg 3) · scikit-learn · XGBoost · LightGBM · Optuna · SHAP · ReportLab ·
-Vercel · Docker · GitHub Actions.
+Vercel · Docker · CircleCI.
 
 Documented deviations from the original blueprint: Tailwind → plain-CSS design
 system (deterministic builds); MapLibre → Plotly's built-in African choropleth

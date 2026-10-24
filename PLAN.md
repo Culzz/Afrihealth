@@ -86,7 +86,7 @@ afrihealth-risk-atlas/
 ├── research/            # notebooks, experiments, paper
 ├── data/                # raw/ (gitignored), processed/, manifests/, samples/
 ├── docs/                # SRS, ARCHITECTURE, DATA_DICTIONARY, MODEL_CARD, SECURITY, DEPLOYMENT
-├── infra/               # Dockerfile.api, docker-compose.yml (CI/CD in .github/workflows)
+├── infra/               # Dockerfile.api, docker-compose.yml (CI/CD in .circleci)
 └── tests/               # cross-cutting integration tests
 ```
 
@@ -144,7 +144,7 @@ R2 adds: `alerts`, `saved_analyses`, `report_jobs`, `users`, `risk_assessments`,
 
 ## 12. Definition of done — Release 1
 
-- [ ] `docker compose up` runs web + api + db reproducibly; CI green in GitHub Actions
+- [ ] `docker compose up` runs web + api + db reproducibly; CI green in CircleCI
 - [ ] Wk-1 audit report governs every modeling claim; no code contradicts the audit
 - [ ] ≥1 model beats temporal baseline (or documented fallback) + leakage test passes
 - [ ] Every number in UI traceable: source → dataset version → model version

@@ -1,0 +1,48 @@
+version: 2.1
+
+jobs:
+  python-tests:
+    docker:
+      - image: cimg/python:3.11
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - pip-v1-{{ checksum "requirements.txt" }}
+      - run:
+          name: Install Python dependencies
+          command: pip install -r requirements.txt
+      - save_cache:
+          paths:
+            - ~/.cache/pip
+          key: pip-v1-{{ checksum "requirements.txt" }}
+      - run:
+          name: Run all tests (validation, features, API contract)
+          command: pytest tests services/api/tests -q
+
+  web-build:
+    docker:
+      - image: cimg/node:20.16
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - npm-v1-{{ checksum "apps/web/package-lock.json" }}
+      - run:
+          name: Install web dependencies
+          command: npm ci --no-audit --no-fund
+          working_directory: apps/web
+      - save_cache:
+          key: npm-v1-{{ checksum "apps/web/package-lock.json" }}
+          paths:
+            - apps/web/node_modules
+      - run:
+          name: Build React app
+          command: npm run build
+          working_directory: apps/web
+
+workflows:
+  ci:
+    jobs:
+      - python-tests
+      - web-build
