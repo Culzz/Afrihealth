@@ -7,6 +7,8 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "api/index.py" },
     { "src": "/assets/(.*)", "dest": "apps/web/assets/$1" },
+    { "src": "/img/(.*)", "dest": "apps/web/img/$1" },
+    { "src": "/favicon.svg", "dest": "apps/web/favicon.svg" },
     { "src": "/(?:index\\.html)?", "dest": "apps/web/index.html" },
     { "src": "/(.*)", "dest": "apps/web/index.html" }
   ]
