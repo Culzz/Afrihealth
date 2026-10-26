@@ -50,6 +50,7 @@ with CI.
 | Wk 7 — React atlas + country deep-dive | ✅ done — Plotly choropleth, forecast bands, SHAP bars |
 | Wk 8 — Deploy + hardening | ✅ done — single-container Docker, compose, CircleCI CI |
 | **R1.5 — Neon Postgres + Vercel** | ✅ shipped — live DB-backed API verified end-to-end (health/atlas/series/forecasts all 200 on `db:neon`) |
+| **UI v2 — editorial redesign** | ✅ shipped — vintage-paper + glass design system, photo landing page, mobile-first (see `apps/web/README.md`) |
 
 ## Live deployment
 
@@ -73,9 +74,22 @@ with CI.
 No opaque universal risk score. Every displayed number is traceable to
 source → dataset version → model version.
 
+## Frontend design, in one paragraph
+
+The UI is an editorial, vintage-paper experience: a warm off-white canvas with
+subtle grain, **Fraunces** serif display type over **Instrument Sans** body text,
+deep-green/terracotta accents, and frosted **iOS-style glassmorphism** panels.
+A photo-led landing page opens the story (Wikimedia Commons imagery, CC BY-SA,
+credited in the footer), and the map/forecast pages keep the data-first density.
+Icons are Lucide; Plotly (~4 MB) is loaded **lazily** only on pages that draw
+charts, so the landing page ships ~64 KB gzipped JS and paints fast. Layout is
+mobile-first (single column → 2/3-col grids) with fluid `clamp()` typography.
+See [`apps/web/README.md`](apps/web/README.md) for the full system.
+
 ## Stack as actually shipped
 
-React + TypeScript + Vite (Plotly.js) · FastAPI + Pydantic · Neon Postgres
+React + TypeScript + Vite (Plotly.js, lazily loaded) · Fraunces + Instrument Sans ·
+Lucide icons · FastAPI + Pydantic · Neon Postgres
 (psycopg 3) · scikit-learn · XGBoost · LightGBM · Optuna · SHAP · ReportLab ·
 Vercel · Docker · CircleCI.
 
