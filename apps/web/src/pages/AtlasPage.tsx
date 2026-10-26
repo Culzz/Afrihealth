@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { api, Atlas, Country, colors, plotly, riskLevel } from '../api/client'
+import { Map, Table2 } from 'lucide-react'
+import { api, Atlas, Country, colors, loadPlotly, riskFill, riskLevel } from '../api/client'
 
 const YEAR_MIN = 2000
 export default function AtlasPage() {
@@ -25,55 +26,61 @@ export default function AtlasPage() {
   }, [rows, mode])
 
   useEffect(() => {
-    const P = plotly()
-    if (!P || !divRef.current || !filtered.length) return
-    const vals = filtered.map((r: any) =>
-      mode === 'observed' ? (r.u5m ?? null) : r.driver_coverage_pct)
-    const numberize = (v: any) => (v == null ? 0 : v)
-    const data = [{
-      type: 'choropleth',
-      locations: filtered.map(r => r.iso3),
-      z: vals.map(numberize),
-      text: filtered.map(r => `${r.country} — ${mode === 'observed'
-        ? (r.u5m == null ? 'no data' : `U5M ${r.u5m}`)
-        : `driver coverage ${r.driver_coverage_pct}%`}`),
-      hoverinfo: 'location+text',
-      colorscale: mode === 'observed'
-        ? [[0, colors.moderate], [0.4, colors.elevated], [0.7, colors.high], [1, colors.critical]]
-        : [[0, '#b3392f'], [1, '#1d7f5c']],
-      zmin: mode === 'observed' ? 0 : 50,
-      zmax: mode === 'observed' ? 170 : 100,
-      marker: { line: { color: '#0e1522', width: 0.6 } },
-      showscale: false,
-    }]
-    const layout = {
-      geo: { scope: 'africa', showframe: false, showcoastlines: false,
-             bgcolor: 'rgba(0,0,0,0)', landcolor: '#1c2940' },
-      paper_bgcolor: 'rgba(0,0,0,0)', margin: { t: 0, b: 0, l: 0, r: 0 },
-      height: 430, dragmode: 'pan',
-    }
-    P.react(data, layout).then(() => {
-      // enable country click navigation
-      const g = document.getElementById('africamap') as any
-    })
+    let alive = true
+    loadPlotly().then(P => {
+      if (!alive || !divRef.current || !filtered.length) return
+      const vals = filtered.map((r: any) =>
+        mode === 'observed' ? (r.u5m ?? null) : r.driver_coverage_pct)
+      const numberize = (v: any) => (v == null ? 0 : v)
+      const data = [{
+        type: 'choropleth',
+        locations: filtered.map(r => r.iso3),
+        z: vals.map(numberize),
+        text: filtered.map(r => `${r.country} — ${mode === 'observed'
+          ? (r.u5m == null ? 'no data' : `U5M ${r.u5m}`)
+          : `driver coverage ${r.driver_coverage_pct}%`}`),
+        hoverinfo: 'location+text',
+        colorscale: mode === 'observed'
+          ? [[0, colors.moderate], [0.4, colors.elevated], [0.7, colors.high], [1, colors.critical]]
+          : [[0, '#7c2d12'], [1, '#2e5339']],
+        zmin: mode === 'observed' ? 0 : 50,
+        zmax: mode === 'observed' ? 170 : 100,
+        marker: { line: { color: '#c9b99a', width: 0.7 } },
+        showscale: false,
+      }]
+      const layout = {
+        geo: { scope: 'africa', showframe: false, showcoastlines: false,
+               bgcolor: 'rgba(0,0,0,0)', landcolor: '#e5dcc9', showland: true },
+        paper_bgcolor: 'rgba(0,0,0,0)', margin: { t: 0, b: 0, l: 0, r: 0 },
+        height: 430, dragmode: 'pan',
+      }
+      P.react(data, layout)
+    }).catch(() => {})
+    return () => { alive = false }
   }, [filtered, mode])
 
   const latest = rows?.length ? rows[0].year : null
 
   return (
     <div>
-      <h1>Atlas {latest ? <span className="muted" style={{ fontSize: 15 }}>({latest})</span> : null}</h1>
-      <p className="muted">
+      <span className="kicker"><Map size={13} /> Risk atlas</span>
+      <h1 style={{ marginTop: 14 }}>
+        The Atlas {latest ? <span className="faint" style={{ fontSize: '0.5em', fontWeight: 400 }}>({latest})</span> : null}
+      </h1>
+      <p className="muted" style={{ maxWidth: '46em' }}>
         Under-five mortality (per 1,000 live births) across African Union countries.
-        Filter toggles show data <i>confidence</i> instead of risk — missing data is visible, never filled.
+        The data-confidence view shows how well-sourced each country is — missing data
+        is visible, never filled.
       </p>
       <div className="grid2">
         <div className="panel">
-          <div style={{ display: 'flex', gap: 10, marginBottom: 12 }}>
-            <button onClick={() => setMode('observed')}
-                    style={mode === 'observed' ? { borderColor: '#1d7f5c' } : {}}>Risk view</button>
-            <button onClick={() => setMode('forecast')}
-                    style={mode !== 'observed' ? { borderColor: '#1d7f5c' } : {}}>Data-confidence view</button>
+          <div style={{ display: 'flex', gap: 10, marginBottom: 12, flexWrap: 'wrap' }}>
+            <button onClick={() => setMode('observed')} className={mode === 'observed' ? 'active' : ''}>
+              Risk view
+            </button>
+            <button onClick={() => setMode('forecast')} className={mode !== 'observed' ? 'active' : ''}>
+              Data-confidence view
+            </button>
             <select value={year ?? ''} onChange={e => setYear(e.target.value ? +e.target.value : null)}>
               <option value="">Latest year</option>
               {Array.from({ length: 2024 - YEAR_MIN + 1 }, (_, i) => 2024 - i)
@@ -85,7 +92,8 @@ export default function AtlasPage() {
           )}
         </div>
         <div className="panel">
-          <h2>Countries ({filtered.length})</h2>
+          <h2 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, margin: '0 0 10px' }}>
+            <Table2 size={17} /> Countries ({filtered.length})</h2>
           <table>
             <thead><tr><th>Country</th><th>U5M</th><th>Flags</th></tr></thead>
             <tbody>

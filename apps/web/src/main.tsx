@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
+import LandingPage from './pages/LandingPage'
 import AtlasPage from './pages/AtlasPage'
 import ForecastPage from './pages/ForecastPage'
 import MethodologyPage from './pages/MethodologyPage'
@@ -12,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<Navigate to="/atlas" replace />} />
+          <Route index element={<LandingPage />} />
           <Route path="atlas" element={<AtlasPage />} />
           <Route path="country/:iso3" element={<ForecastPage />} />
           <Route path="methodology" element={<MethodologyPage />} />

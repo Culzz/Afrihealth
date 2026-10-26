@@ -37,9 +37,33 @@ export function riskLevel(u5m: number): 'critical' | 'high' | 'elevated' | 'mode
   if (u5m >= 40) return 'elevated'
   return 'moderate'
 }
+
+/** Warm risk ramp on the vintage paper theme. */
 export const colors = {
-  critical: '#8f1d1a', high: '#c9520f', elevated: '#d1a30f', moderate: '#1d7f5c',
+  critical: '#7c2d12', high: '#b45309', elevated: '#ca8a04', moderate: '#2e5339',
+}
+export const riskFill: Record<keyof typeof colors, string> = {
+  critical: 'rgba(124, 45, 18, .85)',
+  high: 'rgba(180, 83, 9, .85)',
+  elevated: 'rgba(202, 138, 4, .8)',
+  moderate: 'rgba(46, 83, 57, .82)',
 }
 
 declare global { interface Window { Plotly: any } }
 export function plotly(): any { return window.Plotly }
+
+/** Load Plotly on demand (map/forecast pages only) — keeps the landing page fast. */
+let plotlyPromise: Promise<any> | null = null
+export function loadPlotly(): Promise<any> {
+  if (window.Plotly) return Promise.resolve(window.Plotly)
+  if (plotlyPromise) return plotlyPromise
+  plotlyPromise = new Promise((resolve, reject) => {
+    const s = document.createElement('script')
+    s.src = 'https://cdn.plot.ly/plotly-2.35.2.min.js'
+    s.charset = 'utf-8'
+    s.onload = () => resolve(window.Plotly)
+    s.onerror = () => { plotlyPromise = null; reject(new Error('Plotly failed to load')) }
+    document.head.appendChild(s)
+  })
+  return plotlyPromise
+}

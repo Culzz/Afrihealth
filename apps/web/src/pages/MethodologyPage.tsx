@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Download } from 'lucide-react'
 import { api } from '../api/client'
 
 export default function MethodologyPage() {
@@ -10,16 +11,17 @@ export default function MethodologyPage() {
   }, [])
   return (
     <div>
-      <h1>Methodology & evidence</h1>
+      <h1 style={{ marginTop: 6 }}>Methodology & evidence</h1>
       <div className="grid2">
-        <div className="panel">
-          <h2 style={{ marginTop: 4 }}>Model card (served by the API)</h2>
+        <div className="glass">
+          <h2 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 0 }}>
+            Model card (served by the API)</h2>
           {card === null
             ? <div className="skeleton" style={{ height: 380 }} />
-            : <pre style={{ whiteSpace: 'pre-wrap', font: '13px/1.55 Consolas,monospace', margin: 0,
-                            fontFamily: 'Consolas, monospace' }}>{card}</pre>}
+            : <pre style={{ whiteSpace: 'pre-wrap', font: '12.5px/1.6 "JetBrains Mono", Consolas, monospace', margin: 0,
+                            color: '#4b4336' }}>{card}</pre>}
         </div>
-        <div className="panel">
+        <div className="glass">
           <h2 style={{ marginTop: 4 }}>The three-layer framework</h2>
           <ol>
             <li><b>Observed burden</b> — reported/modelled values with source, unit, coverage flags.</li>
@@ -33,7 +35,8 @@ export default function MethodologyPage() {
             <li>Missing data is flagged, never zero-filled (tested).</li>
             <li>Every number traceable: source → dataset version → model version.</li>
           </ul>
-          <a className="muted" href="/api/v1/exports/panel.csv">⬇ Download the full dataset (CSV)</a>
+          <a className="btn ghost" style={{ padding: '9px 16px', fontSize: 13.5 }} href="/api/v1/exports/panel.csv">
+            <Download size={14} /> Download the full dataset (CSV)</a>
         </div>
       </div>
     </div>
