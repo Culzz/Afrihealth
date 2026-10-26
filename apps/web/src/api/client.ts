@@ -6,7 +6,21 @@ export const api = {
     if (!r.ok) throw new Error(`${r.status} ${r.statusText}: ${await r.text()}`)
     return r.json()
   },
+  async post<T>(path: string, body: unknown): Promise<T> {
+    const r = await fetch(`${BASE}/api/v1${path}`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+    if (!r.ok) throw new Error(`${r.status} ${r.statusText}: ${await r.text()}`)
+    return r.json()
+  },
 }
+
+/** Drivers the scenario simulator accepts (from the v2 contract). */
+export const IntervenableDrivers = [
+  'dpt_cov', 'san_basic', 'water_basic', 'gdp_pc', 'chexp_pctgdp',
+  'phys_1k', 'nurses_1k', 'meas_cov', 'urb_pct',
+] as const
 
 export type Atlas = {
   iso3: string; country: string; region: string; year: number
@@ -29,6 +43,50 @@ export type Forecast = {
 export type Health = {
   status: string; dataset_version: string; data_max_year: number
   model_version: string; countries: number
+}
+
+export type VulnerabilityRow = {
+  iso3: string; country: string; region: string
+  composite: number | null; band: string | null
+  components: Record<string, number | null>
+  component_vintages: Record<string, number | null>
+  missing_components: string[]; complete: boolean
+  jackknife_max_delta: number | null
+}
+export type VulnerabilityData = {
+  composite_version: string; dataset_version: string; year: number
+  weights: Record<string, number>; bands: Record<string, string>
+  framework_note: string; rows: VulnerabilityRow[]
+}
+export type AlertRow = {
+  iso3: string; country: string; year: number
+  p_gt_70: number; p_gt_50: number; yhat: number
+  lo90: number; hi90: number; reasons: string[]
+}
+export type AlertsData = {
+  as_of_year: number; rule: string; honesty_note: string; rows: AlertRow[]
+}
+export type ComparisonColumn = {
+  iso3: string; country: string; region: string
+  u5m_latest: number | null; u5m_year: number
+  trend_10y_pp: number | null
+  forecast_2025: number | null; forecast_2027: number | null
+  interval_2025: number[] | null; p_gt_70_2025: number | null
+  driver_coverage_pct: number | null
+  vulnerability_band: string | null
+  vulnerabilities: Record<string, number | null>
+}
+export type ScenarioRequest = {
+  iso3: string
+  interventions: { driver: string; delta: number }[]
+}
+export type ScenarioResponse = {
+  iso3: string; target_year: number; model_version: string | null
+  baseline_registered: number | null; yhat_registered_replay: number
+  yhat_scenario: number; delta: number
+  interval_90_scenario: number[]; interval_note: string
+  interventions_applied: Record<string, { base: number; delta: number; scenario_value: number }>
+  interventions_unit_note: string; honesty_note: string
 }
 
 export function riskLevel(u5m: number): 'critical' | 'high' | 'elevated' | 'moderate' {

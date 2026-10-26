@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, TrendingUp, Sigma, AlertTriangle } from 'lucide-react'
-import { api, SeriesRow, Forecast, colors, riskFill, riskLevel, loadPlotly } from '../api/client'
+import { ArrowLeft, TrendingUp, Sigma, AlertTriangle, FlaskConical, FileText } from 'lucide-react'
+import { api, SeriesRow, Forecast, colors, riskFill, riskLevel, loadPlotly,
+         ScenarioResponse, ScenarioRequest, IntervenableDrivers } from '../api/client'
 
 export default function ForecastPage() {
   const { iso3 } = useParams()
@@ -55,6 +56,26 @@ export default function ForecastPage() {
   const fc1 = fc && fc.length ? fc[0] : null
   const topDrivers = fc1?.top_drivers_shap ?? []
   const maxAbs = Math.max(1e-6, ...topDrivers.map(d => Math.abs(d.shap)))
+
+  // ---- scenario simulator + auto-brief (R2) ----
+  const [ivDriver, setIvDriver] = useState<string>('dpt_cov')
+  const [ivDelta, setIvDelta] = useState<number>(10)
+  const [scenario, setScenario] = useState<ScenarioResponse | null>(null)
+  const [scenErr, setScenErr] = useState<string | null>(null)
+  const [brief, setBrief] = useState<string | null>(null)
+  useEffect(() => {
+    setScenario(null); setScenErr(null)
+    api.get('/countries/' + iso3 + '/brief').then((t: string) => setBrief(t)).catch(() => setBrief(''))
+  }, [iso3])
+  const runScenario = () => {
+    setScenErr(null); setScenario(null)
+    api.post<ScenarioResponse>('/scenarios', {
+      iso3: String(iso3 || '').toUpperCase(),
+      interventions: [{ driver: ivDriver, delta: ivDelta }],
+    } as ScenarioRequest)
+      .then(setScenario)
+      .catch(e => setScenErr(String(e).includes('422') ? 'not interventable: that driver has no observed value in the scenario year' : String(e)))
+  }
 
   return (
     <div>
@@ -134,6 +155,56 @@ export default function ForecastPage() {
           <div className="kpi glass" style={{ marginTop: 16, borderRadius: 'var(--r-md)' }}>
             <div className="l">Driver data coverage (latest obs)</div>
             <div className="v num">{latest ? latest.q_driver_coverage_pct + '%' : '—'}</div>
+          </div>
+
+          <div className="glass" style={{ marginTop: 16 }}>
+            <h2 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 0 }}>
+              <FlaskConical size={17} /> What-if: nudge a driver</h2>
+            <p className="muted" style={{ fontSize: 12.5, marginTop: 0 }}>
+              Runs the registered model on a counterfactual
+              {' '}{(((series?.filter(s => s.u5m != null) ?? []).slice(-1)[0])?.year ?? 2024) + 1} forecast
+              with one driver changed for its t−1 year. Model behaviour, not a causal
+              estimate — single horizon.
+            </p>
+            <div className="flex" style={{ marginTop: 10 }}>
+              <select value={ivDriver} onChange={e => setIvDriver(e.target.value)}>
+                {IntervenableDrivers.map(d =>
+                  <option key={d} value={d}>{pretty(d + '_p1').replace(' (t-1)', '')}</option>)}
+              </select>
+              <input type="range" min={-30} max={40} step={1} value={ivDelta}
+                     onChange={e => setIvDelta(+e.target.value)} style={{ flex: 1, accentColor: 'var(--accent)' }} />
+              <b className="num" style={{ minWidth: 46 }}>{ivDelta > 0 ? '+' : ''}{ivDelta}</b>
+              <button className="btn primary" style={{ padding: '9px 16px', fontSize: 13.5 }} onClick={runScenario}>
+                Run</button>
+            </div>
+            {scenErr && <p className="muted" style={{ fontSize: 12.5, marginTop: 8 }}>{scenErr}</p>}
+            {scenario && (
+              <div className="kpi num" style={{ marginTop: 12, background: 'rgba(255,255,255,.5)',
+                                              borderRadius: 'var(--r-md)', padding: 14 }}>
+                <div className="l">{pretty(ivDriver + '_p1')} → {scenario.interventions_applied?.[ivDriver] ?
+                  `${(+scenario.interventions_applied[ivDriver].base).toFixed(1)} → ${(+scenario.interventions_applied[ivDriver].scenario_value).toFixed(1)}` : ''}</div>
+                <div className="v" style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+                  {scenario.yhat_scenario}
+                  <span style={{ color: scenario.delta < 0 ? 'var(--accent)' : 'var(--danger)', fontSize: 15, fontWeight: 650 }}>
+                    {scenario.delta > 0 ? '+' : ''}{scenario.delta} vs {scenario.yhat_registered_replay}
+                  </span>
+                </div>
+                <div className="faint num" style={{ fontSize: 12, marginTop: 4 }}>
+                  90% interval {scenario.interval_90_scenario[0]} – {scenario.interval_90_scenario[1]} ·
+                  {(scenario.honesty_note.split('—')[1] ?? 'model behaviour, not causation')}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="glass" style={{ marginTop: 16 }}>
+            <h2 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 0 }}>
+              <FileText size={16} /> Auto-brief</h2>
+            {brief === null ? <div className="skeleton" style={{ height: 130 }} /> : (
+              <pre className="muted" style={{ whiteSpace: 'pre-wrap', font: '12.5px/1.6 var(--sans)', margin: 8 }}>
+                {brief || 'Briefing unavailable.'}
+              </pre>
+            )}
           </div>
         </div>
       </div>

@@ -40,6 +40,21 @@ def model_card_text() -> str:
     return (settings.docs_dir / "MODEL_CARD.md").read_text(encoding="utf-8")
 
 
+@lru_cache(maxsize=4)
+def vulnerability() -> dict:
+    """Health-system vulnerability composite (vuln-v1) — artifact of record."""
+    return json.loads((settings.registry_dir / "vulnerability_v1.json").read_text(
+        encoding="utf-8"))
+
+
+def vulnerability_row(iso3: str) -> dict | None:
+    iso3 = iso3.upper()
+    for r in vulnerability()["rows"]:
+        if r["iso3"] == iso3:
+            return r
+    return None
+
+
 def atlas_year() -> int:
     wide = panel_wide()
     have = wide[wide["u5m"].notna()]["year"]

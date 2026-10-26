@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Compass, Home, BookOpen, Activity } from 'lucide-react'
+import { Compass, Home, BookOpen, Activity, BellRing, ArrowUpDown } from 'lucide-react'
 import { api, Health } from './api/client'
 
 export default function App() {
@@ -21,6 +21,12 @@ export default function App() {
           </NavLink>
           <NavLink to="/atlas" className={({ isActive }) => isActive ? 'active' : ''}>
             <Compass size={15} strokeWidth={2.2} /> Atlas
+          </NavLink>
+          <NavLink to="/alerts" className={({ isActive }) => isActive ? 'active' : ''}>
+            <BellRing size={15} strokeWidth={2.2} /> Alerts
+          </NavLink>
+          <NavLink to="/compare" className={({ isActive }) => isActive ? 'active' : ''}>
+            <ArrowUpDown size={15} strokeWidth={2.2} /> Compare
           </NavLink>
           <NavLink to="/methodology" className={({ isActive }) => isActive ? 'active' : ''}>
             <BookOpen size={15} strokeWidth={2.2} /> Methodology
