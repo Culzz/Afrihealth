@@ -40,7 +40,7 @@ export default function ForecastPage() {
           mode: 'lines+markers', line: { color: '#2e5339', width: 2.4 }, marker: { size: 5 } },
         ...(fill ? [fill] : []),
       ]
-      P.react(data, {
+      P.react(chart.current, data, {
         paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
         font: { color: '#6f6455' }, height: 320, margin: { t: 10, b: 34, l: 46, r: 10 },
         legend: { orientation: 'h' },
@@ -48,7 +48,7 @@ export default function ForecastPage() {
         yaxis: { gridcolor: '#e2d8c6', zerolinecolor: '#e2d8c6' },
         showlegend: data.length > 1,
       })
-    }).catch(() => {})
+    }).catch(e => console.error('[plotly] chart render failed:', e))
     return () => { alive = false }
   }, [series, fc])
 

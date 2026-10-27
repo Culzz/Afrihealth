@@ -53,7 +53,7 @@ export default function AtlasPage() {
           paper_bgcolor: 'rgba(0,0,0,0)', margin: { t: 0, b: 0, l: 0, r: 0 },
           height: 430, dragmode: 'pan',
         }
-        P.react(data, layout)
+        P.react(divRef.current, data, layout)
         return
       }
       if (!filtered.length) return
@@ -82,8 +82,8 @@ export default function AtlasPage() {
         paper_bgcolor: 'rgba(0,0,0,0)', margin: { t: 0, b: 0, l: 0, r: 0 },
         height: 430, dragmode: 'pan',
       }
-      P.react(data, layout)
-    }).catch(() => {})
+      P.react(divRef.current, data, layout)
+    }).catch(e => console.error('[plotly] atlas map render failed:', e))
     return () => { alive = false }
   }, [filtered, mode, vuln])
 
