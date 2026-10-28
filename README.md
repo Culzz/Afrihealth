@@ -51,6 +51,8 @@ with CI.
 | Wk 8 — Deploy + hardening | ✅ done — single-container Docker, compose, CircleCI CI |
 | **R1.5 — Neon Postgres + Vercel** | ✅ shipped — live DB-backed API verified end-to-end (health/atlas/series/forecasts all 200 on `db:neon`) |
 | **UI v2 — editorial redesign** | ✅ shipped — vintage-paper + glass design system, photo landing page, mobile-first (see `apps/web/README.md`) |
+| **R2 — vulnerability composite `vuln-v1`** | ✅ shipped — deterministic burden+capacity composite with declared weights, per-component data vintages, jackknife sensitivity; 49/54 countries complete, no imputation ([artifact](ml/registry/vulnerability_v1.json) + [builder](ml/composite/build.py)) |
+| **R2 — decision-support layers** | ✅ shipped — Alerts watchlist (deterministic, P(u5m>70)-ranked, reason-stated), country comparisons (up to 4), template auto-briefs, model-backed scenario simulator (replay-verified ±0.5, h=1 only, honesty-labelled); **32/32 tests green** |
 
 ## Live deployment
 
@@ -73,6 +75,29 @@ with CI.
 
 No opaque universal risk score. Every displayed number is traceable to
 source → dataset version → model version.
+
+## Release 2 capabilities (shipped)
+
+- **Vulnerability view (Layer 3):** Atlas third mode — burden × capacity composite with
+  declared weights, per-component data vintages ("physicians: 2022"), band tags
+  (low/watch/elevated/high) and per-country jackknife sensitivity in the UI.
+- **Alerts (`#/alerts`):** deterministic watchlist — top 10 countries by
+  P(under-five mortality stays above 70) ≥ 0.5 in 2025, each with stated
+  reasons (vulnerability band, weakest capacity component, driver-vintage
+  flags). Decision support, not surveillance.
+- **Compare (`#/compare`):** side-by-side cards for up to 4 countries — latest
+  burden, 10-year trend, 2025/2027 forecasts, driver coverage, vulnerability band.
+- **Country auto-brief:** templated narrative (deterministic, not LLM) on every
+  country page — observed trend, forecast range, top SHAP drivers, weakest
+  capacity, data confidence, limits.
+- **What-if scenario simulator:** registered-model counterfactual on the country
+  page — nudge DPT/sanitation/water/etc. at t−1, get the model's h=1 response
+  with intervals. Zero-intervention replay reproduces the registered forecast
+  exactly (test-enforced); output labelled "model behaviour, not causation".
+- **What's deliberately NOT shipped:** user accounts/auth (needs a real auth
+  provider — R3 candidate; no fake security), WHO GHO driver refresh (code
+  ready; WHO API returned 502 during the audit window), LLM copilot (no key;
+  the auto-brief is honest templating instead).
 
 ## Frontend design, in one paragraph
 

@@ -95,3 +95,34 @@ GitHub repo):
 new `model_meta.json`/`forecasts.json`/`model_v1.pkl` → rebuild the image.
 The model card's promotion gate (MAE must beat naive baseline) is checked in
 the training memo before anything is registered.
+
+## Release 2 endpoints (live)
+
+Beyond the frozen R1 contract, the serverless function also serves:
+
+| Endpoint | Method | What it returns |
+| --- | --- | --- |
+| `/api/v1/vulnerability` | GET | full `vuln-v1` artifact: weights, bands, 54 rows with component percentiles, vintages, missing lists, jackknife deltas |
+| `/api/v1/vulnerability/{iso3}` | GET | one verbatim row (404 on unknown ISO3) |
+| `/api/v1/alerts` | GET | deterministic watchlist: top 10 by P(u5m > 70) ≥ 0.5 for the next year, with stated reasons — decision support, not surveillance |
+| `/api/v1/comparisons?iso3=A,B,C` | GET | side-by-side bundle for up to 4 countries (burden, trend, forecasts, coverage, band) |
+| `/api/v1/countries/{iso3}/brief` | GET | templated narrative auto-brief (plain text; deterministic, no LLM) |
+| `/api/v1/scenarios` | POST | model-backed counterfactual `{iso3, interventions:[{driver, delta}]}`; zero-intervention replay must equal the registered forecast (test-enforced); h=1 only; `422` on invalid driver or missing t−1 input, honest `501` if the inference runtime is unavailable |
+
+Scenario-runtime note for the serverless image: the registered model is an
+`LGBMRegressor` pickle (LightGBM 4.7.0 + scikit-learn 1.9.1 — versions are
+pinned in `api/requirements.txt` to match the training environment), and
+LightGBM needs `libgomp.so.1`, which the slim image lacks. The GCC runtime
+library is vendored at `api/vendor/libgomp.so.1` and preloaded
+(`ctypes.CDLL(..., RTLD_GLOBAL)`) in `api/index.py` before any model import.
+`api/requirements.txt` also gates `ml/composite` usage out of the function —
+only its published artifact ships.
+
+## R2 composite artifact flow
+
+Rebuild the vulnerability artifact with
+`python -m ml.composite.build` (reads `data/processed/panel_wide.csv` +
+`ml/registry/forecasts.json`) → commit `ml/registry/vulnerability_v1.json`.
+The artifact embeds its weights, policy, vintage years and framework note;
+`.vercelignore` deliberately keeps `ml/registry/` inside the deployment
+bundle while excluding training-time code.

@@ -57,8 +57,9 @@ No single "African health risk score." Outcome-specific models, an explicit data
 ### Release 1 — Research-ready MVP (~8 weeks) ← current target
 WHO/WB ingestion for U5M + drivers · data catalogue · interactive Africa map (MapLibre) · historical trends & comparisons · 1–2 properly validated forecast models · basic explainability + uncertainty · PDF/CSV exports + provenance · tests · live deployment · model card.
 
-### Release 2 — Predictive intelligence
-Forecast studio + model registry · threshold monitoring + anomaly detection · vulnerability index with sensitivity analysis · saved analyses, alerts, scheduled reports · possible second outcome (malaria) if the audit supports it · Celery + Redis background jobs.
+### Release 2 — Predictive intelligence — ✅ SHIPPED (2026-10)
+Vulnerability index with sensitivity analysis ✅ (deterministic percentile composite `vuln-v1`: declared weights, per-component data vintages, jackknife leave-one-out deltas shipped inside the artifact · no imputation · 49/54 countries complete) · threshold alerting ✅ (deterministic watchlist from registered exceedance probabilities, "decision support, not surveillance" framing) · alerts ✅ + comparisons ✅ UI · forecast studio in its honest v1 form ✅ (scenario simulator = registered model on counterfactual driver paths, zero-intervention replay test-enforced to equal the registered forecast; auto-brief = templated narrative, no LLM) · registry stays artifact-backed ✅ (32/32 tests green, endpoints verified live).
+Deliberately NOT shipped, with reasons: user accounts + saved analyses (needs a real auth provider → moved to R3; no fake security), scheduled reports, second outcome (malaria), Celery/Redis (current workload is deterministic, bounded and sub-second — synchronous endpoints suffice).
 
 ### Release 3 — Advanced research platform
 Research copilot (RAG over platform evidence, refuses invented statistics) · validated scenario engine · subnational expansion where data supports · expanded environmental modelling.
