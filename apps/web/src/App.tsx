@@ -1,10 +1,13 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Compass, Home, BookOpen, Activity, BellRing, ArrowUpDown } from 'lucide-react'
+import { Compass, Home, BookOpen, Activity, BellRing, ArrowUpDown,
+         FolderOpen, ShieldCheck, SlidersHorizontal, UserRound } from 'lucide-react'
 import { api, Health } from './api/client'
+import { useAuth } from './hooks/useAuth'
 
 export default function App() {
   const [health, setHealth] = useState<Health | null>(null)
+  const { me } = useAuth()
   useEffect(() => {
     api.get<Health>('/health').then(setHealth).catch(() => setHealth(null))
   }, [])
@@ -28,14 +31,26 @@ export default function App() {
           <NavLink to="/compare" className={({ isActive }) => isActive ? 'active' : ''}>
             <ArrowUpDown size={15} strokeWidth={2.2} /> Compare
           </NavLink>
+          <NavLink to="/quality" className={({ isActive }) => isActive ? 'active' : ''}>
+            <ShieldCheck size={15} strokeWidth={2.2} /> Quality
+          </NavLink>
+          <NavLink to="/priority" className={({ isActive }) => isActive ? 'active' : ''}>
+            <SlidersHorizontal size={15} strokeWidth={2.2} /> Priority
+          </NavLink>
           <NavLink to="/methodology" className={({ isActive }) => isActive ? 'active' : ''}>
             <BookOpen size={15} strokeWidth={2.2} /> Methodology
           </NavLink>
         </nav>
-        {health ? (
-          <span className="healthchip"><span className="dot" />{health.model_version} · data through {health.data_max_year}</span>
+        {me ? (
+          <NavLink to="/workspaces" className="healthchip" style={{ textDecoration: 'none' }}>
+            <FolderOpen size={11} style={{ verticalAlign: -1.5, marginRight: 3 }} />
+            {me.user.display_name} · {me.user.org_name}
+          </NavLink>
         ) : (
-          <span className="healthchip off"><span className="dot" /> connecting…</span>
+          <NavLink to="/login" className="healthchip" style={{ textDecoration: 'none' }}>
+            <UserRound size={11} style={{ verticalAlign: -1.5, marginRight: 3 }} />
+            Sign in
+          </NavLink>
         )}
       </header>
       <div className="disclaimer">

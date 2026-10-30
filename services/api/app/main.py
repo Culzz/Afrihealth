@@ -33,7 +33,9 @@ app.add_middleware(
 
 app.include_router(router)
 from services.api.app.api.r2 import router as r2_router  # noqa: E402
+from services.api.app.api.r3 import router as r3_router  # noqa: E402
 app.include_router(r2_router)
+app.include_router(r3_router)
 
 
 @app.get("/", include_in_schema=False)

@@ -1,19 +1,19 @@
 const BASE = import.meta.env.VITE_API_BASE_URL ?? ''
 
+async function req<T>(path: string, init?: RequestInit): Promise<T> {
+  const r = await fetch(`${BASE}/api/v1${path}`, init)
+  if (!r.ok) throw new Error(`${r.status} ${r.statusText}: ${await r.text()}`)
+  return r.json()
+}
+
 export const api = {
-  async get<T>(path: string): Promise<T> {
-    const r = await fetch(`${BASE}/api/v1${path}`)
-    if (!r.ok) throw new Error(`${r.status} ${r.statusText}: ${await r.text()}`)
-    return r.json()
-  },
-  async post<T>(path: string, body: unknown): Promise<T> {
-    const r = await fetch(`${BASE}/api/v1${path}`, {
+  get: <T,>(path: string): Promise<T> => req<T>(path),
+  post: <T,>(path: string, body: unknown): Promise<T> =>
+    req<T>(path, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
-    })
-    if (!r.ok) throw new Error(`${r.status} ${r.statusText}: ${await r.text()}`)
-    return r.json()
-  },
+    }),
+  del: <T,>(path: string): Promise<T> => req<T>(path, { method: 'DELETE' }),
 }
 
 /** Drivers the scenario simulator accepts (from the v2 contract). */
@@ -125,3 +125,80 @@ export function loadPlotly(): Promise<any> {
   })
   return plotlyPromise
 }
+
+/* ------------------------------ R3: organizations & workspaces ------------ */
+
+export type Me = {
+  user: {
+    user_id: string; org_id: string; email: string
+    display_name: string; role: string; org_name: string
+  }
+}
+export type Workspace = {
+  ws_id: string; org_id: string; name: string
+  countries: string[]; description: string
+  created_by: string; created_at: string
+}
+export type TargetRow = {
+  target_id: string; ws_id: string; iso3: string; indicator: string
+  geography: string; baseline_year: number | null
+  baseline_value: number | null; target_value: number | null
+  target_year: number | null; notes: string; updated_at: string
+}
+export type ProgressRow = {
+  target_id: string; iso3: string; indicator: string; geography: string
+  baseline_year: number | null; baseline_value: number | null
+  target_value: number | null; target_year: number | null
+  actual?: { value: number; year: number; source: string }
+  progress?: { toward_target_pct?: number; status: string; note?: string } & Record<string, unknown>
+}
+export type WsDataRow = {
+  row_id: string; ws_id: string; iso3: string; indicator: string
+  geography: string; year: number; value: number
+  source: string; uploaded_by: string | null; uploaded_at: string
+}
+export type AnalysisRow = {
+  analysis_id: string; ws_id: string; user_id: string | null
+  title: string; view_state: Record<string, unknown>
+  notes: string; created_at: string
+}
+export type ReportListItem = {
+  report_id: string; ws_id: string; version: number
+  created_by: string | null; created_at: string; spec_head?: string
+}
+export type ReportFull = {
+  report_id: string; ws_id: string; version: number
+  spec: Record<string, unknown>
+  computed: { validate: { iso3: string; flags: string[] }[]; analysis: Record<string, unknown>[]; generated_note: string }
+  narrative: {
+    summary: string
+    findings: { kind: string; iso3?: string; text: string }[]
+    limitations: string[]
+    checklist: string[]
+    evidence: { id: string; country: string; text: string; source: Record<string, string> }[]
+  }
+  created_by: string | null; created_at: string
+}
+export type AuditRow = {
+  audit_id: string; org_id: string; user_id: string | null
+  action: string; detail: string; ts: string
+}
+
+/* Data-quality monitor (R3 feature 1) */
+export type IndicatorQuality = {
+  indicator: string; window: number[]; coverage_pct: number
+  countries_observed: number; stale_countries: number
+  missingness_pct: number; suspicious_changes: number
+  suspicious_samples: { iso3: string; year: number; note: string }[]
+  definition_note: string
+}
+export type QualityData = {
+  window: number[]; indicators: IndicatorQuality[]
+  artifacts: { dataset_version: string; model_version: string | null; artifacts: Record<string, string> }
+}
+export type ChangesData = {
+  changed: boolean; what: string[]; current: QualityData['artifacts']
+  note: string; as_of?: string; marked?: boolean
+}
+export type DigestCronResult = { ok: boolean; changed: boolean; what: string[] }
+
