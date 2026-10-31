@@ -430,6 +430,15 @@ def _render_pdf(user: dict, ws: dict, row: dict) -> Response:
     from reportlab.lib.units import cm
     from reportlab.pdfgen import canvas as pdfcanvas
 
+    def san(s: str) -> str:
+        """Standard Type-1 Helvetica is latin-1 only: transliterate the chars
+        the narrative templates use (em dashes, smart quotes, box glyphs)."""
+        for k, v in {"—": "-", "–": "-", "“": '"', "”": '"', "“": '"',
+                     "‘": "'", "’": "'", "·": "-", "★": "*", "☐": "[ ]",
+                     "≥": ">=", "→": "->", "±": "+-", "×": "x"}.items():
+            s = s.replace(k, v)
+        return s.encode("latin-1", "replace").decode("latin-1")
+
     buf = io.BytesIO()
     w, h = A4
     c = pdfcanvas.Canvas(buf, pagesize=A4)
@@ -439,11 +448,11 @@ def _render_pdf(user: dict, ws: dict, row: dict) -> Response:
     y = h - 2.0 * cm
     c.setFont("Helvetica-Bold", 15)
     org = user.get("display_name", "AfriHealth")
-    c.drawString(2 * cm, y, f"AfriHealth Intelligence — {ws['name']}")
+    c.drawString(2 * cm, y, san(f"AfriHealth Intelligence — {ws['name']}"))
     y -= 0.9 * cm
     c.setFont("Helvetica", 9)
-    c.drawString(2 * cm, y, f"Organization: {org} · Report v{row['version']} · "
-                            f"generated {row['created_at'][:16]}Z UTC")
+    c.drawString(2 * cm, y, san(f"Organization: {org} · Report v{row['version']} · "
+                            f"generated {row['created_at'][:16]}Z UTC"))
     y -= 0.7 * cm
     c.setFont("Helvetica-Oblique", 8.5)
     c.drawString(2 * cm, y, "Population-level decision support — not clinical, "
@@ -457,7 +466,7 @@ def _render_pdf(user: dict, ws: dict, row: dict) -> Response:
             if y < 2 * cm:
                 c.showPage(); y = h - 2 * cm
                 c.setFont("Helvetica", size)
-            c.drawString(2 * cm, y, ln)
+            c.drawString(2 * cm, y, san(ln))
             y -= size * 0.52 * cm * 0.9 + 2
 
     import textwrap
