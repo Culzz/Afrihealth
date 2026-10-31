@@ -38,6 +38,16 @@ app.include_router(r2_router)
 app.include_router(r3_router)
 
 
+@app.exception_handler(Exception)
+async def _runtime_diag(_req, exc):
+    """Serverless stderr logs are not accessible to the project owner, so an
+    honest 500 carries the exception class + message (capped). No secrets are
+    in scope: this is a read-heavy public data API."""
+    from fastapi.responses import JSONResponse
+    return JSONResponse({"error": f"{type(exc).__name__}: {exc!s}"[:300]},
+                        status_code=500)
+
+
 @app.get("/", include_in_schema=False)
 def root() -> RedirectResponse:
     dist = settings.frontend_dist
