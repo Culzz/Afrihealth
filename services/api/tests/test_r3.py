@@ -232,6 +232,21 @@ def test_report_pdf_render(client):
     assert r.content[:5] == b"%PDF-"
 
 
+def test_report_pdf_nonascii_workspace_name(client):
+    """Live regression: the em-dash in a real workspace name broke the
+    Content-Disposition header (headers are latin-1-encoded), NOT the drawn
+    text. The ASCII 'pdf ws' name above never caught it."""
+    _ensure_session(client, "pdf2@x.example", "strong-pdf2-password")
+    ws = client.post("/api/v1/workspaces", json={
+        "name": "Nigeria child health — Q4 review", "countries": ["NGA"]}).json()
+    rep = client.post(f"/api/v1/workspaces/{ws['ws_id']}/reports", json={
+        "countries": ["NGA"]}).json()
+    r = client.get(f"/api/v1/workspaces/{ws['ws_id']}/reports/{rep['report_id']}"
+                   "?format=pdf")
+    assert r.status_code == 200
+    assert r.content[:5] == b"%PDF-"
+
+
 def test_report_requires_selection(client):
     r = client.post("/api/v1/workspaces" "/no-such-ws" "/reports",
                     json={"countries": []})

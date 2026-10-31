@@ -510,7 +510,9 @@ def _render_pdf(user: dict, ws: dict, row: dict) -> Response:
     c.showPage()
     c.save()
     buf.seek(0)
-    filename = f"afrihealth_{ws['name'].replace(' ', '_').lower()}_v{row['version']}.pdf"
+    import re
+    slug = re.sub(r"[^A-Za-z0-9_.-]+", "_", ws["name"]).strip("_").lower() or "report"
+    filename = f"afrihealth_{slug}_v{row['version']}.pdf"
     return Response(
         content=buf.getvalue(), media_type="application/pdf",
         headers={"Content-Disposition": f"attachment; filename={filename}"})
