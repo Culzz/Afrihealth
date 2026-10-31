@@ -158,7 +158,7 @@ def ensure_schema() -> None:
     CREATE TABLE IF NOT EXISTS r3_digest (
       key TEXT PRIMARY KEY, value TEXT NOT NULL, updated_at TEXT NOT NULL);
     """
-    with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+    with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
         for stmt in [s.strip() + ";" for s in sql.split(";") if s.strip()]:
             cur.execute(stmt)
 
@@ -172,7 +172,7 @@ class PgRepo:
             raise RepoError("email_already_registered")
         org_id, user_id = _uid(), _uid()
         salt, digest = hash_password(password)
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "INSERT INTO r3_orgs (org_id, name, created_at) VALUES (%s,%s,%s)",
                 (org_id, org_name.strip(), now_iso()))
@@ -185,7 +185,7 @@ class PgRepo:
         return self.get_user_by_email(email_norm)
 
     def get_user_by_email(self, email):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute("SELECT * FROM r3_users WHERE email = %s",
                         (email.strip().lower(),))
             return cur.fetchone()
@@ -194,7 +194,7 @@ class PgRepo:
         token = secrets.token_urlsafe(32)
         exp = (datetime.now(timezone.utc) + timedelta(days=SESSION_TTL_DAYS)) \
             .isoformat(timespec="seconds")
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "INSERT INTO r3_sessions (token_hash, user_id, created_at, expires_at)"
                 " VALUES (%s,%s,%s,%s)",
@@ -202,7 +202,7 @@ class PgRepo:
         return token
 
     def get_user_by_session(self, token):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT u.* FROM r3_sessions s JOIN r3_users u ON u.user_id = s.user_id"
                 " WHERE s.token_hash = %s AND s.expires_at > %s",
@@ -210,14 +210,14 @@ class PgRepo:
             return cur.fetchone()
 
     def delete_session(self, token):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute("DELETE FROM r3_sessions WHERE token_hash = %s",
                         (token_hash(token),))
 
     # workspaces --
     def create_workspace(self, org_id, user_id, name, countries, description):
         ws_id = _uid()
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "INSERT INTO r3_workspaces (ws_id, org_id, name, countries, "
                 "description, created_by, created_at) VALUES (%s,%s,%s,%s,%s,%s,%s)",
@@ -229,14 +229,14 @@ class PgRepo:
         return self.get_workspace(ws_id)
 
     def list_workspaces(self, org_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT * FROM r3_workspaces WHERE org_id = %s ORDER BY created_at DESC",
                 (org_id,))
             return [self._expand_ws(r) for r in cur.fetchall()]
 
     def get_workspace(self, workspace_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute("SELECT * FROM r3_workspaces WHERE ws_id = %s",
                         (workspace_id,))
             row = cur.fetchone()
@@ -248,7 +248,7 @@ class PgRepo:
         return row
 
     def ws_role(self, workspace_id, user_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT role FROM r3_ws_members WHERE ws_id = %s AND user_id = %s",
                 (workspace_id, user_id))
@@ -260,7 +260,7 @@ class PgRepo:
         sql = ("INSERT INTO r3_targets (target_id, ws_id, iso3, indicator, geography,"
                " baseline_year, baseline_value, target_value, target_year, notes,"
                " updated_at) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)")
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(sql, (
                 tid, workspace_id, entry["iso3"].upper(), entry["indicator"],
                 entry.get("geography", ""), entry.get("baseline_year"),
@@ -269,21 +269,21 @@ class PgRepo:
         return self.get_target(workspace_id, tid)
 
     def get_target(self, workspace_id, target_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT * FROM r3_targets WHERE ws_id = %s AND target_id = %s",
                 (workspace_id, target_id))
             return cur.fetchone()
 
     def list_targets(self, workspace_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT * FROM r3_targets WHERE ws_id = %s ORDER BY iso3, indicator",
                 (workspace_id,))
             return cur.fetchall()
 
     def delete_target(self, workspace_id, target_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute("DELETE FROM r3_targets WHERE ws_id = %s AND target_id = %s",
                         (workspace_id, target_id))
 
@@ -292,7 +292,7 @@ class PgRepo:
                " year, value, source, uploaded_by, uploaded_at)"
                " VALUES (%s,%s,%s,%s,%s,%s,%s,'org-upload',%s,%s)")
         n = 0
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             for r in rows:
                 cur.execute(sql, (
                     _uid(), workspace_id, r["iso3"].upper(), r["indicator"],
@@ -302,7 +302,7 @@ class PgRepo:
         return n
 
     def list_ws_data(self, workspace_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT * FROM r3_ws_data WHERE ws_id = %s ORDER BY uploaded_at DESC"
                 " LIMIT 5000", (workspace_id,))
@@ -311,7 +311,7 @@ class PgRepo:
     # saved analyses --
     def add_analysis(self, workspace_id, user_id, title, view_state, notes):
         aid = _uid()
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "INSERT INTO r3_analyses (analysis_id, ws_id, user_id, title,"
                 " view_state, notes, created_at) VALUES (%s,%s,%s,%s,%s,%s,%s)",
@@ -320,7 +320,7 @@ class PgRepo:
         return self.get_analysis(workspace_id, aid)
 
     def get_analysis(self, workspace_id, analysis_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT * FROM r3_analyses WHERE ws_id = %s AND analysis_id = %s",
                 (workspace_id, analysis_id))
@@ -330,7 +330,7 @@ class PgRepo:
         return row
 
     def list_analyses(self, workspace_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT * FROM r3_analyses WHERE ws_id = %s ORDER BY created_at DESC",
                 (workspace_id,))
@@ -339,7 +339,7 @@ class PgRepo:
 
     # reports --
     def next_report_version(self, workspace_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT COALESCE(MAX(version), 0) AS v FROM r3_reports WHERE ws_id = %s",
                 (workspace_id,))
@@ -348,7 +348,7 @@ class PgRepo:
     def add_report(self, workspace_id, user_id, spec, computed, narrative):
         rid = _uid()
         version = self.next_report_version(workspace_id)
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "INSERT INTO r3_reports (report_id, ws_id, version, spec, computed,"
                 " narrative, created_by, created_at) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)",
@@ -357,7 +357,7 @@ class PgRepo:
         return self.get_report(workspace_id, rid)
 
     def list_reports(self, workspace_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT report_id, ws_id, version, created_by, created_at,"
                 " LEFT(spec, 400) AS spec_head FROM r3_reports WHERE ws_id = %s"
@@ -365,7 +365,7 @@ class PgRepo:
             return cur.fetchall()
 
     def get_report(self, workspace_id, report_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT * FROM r3_reports WHERE ws_id = %s AND report_id = %s",
                 (workspace_id, report_id))
@@ -378,32 +378,32 @@ class PgRepo:
 
     # audit + digest --
     def get_org(self, org_id):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute("SELECT * FROM r3_orgs WHERE org_id = %s", (org_id,))
             return cur.fetchone()
 
     def audit(self, org_id, user_id, action, detail):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "INSERT INTO r3_audit (audit_id, org_id, user_id, action, detail, ts)"
                 " VALUES (%s,%s,%s,%s,%s,%s)",
                 (_uid(), org_id, user_id, action, json.dumps(detail), now_iso()))
 
     def list_audit(self, org_id, limit=50):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "SELECT * FROM r3_audit WHERE org_id = %s ORDER BY ts DESC LIMIT %s",
                 (org_id, limit))
             return cur.fetchall()
 
     def get_digest_key(self, key):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute("SELECT value FROM r3_digest WHERE key = %s", (key,))
             row = cur.fetchone()
         return row["value"] if row else None
 
     def set_digest_key(self, key, value):
-        with dbsession.connect() as conn, conn.cursor(psycopg.rows.dict_row) as cur:
+        with dbsession.connect() as conn, conn.cursor(row_factory=psycopg.rows.dict_row) as cur:
             cur.execute(
                 "INSERT INTO r3_digest (key, value, updated_at) VALUES (%s,%s,%s)"
                 " ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value,"
